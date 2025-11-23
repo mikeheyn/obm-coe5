@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Generate a CoE5 mod file that modifies ritual costs by class/ritual power type.
+Generate a CoE5 mod file that modifies ritual costs and spawn rates.
 
 This allows different percentage modifiers for different factions/classes,
-creating a "tier list" balance system.
+creating a "tier list" balance system. Also supports global spawn rate modifiers.
 
 Usage:
     python generate_tiered_cost_mod.py <config_file> [output_file]
@@ -46,6 +46,59 @@ RESOURCE_TYPES = {
     18: "Hearts",
     19: "Skulls",
 }
+
+# Spawn trait types that can be modified
+SPAWN_TRAITS = [
+    'spawnmon',      # General spawn (Dvala, etc.)
+    'spawn1d6mon',   # Spawn 1d6 with percentage chance
+    'satyrspawn',    # Dryad Queen satyr boost
+    'harpyspawn',    # Dryad Queen harpy boost
+    'centspawn',     # Dryad Queen centaur boost
+    'minospawn',     # Dryad Queen minotaur boost
+    'motherspawn',   # Various mother spawns (Hydra, Aztlan gods)
+]
+
+
+def parse_monster_data(filepath):
+    """Parse the monster data file and extract monsters with spawn traits."""
+    monsters = []
+    current_monster = None
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            # Check for new monster definition
+            match = re.match(r'newmonster\s+"([^"]+)"', line)
+            if match:
+                if current_monster and current_monster['spawns']:
+                    monsters.append(current_monster)
+                current_monster = {
+                    'name': match.group(1),
+                    'spawns': []
+                }
+                continue
+
+            if current_monster:
+                # Check for spawn traits
+                for trait in SPAWN_TRAITS:
+                    match = re.match(rf'{trait}\s+(\d+)', line.split('#')[0])
+                    if match:
+                        value = int(match.group(1))
+                        # Extract comment if present
+                        comment = ''
+                        if '#' in line:
+                            comment = line.split('#', 1)[1].strip()
+                        current_monster['spawns'].append({
+                            'trait': trait,
+                            'value': value,
+                            'comment': comment
+                        })
+                        break
+
+        # Don't forget the last monster
+        if current_monster and current_monster['spawns']:
+            monsters.append(current_monster)
+
+    return monsters
 
 
 def parse_ritual_data(filepath):
@@ -129,7 +182,7 @@ def process_config(config, ritpow_names):
         return config.get('default', 100), config.get('ritpow_modifiers', {}), None, None
 
 
-def generate_mod_file(rituals, config, ritpow_names, output_path):
+def generate_mod_file(rituals, config, ritpow_names, output_path, project_dir):
     """Generate a mod file that modifies ritual costs based on config."""
 
     # Process config (supports both old and new tier-based format)
@@ -148,6 +201,23 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
         f.write("# This mod adjusts ritual costs by class/ritual power type.\n")
         f.write("# Generated from Ritual Data v5.33.c5m\n")
         f.write("# \n")
+
+        # Prepend base mod if specified
+        base_mod = config.get('base_mod')
+        if base_mod:
+            base_path = project_dir / "data" / base_mod
+            if base_path.exists():
+                f.write("# " + "=" * 50 + "\n")
+                f.write(f"# BASE MOD: {base_mod}\n")
+                f.write("# (Our changes below override any conflicts)\n")
+                f.write("# " + "=" * 50 + "\n\n")
+
+                with open(base_path, 'r', encoding='utf-8') as base:
+                    f.write(base.read())
+
+                f.write("\n\n# " + "=" * 50 + "\n")
+                f.write("# OBM MODIFICATIONS START HERE\n")
+                f.write("# " + "=" * 50 + "\n\n")
 
         if level_modifiers:
             f.write("# Ritual Level Modifiers:\n")
@@ -234,6 +304,43 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
     return modified_count, skipped_count
 
 
+def generate_spawn_modifications(monsters, spawn_modifier, output_file):
+    """Generate spawn modifications and append to output file."""
+    if spawn_modifier == 100:
+        return 0  # No changes needed
+
+    modified_count = 0
+
+    with open(output_file, 'a', encoding='utf-8') as f:
+        f.write("\n# " + "=" * 50 + "\n")
+        f.write("# SPAWN RATE MODIFICATIONS\n")
+        f.write("# " + "=" * 50 + "\n")
+        f.write(f"# Global spawn modifier: {spawn_modifier}%\n")
+        f.write("# \n\n")
+
+        for monster in monsters:
+            f.write(f'selectmonster "{monster["name"]}"\n')
+
+            for spawn in monster['spawns']:
+                trait = spawn['trait']
+                original_value = spawn['value']
+
+                # Calculate new value
+                new_value = math.ceil(original_value * spawn_modifier / 100)
+                new_value = max(1, new_value)
+
+                # Write the modification
+                if spawn['comment']:
+                    f.write(f"{trait} {new_value}  # was {original_value}; {spawn['comment']}\n")
+                else:
+                    f.write(f"{trait} {new_value}  # was {original_value}\n")
+
+            f.write("\n")
+            modified_count += 1
+
+    return modified_count
+
+
 def list_ritpows(ritpow_names):
     """Print all ritual power types."""
     print("\nRitual Power Types:")
@@ -285,13 +392,21 @@ def main():
     script_dir = Path(__file__).parent
     project_dir = script_dir.parent
     ritual_data_file = project_dir / "data" / "Ritual Data v5.33.c5m"
+    monster_data_file = project_dir / "data" / "Monster Data v5.33.c5m"
 
     if not ritual_data_file.exists():
         print(f"Error: Could not find '{ritual_data_file}'")
         sys.exit(1)
 
+    if not monster_data_file.exists():
+        print(f"Error: Could not find '{monster_data_file}'")
+        sys.exit(1)
+
     # Parse ritual data
     rituals, ritpow_names = parse_ritual_data(ritual_data_file)
+
+    # Parse monster data for spawn traits
+    monsters_with_spawns = parse_monster_data(monster_data_file)
 
     # Handle command line arguments
     if len(sys.argv) < 2:
@@ -333,13 +448,31 @@ def main():
     print(f"Parsing ritual data from: {ritual_data_file}")
     print(f"Found {len(rituals)} rituals with costs")
     print(f"Found {len(ritpow_names)} ritual power types")
+    print(f"Found {len(monsters_with_spawns)} monsters with spawn traits")
+
+    # Check for base mod
+    base_mod = config.get('base_mod')
+    if base_mod:
+        base_path = project_dir / "data" / base_mod
+        if not base_path.exists():
+            print(f"Warning: Base mod '{base_mod}' not found at {base_path}")
+        else:
+            print(f"Using base mod: {base_mod}")
 
     print(f"\nGenerating mod file: {output_path}")
-    modified, skipped = generate_mod_file(rituals, config, ritpow_names, output_path)
+    modified, skipped = generate_mod_file(rituals, config, ritpow_names, output_path, project_dir)
 
-    print(f"\nResults:")
+    print(f"\nRitual Cost Results:")
     print(f"  Modified: {modified} rituals")
     print(f"  Skipped (100%): {skipped} rituals")
+
+    # Handle spawn modifications
+    spawn_modifier = config.get('spawn_modifier', 100)
+    if spawn_modifier != 100:
+        spawn_modified = generate_spawn_modifications(monsters_with_spawns, spawn_modifier, output_path)
+        print(f"\nSpawn Rate Results:")
+        print(f"  Modified: {spawn_modified} monsters")
+        print(f"  Spawn modifier: {spawn_modifier}%")
 
     print(f"\nTo use this mod:")
     print(f"  1. Copy '{output_file}' to your CoE5 mods folder")

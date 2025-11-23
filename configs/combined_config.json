@@ -1,0 +1,94 @@
+{
+  "description": "Combined: Class tiers + Level modifiers + Spawn boost + Balance Redux",
+
+  "spawn_modifier": 200,
+  "base_mod": "balancemodredux.c5m",
+
+  "tiers": {
+    "S": 100,
+    "A": 90,
+    "B": 80,
+    "C": 70,
+    "D": 60,
+    "F": 50
+  },
+
+  "class_tiers": {
+    "Scourge Lord": "S",
+    "Illusionist": "S",
+    "Guildmaster": "S",
+    "Necromancy": "S",
+    "Spirit Summons": "S",
+    "Crystal Amazon": "S",
+    "Garnet Amazon": "S",
+    "Jade Amazon": "S",
+    "Onyx Amazon": "S",
+
+    "Enchantment": "A",
+    "Cloud Lord": "A",
+    "Warlock of Fire": "A",
+    "Warlock of Water": "A",
+    "Warlock of Air": "A",
+    "Warlock of Earth": "A",
+    "Witchery": "A",
+    "Baalite Rituals": "A",
+    "Senator": "A",
+    "Revelry": "A",
+    "Empress": "A",
+    "Dark Emperor": "A",
+    "God Emperor of the Underworld": "A",
+    "Baron": "A",
+    "Druidism": "A",
+    "Mictlan Rituals": "A",
+    "War Priest": "A",
+    "Blood Priest": "A",
+    "Sky Priest": "A",
+    "Rain Priest": "A",
+    "Night Priest": "A",
+    "Death Priest": "A",
+
+    "Troll Magic": "B",
+    "Dvala": "B",
+    "Rune Smith": "B",
+    "Dwarf Councilor": "B",
+    "Pale One Rituals": "B",
+    "Monk": "B",
+    "Renatus": "B",
+    "Alchemist": "B",
+    "Magistratus": "B",
+    "White One": "B",
+    "Akashic, Ruby": "B",
+    "Akashic, Sapphire": "B",
+    "Akashic, Diamond": "B",
+    "Akashic, Emerald": "B",
+    "Engineer Magus": "B",
+    "Fire Giant": "B",
+    "Frost Giant": "B",
+    "Mountain Giant": "B",
+    "Storm Giant": "B",
+    "Sea Giant": "B",
+
+    "Demonology": "C",
+    "Hoburg Weed": "C",
+    "Hoburg Clockwork": "C",
+    "Bakemono Rituals": "C",
+
+    "Nekromant": "D",
+    "High Cultist": "D",
+    "Star Spawn": "D",
+
+    "Kobold, Black": "F",
+    "Kobold, Red": "F",
+    "Kobold, Blue": "F",
+    "Kobold, White": "F",
+    "Kobold, Green": "F",
+    "Dryad Queen": "F",
+    "Raksharaja": "F"
+  },
+
+  "level_modifiers": {
+    "1": 80,
+    "2": 90,
+    "3": 100
+  }
+}

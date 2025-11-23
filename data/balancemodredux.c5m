@@ -1,0 +1,1845 @@
+icon "MPMod.tga"
+description "v1.1 Release. This is a modification of Maverick00053's Multiplayer Balance Mod. The purpose hereof is to continue adjusting the game to further iron out the inconsistencies and inbalance gameplay between classes, a changelog will be added in the future."
+
+#You have to create the new ritual type at the top of the mod
+#newritpow ""
+
+#-----Weapons-----
+
+#### SCOUTS ####
+
+newmonster "Goblin Scout"                                                       
+copyspr "Goblin Archer"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+stealth
+goblin 1
+allitemslots
+noleader            # Cannot lead troops even when a commander
+
+
+newmonster "Hoburg Scout"                                                       
+copyspr "Hoburg Militia"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+stealth
+allitemslots
+noleader            # Cannot lead troops even when a commander
+
+
+newmonster "Bakemono Scout"                                                       
+copyspr "Bakemono Archer"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+noleader            # Cannot lead troops even when a commander
+
+####################
+
+#### HOME GUARD ####
+
+newmonster "Baron's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Necromancer's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Demonologist's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Witch's Home Guard"                                           
+copystats "Androphag Archer"
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "High Priestess's Home Guard"                                           
+copystats "Ba'alite Heavy Infantry"
+rank             0  # Mid
+rangedweapon 0   9  # Crossbow
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Bakemono's Home Guard"                                           
+copystats "Dai Bakemono Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Barbarian's Home Guard"                                           
+copystats "Barbarian Bowman"
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Senator's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Pale Ones's Home Guard"                                           
+copystats "Pale One Soldier"
+rank             0  # Mid
+rangedweapon 1  27  # Sling
+meleeweapon  0  23  # Halberd (value 1: D8 slash damage)
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Druid's Home Guard"                                           
+copystats "Barechested Swordsman"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Burgmeister's Home Guard"                                           
+copystats "Hoburg Crossbow"
+shield
+stationary
+descr "Trained and heavily armed mercenaries whos only desire is to protect their source of income"
+
+newmonster "Warlocks's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Priest King's Home Guard"                                           
+copystats "Feathered Warrior"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Troll King's Home Guard"                                             
+copystats "Goblin Archer"
+stationary
+descr "Trained and armed defenders whos only desire is to protect their home"
+
+newmonster "Enchanter's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "High Cultist's Home Guard"                                            
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Dwarf Queen's Home Guard"                                            
+copystats "Outdoor Dwarf"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Voice of El's Home Guard"                                            
+copystats "Tower Guard"
+copyspr   "Temple Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Illusionist's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Markgraf's Home Guard"                                           
+copystats "Hoburg Crossbow"
+shield
+stationary
+descr "Trained and heavily armed mercenaries whos only desire is to protect their source of income"
+
+newmonster "Dryad Queen's Home Guard"                                           
+copystats "Satyr Warrior"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Scourge Lord's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Cloud Lord's Home Guard"                                           
+copystats "Airya Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Maharaja's Home Guard"                                           
+copystats "Bandar Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Raksharaja's Home Guard"                                           
+copystats "Bandar Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Kobold King's Home Guard"                                           
+copystats "Black Kobold Scout"
+rangedweapon 0  27  # Sling
+rank             0  # Mid
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+#### DWARF MODIFICATIONS ####
+
+selectmonster "Young Dvala"
+trade 1
+
+selectmonster "Dvala"
+trade 1
+
+selectmonster "Daughter of Dvalin"
+trade 1
+
+selectmonster "Dwarf Arbalest"
+clearmove
+mountain
+snow
+
+selectmonster "Dwarf"
+hp               6
+
+#### PALE ONES MODIFICATIONS ####
+
+#- Weapons
+selectweapon "Obsidian Glaive"
+sweep
+
+selectmonster "King Of The Deep"
+fastheal
+clearweapons
+meleeweapon             19   "Obsidian Glaive" # d27 Slash damage.
+
+selectmonster "Pale One Slinger"
+clearweapons
+rangedweapon               1  27 # Sling: d3 Blunt damage.
+meleeweapon                1   1 # Dagger: d4 Pierce damage.
+
+#### VOICE OF EL MODIFICATIONS ####
+
+selectmonster "Bishop"
+more1spells 10
+
+selectmonster "Arch Bishop"
+more1spells 10
+
+selectmonster "Angel"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Angelic Warrior"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Arch Angel"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Celestial Lion"
+clearmove
+flying
+semistupid
+huge
+
+selectmonster "Harbinger"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Ophan"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Pilgrim"
+clearmove
+semistupid
+
+selectmonster "Saint"
+clearmove
+semistupid
+temple2             # Prefers temples
+money2              # Prefers gold income sites
+
+selectmonster "Seraph"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+
+#### SENATOR MODIFICATIONS ####
+
+#- Terrain
+
+#Senator Class Stables
+selectterr 435
+spr "ElephantStable.tga"
+name "War Elephant Stables"
+gold 3
+ownable
+apcost 1
+
+#- Rituals 
+
+newritual "Bring Forth the War Elephants"
+ritpow 31
+level 2
+free
+cost 0 50 #Gold
+cost 1 15 #Iron
+apcost 1
+terr 435
+addstring "War Elephant"
+summoning
+descr "The senator personally oversees the proper care and training of the legion's most powerful weapon and sees its deployment. This weapon is the War Elephant."
+
+newritual "Establish the Stables"
+ritpow 31
+level 2
+free
+apcost 5
+cost 0 150 #Cost gold
+soundfx 57
+terr -32
+alterloc 435
+closewin
+descr "The senator funds the project to establish a Elephant Stable."
+
+#### MARKGRAF MODIFICATIONS ####
+
+#- Terrain
+
+selectterrgroup  -1110
+setname "Old Castles and Graveyards"
+addterr -70
+addterr 235
+addterr  38
+
+#- Rituals
+
+selectritual "Flesh Rite"
+clearritspec
+terr -1110
+addstring "Markmeister"
+addstring "Ghoul Baron"
+addstring "Markgraf"
+addstring "Ghoul Baron"
+addstring "Markmann"
+addstring "Ghoul Baron"
+promotion 1
+closewin
+
+
+#### WARLOCK MODIFICATIONS ####
+
+#- Rituals
+
+selectritual "Flame Pact"
+cost 7 40 #Cost fire
+
+selectritual "Flame Pact" 1
+cost 7 20 #Cost fire
+
+selectritual "Water Pact"
+cost 8 40 #Cost water
+
+selectritual "Water Pact" 1
+cost 8 20 #Cost water
+
+selectritual "Storm Pact"
+cost 9 40 #Cost air
+
+selectritual "Storm Pact" 1
+cost 9 20 #Cost air
+
+selectritual "Earth Pact"
+cost 10 40 #Cost earth
+
+selectritual "Earth Pact" 1
+cost 10 20 #Cost earth
+
+selectritual "Lesser Fire Summoning"
+cost 7 20 #Cost fire 
+
+selectritual "Lesser Water Summoning"
+cost 8 20 #Cost water 
+
+selectritual "Lesser Air Summoning"
+cost 9 20 #Cost air 
+
+selectritual "Lesser Earth Summoning"
+cost 10 20 #Cost earth 
+
+#Fire Warlock
+
+selectritual "Greater Flame Pact"
+cost 7 120 #Cost fire
+
+selectritual "Greater Fire Summoning"
+cost 7 35 #Cost fire 
+
+selectritual "Summon Champion of Fire"
+cost 7 35 #Cost fire 
+
+selectritual "Circle of Flames"
+cost 7 3 #Cost fire 
+
+selectritual "Vafur Flames"
+cost 7 18 #Cost fire 
+
+selectritual "Summon Magma Warrior"
+cost 7 18 #Cost fire 
+cost 10 18 #Cost earth
+
+selectritual "Summon Smoke Warrior"
+cost 7 18 #Cost fire 
+cost 9 18 #Cost air
+
+selectritual "Summon King of Fire"
+cost 7 160 #Cost fire 
+
+selectritual "Wheel of Frost and Flames"
+cost 7 32 #Cost fire 
+cost 8 32 #Cost water 
+
+selectritual "Eternal Pyre"
+cost 7 80 #Cost fire 
+
+#Water Warlock
+
+selectritual "Greater Water Pact"
+cost 8 120 #Cost water
+
+selectritual "Greater Water Summoning"
+cost 8 35 #Cost water 
+
+selectritual "Summon Yeti"
+cost 8 18 #Cost water 
+cost 9 18 #Cost air
+
+selectritual "Summon Champion of Water"
+cost 8 35 #Cost water 
+
+selectritual "Summon Mud Warrior"
+cost 8 18 #Cost water 
+cost 10 18 #Cost earth
+
+selectritual "Maelstrom"
+cost 8 29 #Cost water 
+
+selectritual "Enchant Lake"
+cost 8 14 #Cost water 
+
+selectritual "Summon Queen of Water"
+cost 8 160 #Cost water 
+
+selectritual "Fimbul Fortress"
+cost 8 80 #Cost water 
+
+selectritual "Primal Maelstrom"
+cost 8 32 #Cost water 
+
+#Air Warlock
+
+selectritual "Greater Storm Pact"
+cost 9 120 #Cost air
+
+selectritual "Greater Air Summoning"
+cost 9 35 #Cost air 
+
+selectritual "Summon Champion of Air"
+cost 9 35 #Cost air 
+
+selectritual "Curtain of Storms"
+cost 9 18 #Cost air 
+
+selectritual "Summon Queen of Air"
+cost 9 160 #Cost air 
+
+selectritual "Wheel of Storm and Stone"
+cost 9 32 #Cost air 
+cost 10 32 #Cost earth
+
+selectritual "Perpetual Storm"
+cost 9 100 #Cost air 
+
+selectritual "Cloud Castle"
+cost 9 120 #Cost air 
+
+#Earth Warlock
+
+selectritual "Greater Earth Pact"
+cost 10 120 #Cost earth
+
+selectritual "Greater Earth Summoning"
+cost 10 35 #Cost earth 
+
+selectritual "Summon Champion of Earth"
+cost 10 35 #Cost earth 
+
+selectritual "Ramparts of Earth"
+cost 10 7 #Cost earth 
+
+selectritual "Dig"
+cost 10 7 #Cost earth 
+
+selectritual "Summon King of Earth"
+cost 10 160 #Cost earth 
+
+selectritual "Wizard's Tower"
+cost 10 80 #Cost earth 
+
+selectritual "Raise Volcano"
+cost 10 40 #Cost earth 
+cost 7  20 #Cost fire 
+
+#### DRYAD QUEEN MODIFICATIONS ####
+
+#- Rituals
+
+newritual "Call Forth Sacred Defenders"
+ritpow 47
+level 1
+free
+terr -65
+cost 2 150 #Cost herbs
+addstring "5*Dryad Queen's Home Guard"
+summoning
+descr ""
+
+#### KOBOLD KING MODIFICATIONS ####
+
+selectmonster  "Fire Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+selectmonster "Fire Dragon Hatchling"
+stupid
+stationary
+
+selectmonster  "Frost Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+spawnmon       16          # Spawns the next monster about every 6 turns. 16/100 per turn
+
+newmonster  "Frost Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Frost Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6 276 # Icy Breath: d6 Cold damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+coldres                      100 # Cold immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Storm Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Storm Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Storm Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6 858 # Lightning Breath: d6 Shock damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+shockres                     100 # Shock immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Bile Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Bile Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Bile Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6  38 # Poison Breath: d6 Poison damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+poisonres                    100 # Poison immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Dusk Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Dusk Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Dusk Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+spellweapon50s             9   1 # Dark Magic at level 1.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+fireres                      100 # Fire immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Red Kobold Sorcerer"
+clearspec
+power                      52  2 # Kobold, Red, level 1.
+mastery                        1
+fireres                      100
+
+selectmonster  "Blue Kobold Sorcerer"
+clearspec
+power                      53  2 # Kobold, Blue, level 1.
+mastery                        1
+coldres                      100
+
+selectmonster  "Green Kobold Sorcerer"
+clearspec
+power                      55  2 # Kobold, Green, level 1.
+mastery                        1
+poisonres                    100
+
+selectmonster  "White Kobold Sorcerer"
+clearspec
+power                      54  2 # Kobold, White, level 1.
+mastery                        1
+shockres                     100
+
+selectmonster  "Red Kobold King"
+power          54 3
+
+selectmonster  "Blue Kobold King"
+power          54 3
+
+selectmonster  "Green Kobold King"
+power          54 3
+
+selectmonster  "White Kobold King"
+power          54 3
+
+selectritual "Ritual of Mastery" 26
+cost 7 50
+
+selectritual "Ritual of Mastery" 27
+cost 10 50
+
+selectritual "Ritual of Mastery" 28
+cost 8 50
+
+selectritual "Ritual of Mastery" 29
+cost 9 50
+
+selectritual "Ritual of Grand Mastery" 22
+cost 7 200
+
+selectritual "Ritual of Grand Mastery" 23
+cost 10 200
+
+selectritual "Ritual of Grand Mastery" 24
+cost 8 200
+
+selectritual "Ritual of Grand Mastery" 25
+cost 9 200
+
+#-Events
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Fire Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Fire Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Bile Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Bile Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Frost Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Frost Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Dusk Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Dusk Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Storm Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Storm Dragon Hatchling"
+endevent
+
+#### ENCHANTER MODIFICATIONS ####
+
+selectritual "Animate Sword"
+apcost       0
+
+selectritual "Animate Bow"
+apcost       0
+
+selectritual "Animate Spear"
+apcost       1
+
+selectritual "Animate Armor"
+apcost       0
+
+selectritual "Craft Gargoyle"
+clearritspec
+descr "The Enchanter crafts a Gargoyle from ordinary earth and brings it to life with a complex ritual.  This ritual is both time consuming and expensive, but the gargoyle is a solid construct that is difficult to harm in combat."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost              1    5 # 5 Iron
+terr                 -94 # Required terrain: temples and fortified locations.
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 1 # Actual AP cost: 2.
+# fx1100               2 # Likely an undocumented AI tip related to stationary defenses.
+aialways              20 # Extra 20% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "3*Gargoyle"
+free
+
+selectritual "Create Flesh Golem"
+clearritspec
+descr "By taking five random corpses and stitching them together into one large humanoid being the Enchanter can create a Flesh Golem.  The creation of a Flesh Golem is relatively quick and inexpensive, but it is not nearly as powerful as golems made out of more solid materials."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost             14    5 # 5 Corpses (humanoid)
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 0 # Actual AP cost: 1.
+aialways              50 # Extra 50% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "2*Flesh Golem"
+
+selectritual "Sculpt Terracotta Soldier"
+descr "The Enchanter forms a soldier out of mud and brings it to life with a simple enchantment.  The process takes a long time, but it does not require any resources other than large quantities of mud."
+ritpow                11 # Enchantment
+level                  1
+terr                 -20 # Required terrain: swamp/bog.
+summoning                # The ritual will summon the monsters specified in a random string.
+destroyterr            8 # % chance of destroying the terrain.
+apcost                 1 # Actual AP cost: 2.
+aialways             999 # AI will always try to cast this ritual, and make long term plans to do so.
+aiweakonly           400 # AI commander will only cast this ritual if his troop strength is below this value. One spearman gives 10 troop strength points.
+addstring     "2*Terracotta Soldier"
+
+selectritual "Animate Tools"
+apcost       1
+
+selectritual "Create Mimic"
+clearritspec
+descr "Even though an Enchanter could create a Mimic from just about any furniture, the chest is usually the preferred piece of furniture to use. This gives the mimic a very large mouth with which it can attack its prey and chests are also exceedingly good at drawing the attention of any would-be raiders. It is possible to tell a Mimic apart from an ordinary piece of furniture by touching it, as it is quite slimy. The slime is sticky and will make it difficult to move and escape from the Mimic, even though a chest shape is badly suited for movement."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost              1    5 # 5 Iron
+terr                 -24 # Required terrain: villages and smaller settlements.
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 0 # Actual AP cost: 2.
+aialways              40 # Extra 40% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "Mimic"
+free
+
+selectritual "Craft Guardian"
+apcost       1
+free
+
+selectritual "Create Necrotod"
+apcost       1
+
+selectritual "Create Wood Golem"
+apcost       0
+
+selectritual "Create Stone Golem"
+apcost       0
+
+selectritual "Create Ice Golem"
+apcost       0
+
+selectritual "Create Clay Golem"
+apcost       0
+
+selectritual "Enliven Statue"
+clearritspec
+descr "With this ritual the Enchanter will bring a humanlike statue to life and make it obey simple orders.  The ritual can only be performed in temples where there is an ample supply of statues and each casting of this ritual has a chance of destroying the temple."
+ritpow                11 # Enchantment
+level                  2
+terr                  -2 # Required terrain: Ancient Temple.
+summoning                # The ritual will summon the monsters specified in a random string.
+destroyterr            5 # % chance of destroying the terrain.
+apcost                 0 # Actual AP cost: 1
+aialways             999 # AI will always try to cast this ritual, and make long term plans to do so.
+aiweakonly           400 # AI commander will only cast this ritual if his troop strength is below this value. One spearman gives 10 troop strength points.
+addstring     "Animated Statue"
+
+selectritual "Enchanted Gate"
+apcost       2
+free
+
+selectritual "Iron Grafting"
+promotion    3
+
+selectritual "Animate Ballista"
+apcost       1
+
+selectritual "Dogs of Gold and Silver"
+apcost       1
+
+selectritual "Create Juggernaut"
+terr        -2
+apcost       2
+
+selectritual "Create Oak Golem"
+apcost       2
+
+selectritual "Create Iron Golem"
+apcost       2
+
+selectritual "Create Onyx Golem"
+apcost       2
+
+selectritual "Create Crystal Golem"
+apcost       2
+
+selectritual "Create Silver Golem"
+apcost       2
+
+selectritual "Create Gold Golem"
+apcost       2
+
+selectritual "Create Home Portal"
+apcost       2
+
+selectritual "Create Portal"
+apcost       2
+
+selectritual "Infuse Magic Library"
+apcost       2
+
+selectritual "Brass Bull"
+apcost       2
+cost         0 350
+
+#- Units
+selectmonster "Dancing Spear"
+unaging
+
+selectmonster "Dancing Sword"
+unaging
+
+selectmonster "Animated Armor"
+unaging
+
+selectmonster "Gargoyle"
+unaging
+
+selectmonster "Terracotta Soldier"
+unaging
+
+selectmonster "Guardian"
+unaging
+
+selectmonster "Wood Golem"
+weaponslots
+
+selectmonster "Stone Golem"
+weaponslots
+unaging
+
+selectmonster "Ice Golem"
+weaponslots
+unaging
+
+selectmonster "Clay Golem"
+weaponslots
+unaging
+
+selectmonster "Animated Statue"
+weaponslots
+unaging
+
+selectmonster "Animated Ballista"
+unaging
+
+selectmonster "Dog of Gold"
+unaging
+
+selectmonster "Dog of Silver"
+unaging
+
+selectmonster "Juggernaut"
+unaging
+
+selectmonster "Oak Golem"
+weaponslots
+
+selectmonster "Iron Golem"
+weaponslots
+unaging
+
+selectmonster "Onyx Golem"
+weaponslots
+unaging
+
+selectmonster "Crystal Golem"
+weaponslots
+unaging
+
+selectmonster "Silver Golem"
+weaponslots
+unaging
+
+selectmonster "Gold Golem"
+weaponslots
+unaging
+
+selectmonster "Brass Bull"
+unaging
+
+#### BARBARIAN MODIFICATIONS ####
+
+#- Terrain
+selectterr  780
+name    "Moonlight Lodge"
+spr     "lodge.png"
+apcost  1
+gold    2
+herbs    3
+pop    10
+lifeforce   20
+walls
+woodengate
+citadel
+nostdrec
+ownable
+temple
+settlement
+
+#- Rituals
+
+newritual   "Raise Moonlight Lodge"
+ritpow      13 #Spirit Guide
+level       2
+cost        2 300
+terr        -62
+promotion
+alterloc    780
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Werebear"
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Wereboar"
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Werewolf"
+
+selectritual  "Summon Ancestor"
+clearritspec
+descr "The Spirit Guide builds a sweat lodge and burns aromatic herbs to attract the attention of an ancestral spirit of his tribe.  The spirit manifests as a spectral warrior ready to aid his descendants in battles."
+ritpow                13 # Spirit Summons
+level                  1
+cost              2   35 # 35 Herbs
+terr                 -42 # Required terrain: any land.
+summoning                # The ritual will summon the monsters specified in a random string.
+terrboost             19 # Adds 1 to the number of monsters summoned in this terrain: Old Battlefield.
+sum0chance             5 # % chance to summon first string instead of a random string among the others.
+addstring     "c*Ancestral Chief"
+addstring     "1d2*Ancestral Lancer"
+addstring     "1d3*Ancestral Warrior"
+addstring     "1d2*Ancestral Archer"
+
+selectritual  "Summon Heroes of Old"
+clearritspec
+descr "The Spirit Guide builds a sweat lodge and burns large amounts aromatic herbs to call the spirits of the tribe's most heroic ancestors."
+ritpow                13 # Spirit Summons
+level                  2
+cost              2  250 # 250 Herbs
+terr                 -42 # Required terrain: any land.
+summoning                # The ritual will summon the monsters specified in a random string.
+terrboost              4 # Adds 1 to the number of monsters summoned in this terrain: Ancient Forest.
+terrscale50           19 # 50% more monsters summoned in this terrain: Old Battlefield.
+addstring     "(4)c*Ancestor Guide"     # This string will only be included in terrain: Ancient Forest.
+addstring     "c*Ancestral Hero"
+addstring     "c*Ancestral Chief & 1d3+2*Ancestral Lancer"
+addstring     "1d4+2*Ancestral Warrior & 1d4+2*Ancestral Archer"
+addstring     "2d4+4*Ancestral Warrior"
+addstring     "2d4+1*Ancestral Lancer"
+
+selectritual  "Carve Totempole"
+cost          2 250
+free
+
+selectritual  "Promise of the Ancestors"
+cost          2 325
+
+selectritual  "Army of Legends"
+cost          2 750
+
+newritpow
+
+newritual "Raise Champion Host"
+level     1
+terr     -23
+cost       0 250
+summoning
+addstring  "2d6+3*Barbarian Champion"
+
+#- Units
+newmonster    "Barbarian Werewolf"                                               
+descr "In fact, among the henchmen or retainers composing the bodyguards there are varying degrees of rank conferred by the chief whom they follow, and there is an eager rivalry between the retainers for the post of honor next their chief, as well as between the different chiefs for the honor of having the most numerous and the most valiant bodyguard.  Here lie dignity and strength.  From a surviving slave who managed to flee after serving as a captive for the Barbarian Leader, strange tales about some of these bodyguards have been recorded.  It is said that some of the most honored bodyguards at times of great omens are fetched by some of the oldest Enaries to a sacred place in the forest, where they must crawl through the skin of an old Wolf while the priest covers them with tattoos and markings.  Upon returning, their mind is different and they become grumpy and solitary.  It is said that they now are possessed by the spirit of the Bear, and can take that shape during battles.  Some reports have described small tame Wolves fighting on the Barbarian side in battles, but nothing indicates that they were once humans."
+copyspr                 "Wolf"
+armor                          0 # Armor.
+hp                             8 # Hit Points.
+str                            5 # Strength.
+mor                            5 # Morale.
+mr                             5 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                6  11 # Bite: d6 Slash damage.
+fast
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+regeneration                     # Heals ~5% HP every combat round in battle. May rise from the dead if unit suffered less damage than 150% of its HP. Heals permanent battle afflictions over time.
+lookslike                      2 # To opposing players, this monster will appear to be the type defined 1 after this one; i.e. monster #1137: Bandit.
+
+newmonster    "Barbarian Wereboar"                                                 # 1136
+descr "In fact, among the henchmen or retainers composing the bodyguards there are varying degrees of rank conferred by the chief whom they follow, and there is an eager rivalry between the retainers for the post of honor next their chief, as well as between the different chiefs for the honor of having the most numerous and the most valiant bodyguard.  Here lie dignity and strength.  From a surviving slave who managed to flee after serving as a captive for the Barbarian Leader, strange tales about some of these bodyguards have been recorded.  It is said that some of the most honored bodyguards at times of great omens are fetched by some of the oldest Enaries to a sacred place in the forest, where they must crawl through the skin of an old Boar while the priest covers them with tattoos and markings.  Upon returning, their mind is different and they become grumpy and solitary.  It is said that they now are possessed by the spirit of the Bear, and can take that shape during battles.  Some reports have described small tame Boards fighting on the Barbarian side in battles, but nothing indicates that they were once humans."
+copyspr                 "Great Boar"
+armor                          1 # Armor.
+hp                            14 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             5 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                6  37 # Gore: d6 Slash damage.
+fast
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+regeneration                     # Heals ~5% HP every combat round in battle. May rise from the dead if unit suffered less damage than 150% of its HP. Heals permanent battle afflictions over time.
+lookslike                      1 # To opposing players, this monster will appear to be the type defined 1 after this one; i.e. monster #1137: Bandit.
+
+newmonster    "Barbarian Warrior"                                        #  123
+descr "They all possess precisely the same physical characteristics, fierce eyes, unruly hair, and large frames which are good only for a spurt; they certainly have not a corresponding power of endurance for hard work, while, although inured by the nature of their climate and soil to hunger and cold, they have never learnt to withstand heat and thirst.  Generally speaking, the footmen are the most numerous, and the fighting line therefore is composed of both arms combined, all the fastest runners among the young men being chosen for the van, and by their great speed of foot being admirably suited for a cavalry engagement.  Not being a crafty or a cunning race, they furthermore disclose their secret thoughts in the freedom of the feast, and so the minds of all lie open and discovered.  In quenching their thirst they are by no means so temperate; let them but be given all the intoxicating liquor they choose to drink, and vice will make an easier conquest of them than the sword."
+copyspr                 "Barbarian Warrior"
+armor                          0 # Armor.
+hp                             7 # Hit Points.
+str                            5 # Strength.
+mor                            5 # Morale.
+mr                             3 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                1   3 # Axe: d8 Slash damage.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+shield                           # Reduces damage from most weapons by 0-1; 0-2 against ranged weapons.
+allitemslots                     # Has the full set of item slots.
+berserker                        # Can go berserk if hit in combat.  Berserk: +1 Strength, +10 Morale, fight to -20% HP.
+
+newmonster      "Barbarian Champion"
+copyspr         "Unexpected Hero"
+armor                          1 # Armor.
+hp                            10 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             3 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                1  21 # Greatsword: d10 Slash damage.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+allitemslots                     # Has the full set of item slots.
+berserker
+
+
+selectmonster  "Onyx Amazon"
+clearmove
+mor             6
+
+selectmonster  "Jade Amazon"
+clearweapons
+poisonres      50
+meleeweapon    0 "Poison Spear"
+rangedweapon   0 "Sling"
+
+selectmonster  "Garnet Amazon"
+hp              8
+str             5
+mor             6
+
+selectmonster  "Barbarian Leader"
+hp             18
+armor           1
+power           0   1
+
+
+
+#### HOBURG MODIFICATIONS ####
+
+#- Terrain
+selectterr  781
+name                 "Labryinth Grove"
+herbs             2 # Herbs:  2
+fungus            2 # Fungus:  2
+weed              1 # Weed: 1
+lifeforce        35 # 3 Lifeforce can be drained from this square per turn.
+apcost            5 # Action Point cost for moving through the terrain: 6
+burnable            # The terran can be burned like forest.
+invisible           # Terrain on top of the background is not drawn, but the grass will still be drawn.
+forest              # The terrain counts as forest for the purposes of abilities like Forest Stealth.
+nosight             # The terrain does not provide vision into adjacent squares when owned.
+
+
+
+#- Rituals
+
+newritual     "Vessel of Wrath"
+descr "When the Entish guardians of the Hoburgs are engulfed in the flame of war leaving naught but dead cinders in its wake, the most stalwart of the Horticulturists give up their sense of self to become as a conduit for the rage and vengeance of the devestated wood spirits."
+ritpow              9 # Hoburg Weed
+level               3 
+cost            6 250 # 250 Weed
+#terr               37 # Shadow Wood
+castertarg
+promotion
+addstring          "Garden Master"
+addstring          "Scion of the Wood"
+free
+
+newritual    "Awaken Vine Men"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 50 # 50 Weed
+terr        -6    # Forests
+summoning
+addstring    "2d3+1*Vine Man"
+free
+
+newritual    "Awaken Vine Ogre"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 35 # 35 Weed
+terr        -6    # Forests
+summoning
+addstring    "Vine Ogre"
+free
+
+newritual    "Awaken Dark Vines"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost        6 150 # 150 Weed
+terr        -6    # Forests
+summoning
+addstring    "Dark Vines"
+free
+
+newritual    "Awaken Ivy King"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost        6 350 # 350 Weed
+terr        -97   # Ancient Forests and similar
+summoning
+addstring    "c*Ivy King & 2*Vine Man & Vine Ogre"
+free
+
+#newritual    "Labryinth Grove"
+#descr        "wip"
+#level        4
+#ritpow              9 # Hoburg Weed
+#cost           6 35 # 35 Weed
+#soundfx     57
+#chooseterrloc         -21
+#alterloc               781
+#free
+
+#newritual    "Wild Regrowth"
+#descr        "wip"
+#level        4
+#ritpow              9 # Hoburg Weed
+#cost         6 100 # 100 Weed
+#soundfx     57
+#free
+
+newritual    "Walking Woods"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 250 # 250 Weed
+terr        -6     # Forests and Jungles
+soundfx     57
+seteventvar 7801
+free
+
+newritual    "Tree Sight"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 200 # 200 Weed
+terr        -6
+soundfx     57
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+free
+
+#- Events
+
+squareevent
++varequal  7801 1 # True after casting Walking Woods
++terrain       -6 # Forests and jungles
++plane         -2
+message        -1 "Bark and branch, root and vine, suddenly forests across all of Elysium shudder and move, taking on a life of their own and harrying civilization!"
+setvar     7801 0
++chance         5 # Five percent chance per forest tile
+alterterrain    0 # Turn into plains
+newunits       -2 "c*Vine Ogre & 2d4 Vine Man"
+endevent
+
+#- Units
+
+selectmonster "Horologist"
+chopforest                     1
+
+selectmonster "Clockwork Master Crafter"
+chopforest                     1
+
+newmonster    "Scion of the Wood"
+descr         "WIP"
+spr1          "scion1.tga"
+spr2          "scion2.tga"
+armor                          1 # Armor.
+hp                             8 # Hit Points.
+str                            4 # Strength.
+mor                            5 # Morale.
+mr                             9 # Magic Resistance.
+rank                          -1 # Back rank.
+spellweapon               54   3 # Forest Magic at level 3.
+meleeweapon               -1   5 # Staff: d2 Blunt damage.
+slow                             # The monster only has 2 AP.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+allitemslots                     # Has the full set of item slots.
+power                       9  4 # Hoburg Weed, level 4.
+nametype                       4 # Germanic male.
+awakentrees                    6 # Animate trees in 6 radius
+fireres                      -25 # 25% weakness to fire
+
+newmonster    "Vine Man"
+descr         "plant boi"
+spr1          "vineman1.png"
+spr2          "vineman2.png"
+armor                     1 
+hp                        8
+str                       5
+mor                      99
+mr                        5
+rank                      1 # Front Rank
+meleeweapon50s        3 332 # Tangle vines d3 blunt
+meleeweapon        2 "Fist" # d2 Blunt
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+newmonster    "Vine Ogre"
+descr         "plant boi"
+spr1          "vineogre1.png"
+spr2          "vineogre2.png"
+armor                     1 
+hp                       38
+str                       7
+mor                      99
+mr                        5
+size2x2
+rank                      1 # Front Rank
+meleeweaponbonus      6 332 # Tangle Vines d6 blunt
+meleeweapon50s        6 332 # Tangle vines d6 blunt
+meleeweapon        12 "Fist" # d12 Blunt
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+newmonster    "Dark Vines"
+descr         "plant boi"
+spr1          "darkvines1.png"
+spr2          "darkvines2.png"
+huge
+armor                     1 
+hp                       87
+str                       8
+mor                      99
+mr                        7
+rank                      1 # Front Rank
+meleeweaponbonus       6 "Tentacle" # d6 Blunt
+meleeweaponbonus       6 "Tentacle" # d6 Blunt
+meleeweaponbonus       6 "Tentacle" # d6 Blunt     
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+noeyes
+hpoverflow                1 # Increased HP persists
+absorbdead                3 # Consumes 3 corpses per turn for 9 Hp
+
+newmonster    "Ivy King"
+descr         "plant boi"
+spr1          "ivyking1.png"
+spr2          "ivyking2.png"
+armor                     1 
+hp                       42
+str                       7
+mor                      99
+mr                        5
+size2x2
+rank                     -1 # Back Rank
+meleeweaponbonus      6 332 # Tangle Vines d6 blunt
+meleeweapon50s        6 332 # Tangle vines d6 blunt
+meleeweapon       12 "Fist" # d12 Blunt
+spellweaponbonus  60 3      # Tree magic
+power                   9 4 # Scion rituals
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+#### BARON ####
+
+newritual       "Establish Capital"
+descr           "Whence commeth law? Whence commeth loyalty? Whence commeth order? Elysium is in need of all of these things desperately and immediately. Only the Baron can wrest the world from this chaotic state, but first he must gather together the resources to crown himself a great leader."
+ritpow           6 # Baron
+cost         0 450 # 450 Gold
+terr            -9 #
+soundfx         57
+movehome         1 
+free
+nonearby99req   124 # Must not have a King's Castle on the plane
+alterloc        124 # Creates King's Castle
+
+selectritual  "Raise Levies"
+clearritspec
+descr "Raises a militia from the local population that will defend the place from brigands, animals or worse.  The militia can only be raised in a settlement where there is no militia already.  The larger the settlement, the larger the militia will be."
+ritpow                 6 # Baron
+level                  1
+terr                 -14 # Required terrain: human settlement.
+nomonreq                 # Monsters in strings beginning with "(-)" must not be here.
+sacrscale                # Summoning amount scales with sacrifice income of target square.
+summoning                # The ritual will summon the monsters specified in a random string.
+aialways             100 # AI will always try to cast this ritual if it currently can, but it will not make long term plans to do so.
+free                     # Always start with this ritual in addition to the others.
+addstring     "1d7+1*Levy"
+addstring     "(-)Levy"     # This string will only be used by nomon[...] commands.
+
+
+
+#### -----Class Content----- ####
+
+#Baron
+selectclass 1
+addstartunits "Scout" 1
+addstartunits "Baron's Home Guard" 5
+
+
+#Necromancer
+selectclass 2
+addstartunits "Scout" 1
+addstartunits "Necromancer's Home Guard" 5
+clearrec #Clears the Necro recruitment list so we can reset it
+addcomrec "Necromancer's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Necromancer's Apprentice"
+reclimiter "-Necromancer"
+reclimiter "-Grand Necromancer"
+addcomrec "Necromancer's Apprentice" 15 50 d12 0 #Make it 15 percent
+libraryrec
+addunitrec "Soulless Soldier" 100 5 0 0 5
+reclimiter "=Soulless"
+addunitrec "Armored Soulless" 100 5 0 0 20
+reclimiter "=Soulless"
+addunitrec "Armored Longdead" 100 5 0 0 20
+reclimiter "=Longdead"
+addunitrec "Bane Fire Archer" 100 5 0 0 0
+reclimiter "=Longdead"
+recxcost 5 20
+addunitrec "Bane-Bones" 100 5 0 0 10
+reclimiter "=Longdead"
+recxcost 5 5
+
+#Demonologist
+selectclass 3
+addstartunits "Scout" 1
+addstartunits "Demonologist's Home Guard" 5
+addcomrec "Cultist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cultist"
+reclimiter "-Demonologist"
+reclimiter "-Goetic Master"
+
+
+#Witch
+selectclass 4
+addstartunits "Scout" 1
+addstartunits "Witch's Home Guard" 5
+addcomrec "Witch's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Witch's Apprentice"
+reclimiter "-Witch"
+reclimiter "-Hag"
+
+
+#High Priestess
+selectclass 5
+addstartunits "Scout" 1
+addstartunits "High Priestess's Home Guard" 5
+addcomrec "Hierodule" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Hierodule"
+reclimiter "-High Priestess"
+reclimiter "-Anointed Priestess"
+
+
+#Bakemono
+selectclass 6
+addstartunits "Bakemono Scout" 1
+addmercrec "Bakemono Scout" 10 1 20 d6 0 
+addstartunits "Bakemono's Home Guard" 5
+addcomrec "Bakemono Shaman" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Bakemono Sorceror"
+reclimiter "-Bakemono Great Sorceror"
+reclimiter "-Bakemono Shaman"
+reclimiter "-Bakemono Witch Doctor"
+
+
+#Barbarian
+selectclass 7
+addstartterr           109
+addstartterr           109
+clearstartunits
+setmaincom             "Barbarian Leader"
+addstartunits          "Barbarian Warrior"        20
+addstartunits          "Barbarian Bowman"          5
+addstartunits          "Scout" 1
+addstartunits          "Barbarian's Home Guard" 5
+addstartunits          "Thunder Totem"              1
+addstartcom            "Spirit Guide"
+addcomrec "Spirit Guide" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Spirit Guide"
+reclimiter "-Enarie"
+reclimiter "-Elder Enarie"
+addcomrec   "Crystal Priestess"              10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Crystal Priestess"
+addcomrec   "Garnet Priestess"               10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Garnet Priestess"
+addcomrec   "Onyx Priestess"                 10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Onyx Priestess"
+addcomrec   "Jade Priestess"                 10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Jade Priestess"
+addunitrec "Crystal Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Crystal Priestess"
+reclimiter  "+Painted Crystal Priestess"
+reclimiter  "+Crystal Sorceress"
+addunitrec "Jade Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Jade Priestess"
+reclimiter  "+Painted Jade Priestess"
+reclimiter  "+Jade Sorceress"
+addunitrec "Onyx Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Onyx Priestess"
+reclimiter  "+Painted Onyx Priestess"
+reclimiter  "+Onyx Sorceress"
+addunitrec "Garnet Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Garnet Priestess"
+reclimiter  "+Painted Garnet Priestess"
+reclimiter  "+Garnet Sorceress"
+addunitrec "Barbarian Werebear" 100 1 25 0
+recterr     780
+addunitrec "Barbarian Wereboar" 100 2 35 0
+recterr     780
+addunitrec "Barbarian Werewolf" 100 3 50 0
+recterr     780
+
+
+#Senator
+selectclass 8
+addstartunits "Scout" 1
+addstartunits "Senator's Home Guard" 5
+addcomrec "Senator" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Senator"
+reclimiter "-Emperor"
+addcomrec "Reveler" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Reveler"
+
+
+#Pale Ones (Agartha)
+selectclass 9
+addstartunits "Pale One Scout" 1
+addstartunits "Pale Ones's Home Guard" 5 
+addcomrec "Earth Reader" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Earth Reader"
+reclimiter "-Earth Mind"
+
+
+#Druid
+selectclass 10
+addstartunits "Barechested Scout" 1
+addstartunits "Druid's Home Guard" 5
+addcomrec "Druid's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Druid's Apprentice"
+reclimiter "-Druid"
+reclimiter "-Elder Druid"
+
+
+#Burgmeister (Hoburg) 
+selectclass 11
+addstartunits "Hoburg Scout" 1
+addstartunits "Burgmeister's Home Guard" 15 
+addcomrec "Horticulturist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Horticulturist"
+reclimiter "-Garden Master"
+reclimiter "-Burgmeister"
+addcomrec "Horologist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Horologist"
+reclimiter "-Clockwork Master Crafter"
+
+
+#Warlock
+selectclass 12
+addstartunits "Scout" 1
+addstartunits "Warlocks's Home Guard" 5
+addcomrec "Warlock's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Warlock's Apprentice"
+reclimiter "-Warlock of Fire"
+reclimiter "-Great Warlock of Fire"
+reclimiter "-Warlock of Water"
+reclimiter "-Great Warlock of Water"
+reclimiter "-Warlock of Air"
+reclimiter "-Great Warlock of Air"
+reclimiter "-Warlock of Earth"
+reclimiter "-Great Warlock of Earth"
+
+
+#Priest King (Mictlan)
+selectclass 13
+addstartunits "Scout" 1 
+addstartunits "Priest King's Home Guard" 5
+addcomrec "Sun Temple Attendant" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Sun Temple Attendant"
+reclimiter "-Priest King"
+reclimiter "-High Priest of the Sun"
+
+
+#Troll King
+selectclass 14
+addstartunits "Goblin Scout" 1
+addstartunits "Troll King's Home Guard" 10
+addcomrec "Goblin Shaman" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Goblin Shaman"
+reclimiter "-Goblin Witch Doctor"
+reclimiter "-Troll Shaman"
+reclimiter "-Troll Witch Doctor"
+reclimiter "-Elder Troll Shaman"
+
+
+#Enchanter
+selectclass 15
+addstartunits "Scout" 1
+addstartunits "Enchanter's Home Guard" 5
+addcomrec "Enchanter's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Enchanter's Apprentice"
+reclimiter "-Enchanter"
+reclimiter "-Great Enchanter"
+
+
+#Beholder (Non Playable) 
+#selectclass 16
+
+#Archmage (Non Playable)
+#selectclass 17
+
+#Goblin King (Non Playable)
+#selectclass 18
+
+
+#High Cultist
+selectclass 19
+addstartunits "Scout" 1
+addstartunits "High Cultist's Home Guard" 5
+addcomrec "Cultist of the Deep" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cultist of the Deep"
+reclimiter "-High Cultist"
+
+
+#Dwarf Queen
+selectclass 20
+addstartunits "Outdoor Dwarf" 1
+addstartunits "Dwarf Queen's Home Guard" 5
+clearrec #Clears the Dwarf recruitment list so we can reset it
+addunitrec "Dwarf" 100 5 0 0 20
+addunitrec "Dwarf Warrior" 100 5 0 0 20
+addunitrec "Dwarf Guard" 100 5 0 0 40
+addunitrec "Dwarf Arbalest" 100 5 0 0 30
+addunitrec "Outdoor Dwarf" 100 2 10 0 10
+addunitrec "Dwarf Sapper" 100 5 0 0 30
+addunitrec "Dwarven Ballista" 100 2 0 0 60
+addcomrec "Dwarf Commander" 100 20 0 10 
+
+
+#Voice of El (Priest)
+selectclass 21
+addstartunits "Scout" 1
+addstartunits "Voice of El's Home Guard" 5
+addcomrec "Bishop" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Bishop"
+reclimiter "-Arch Bishop"
+reclimiter "-Cardinal"
+reclimiter "-Pontiff"
+addmercrec "Angel" 50 1 100 0 0
+reclimiter "+Arch Bishop"
+recxcost 12 10
+addmercrec ""Harbinger"" 50 1 150 0 0
+reclimiter "+Cardinal"
+recxcost 12 20
+addmercrec ""Arch Angel" 50 1 200 0 0
+reclimiter "+Pontiff"
+recxcost 12 30
+
+
+#Illusionist
+selectclass 22
+addstartunits "Scout" 1
+addstartunits "Illusionist's Home Guard" 5
+addcomrec "Illusionist's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Illusionist's Apprentice"
+reclimiter "-Illusionist"
+reclimiter "-Master Illusionist"
+
+
+#Markgraf
+selectclass 23
+addstartunits "Hoburg Scout" 1
+addstartunits "Markgraf's Home Guard" 15 
+addcomrec "Nekromant" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Nekromant"
+reclimiter "-Grand Nekromant"
+reclimiter "-Ghoulgraf"
+reclimiter "-Ghoul Baron"
+
+
+#Dryad Queen (Pan)
+selectclass 24
+addstartunits "Harpy Scout" 1
+addstartunits "Dryad Queen's Home Guard" 5  
+addcomrec "Dryad" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Dryad"
+reclimiter "-Dryad Queen"
+reclimiter "-Anointed of Gaia" 
+
+
+#Scourge Lord
+selectclass 25
+addstartunits "Scout" 1
+addstartunits "Scourge Lord's Home Guard" 5
+addcomrec "Scourage Herald" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Scourage Herald"
+reclimiter "-Scourage Lord"
+reclimiter "-Scourage King"
+
+
+#Cloud Lord
+selectclass 26
+addstartunits "Airya Scout" 1
+addstartunits "Cloud Lord's Home Guard" 5
+addcomrec "Cloud Caster" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cloud Caster"
+reclimiter "-Cloud Lord"
+reclimiter "-Eagle King"
+
+
+#Kobold King
+selectclass 27
+addstartunits "Black Kobold Murderer" 1
+addstartunits "Kobold King's Home Guard" 10
+addcomrec     "Red Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Red Kobold Shaman"
+reclimiter    "+Red Kobold Chief"
+addcomrec     "Red Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Red Kobold Sorcerer"
+reclimiter    "+Red Kobold Shaman"
+addcomrec     "Blue Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Blue Kobold Shaman"
+reclimiter    "+Blue Kobold Chief"
+addcomrec     "Blue Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Blue Kobold Sorcerer"
+reclimiter    "+Blue Kobold Shaman"
+addcomrec     "Green Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Green Kobold Shaman"
+reclimiter    "+Green Kobold Chief"
+addcomrec     "Green Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Green Kobold Sorcerer"
+reclimiter    "+Green Kobold Shaman"
+addcomrec     "White Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-White Kobold Shaman"
+reclimiter    "+White Kobold Chief"
+addcomrec     "White Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-White Kobold Sorcerer"
+reclimiter    "+White Kobold Shaman"
+addcomrec     "Black Kobold Slayer Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Black Kobold Slayer Shaman"
+reclimiter    "+Black Kobold Chief"
+
+#Monkey Maharaja
+selectclass 28
+clearstartunits
+setmaincom             "Bandaraja"
+addstartunits          "Markata"                  10
+addstartunits          "Markata Archer"           10
+addstartunits          "Vanara Archer"             5
+addstartunits          "Vanara Soldier"            5
+addstartunits  "Maharaja's Home Guard" 5
+addstartcom    "Yogi"
+addcomrec      "Yogi" 25 50 d12 0 #Make it 25 percent
+reclimiter     "-Yogi"
+addcomrec      "Bandaraja" 25 60 d10 0 #Make it 25 percent
+reclimiter     "-Bandaraja"
+
+#Raksharaja
+selectclass 29
+addstartunits  "Raksharaja's Home Guard" 5
+addcomrec      "Rakshasa General" 25 100 20 0 
+reclimiter     "-Raksharaja"
+reclimiter     "-Rakshasa General"
+
+
+#-----Events-----
+
+#Event Code to Aid in Testing
+#playerevent
+#+turnnbr 1
+#addresources -2 0 5000
+#addresources -2 7 5000
+#addresources -2 8 5000
+#addresources -2 9 5000
+#addresources -2 10 5000
+#endevent

@@ -138,7 +138,8 @@ def main():
 
     # Find the ritual data file
     script_dir = Path(__file__).parent
-    ritual_data_file = script_dir / "Ritual Data v5.33.c5m"
+    project_dir = script_dir.parent
+    ritual_data_file = project_dir / "data" / "Ritual Data v5.33.c5m"
 
     if not ritual_data_file.exists():
         print(f"Error: Could not find '{ritual_data_file}'")
@@ -148,7 +149,7 @@ def main():
     rituals = parse_ritual_data(ritual_data_file)
     print(f"Found {len(rituals)} rituals with costs")
 
-    output_path = script_dir / output_file
+    output_path = project_dir / "output" / output_file
     print(f"Generating mod file: {output_path}")
     num_modified = generate_mod_file(rituals, percentage, output_path)
 

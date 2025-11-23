@@ -1,0 +1,9 @@
+{
+  "description": "Ritual cost modifier by spell level - buff early game rituals",
+
+  "level_modifiers": {
+    "1": 80,
+    "2": 90,
+    "3": 100
+  }
+}

@@ -65,7 +65,8 @@ def parse_ritual_data(filepath):
                     'name': match.group(1),
                     'costs': [],
                     'ritpow': None,
-                    'ritpow_name': None
+                    'ritpow_name': None,
+                    'level': None
                 }
                 continue
 
@@ -78,6 +79,12 @@ def parse_ritual_data(filepath):
                     current_ritual['ritpow'] = ritpow_num
                     current_ritual['ritpow_name'] = ritpow_name
                     ritpow_names[ritpow_num] = ritpow_name
+                    continue
+
+                # Check for level
+                match = re.match(r'level\s+(\d+)', line.split('#')[0])
+                if match:
+                    current_ritual['level'] = int(match.group(1))
                     continue
 
                 # Check for cost line
@@ -128,6 +135,9 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
     # Process config (supports both old and new tier-based format)
     default_pct, ritpow_modifiers, tiers, class_tiers = process_config(config, ritpow_names)
 
+    # Get level modifiers if present
+    level_modifiers = config.get('level_modifiers', {})
+
     modified_count = 0
     skipped_count = 0
 
@@ -139,9 +149,15 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
         f.write("# Generated from Ritual Data v5.33.c5m\n")
         f.write("# \n")
 
+        if level_modifiers:
+            f.write("# Ritual Level Modifiers:\n")
+            for level, pct in sorted(level_modifiers.items(), key=lambda x: int(x[0])):
+                f.write(f"#   Level {level}: {pct}%\n")
+            f.write("# \n")
+
         if tiers:
             # Tier-based format
-            f.write("# Tier Definitions:\n")
+            f.write("# Class Tier Definitions:\n")
             for tier_name, pct in sorted(tiers.items()):
                 f.write(f"#   {tier_name}: {pct}%\n")
             f.write("# \n")
@@ -156,7 +172,7 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
                 classes = sorted(tier_groups[tier_name])
                 f.write(f"#   {tier_name}: {', '.join(classes)}\n")
             f.write("# \n\n")
-        else:
+        elif ritpow_modifiers:
             # Old format
             f.write(f"# Default modifier: {default_pct}%\n")
             f.write("# \n")
@@ -164,17 +180,29 @@ def generate_mod_file(rituals, config, ritpow_names, output_path):
             for ritpow_id, pct in sorted(ritpow_modifiers.items(), key=lambda x: int(x[0])):
                 f.write(f"#   Ritpow {ritpow_id}: {pct}%\n")
             f.write("# \n\n")
+        else:
+            f.write("\n")
 
         current_ritpow = None
 
         for ritual in rituals:
             ritpow = ritual['ritpow']
+            level = ritual['level']
 
-            # Determine percentage for this ritual
+            # Determine base percentage for this ritual (from class tier)
             if ritpow is not None and str(ritpow) in ritpow_modifiers:
-                percentage = ritpow_modifiers[str(ritpow)]
+                class_pct = ritpow_modifiers[str(ritpow)]
             else:
-                percentage = default_pct
+                class_pct = default_pct
+
+            # Apply level modifier if present
+            if level is not None and str(level) in level_modifiers:
+                level_pct = level_modifiers[str(level)]
+            else:
+                level_pct = 100
+
+            # Combine modifiers (multiply percentages)
+            percentage = (class_pct * level_pct) // 100
 
             # Skip if 100% (no change)
             if percentage == 100:
@@ -255,7 +283,8 @@ def generate_config_template(ritpow_names, output_path):
 
 def main():
     script_dir = Path(__file__).parent
-    ritual_data_file = script_dir / "Ritual Data v5.33.c5m"
+    project_dir = script_dir.parent
+    ritual_data_file = project_dir / "data" / "Ritual Data v5.33.c5m"
 
     if not ritual_data_file.exists():
         print(f"Error: Could not find '{ritual_data_file}'")
@@ -299,7 +328,7 @@ def main():
     else:
         output_file = "tiered_ritual_costs.c5m"
 
-    output_path = script_dir / output_file
+    output_path = project_dir / "output" / output_file
 
     print(f"Parsing ritual data from: {ritual_data_file}")
     print(f"Found {len(rituals)} rituals with costs")

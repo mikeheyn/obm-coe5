@@ -4222,3 +4222,14 @@ clearmove
 
 selectmonster "Little Soulless Defender"
 clearmove
+
+selectmonster "Olm"
+clearmove
+
+selectmonster "Olm Sage"
+clearmove
+
+selectmonster "Sentinel"
+clearmove
+
+selectmonster ""

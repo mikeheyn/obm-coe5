@@ -1,0 +1,143 @@
+#hoburg fastening
+
+selectmonster "Burgmeister"
+clearmove
+
+selectmonster "Burgmann"
+clearmove
+
+selectmonster "Horticulturist"
+clearmove
+
+selectmonster "Garden Master"
+clearmove
+
+selectmonster "Horologist"
+clearmove
+
+selectmonster "Clockwork Master Crafter"
+clearmove
+
+selectmonster "Hoburg Militia"
+clearmove
+
+selectmonster "Hoburg Slinger"
+clearmove
+
+selectmonster "Hoburg Soldier"
+clearmove
+
+selectmonster "Hoburg Defender"
+clearmove
+
+selectmonster "Hoburg Crossbow"
+clearmove
+
+selectmonster "Hoburg Pikeneer"
+clearmove
+
+selectmonster "Burgmeister Guard"
+clearmove
+
+selectmonster "Hog Knight"
+fast
+
+selectmonster "Hogmeister"
+fast
+
+selectmonster "Hoburg Scout"
+clearmove
+
+# Markgraf fastening
+
+selectmonster "Markgraf"
+clearmove
+
+selectmonster "Malefic Markgraf"
+clearmove
+
+selectmonster "Malefic Master"
+fast
+saner 3
+thrallhunt 5
+
+selectmonster "Markmann"
+saner 1
+
+selectmonster "Ghoulgraf"
+clearmove
+
+selectmonster "Nekromant"
+clearmove
+saner 1
+
+selectmonster "Grand Nekromant"
+clearmove
+saner 3
+
+selectmonster "Corpse Nekromant"
+clearmove
+
+selectmonster "Wight Nekromant"
+clearmove
+
+selectmonster "Ghost Nekromant"
+saner 1
+
+selectmonster "Grand Ghost Nekromant"
+saner 2
+
+selectmonster "Malefic Markmeister"
+saner 1
+
+selectmonster "Malefic Hauptmarkmeister"
+clearmove
+
+selectmonster "Hoburg Thrall"
+clearmove
+
+selectmonster "Hobmark Soldier"
+clearmove
+
+selectmonster "Hobmark Defender"
+clearmove
+
+selectmonster "Hobmark Crossbow"
+clearmove
+
+selectmonster "Hobmark Hammerer"
+clearmove
+
+selectmonster "Hobmark Pikeneer"
+clearmove
+
+selectmonster "Markgraf Guard"
+clearmove
+
+selectmonster "Hog Hussar"
+fast
+
+selectmonster "Markmeister"
+fast
+thrallhunt 5
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Soulless"
+clearmove
+
+selectmonster "Little Soulless Soldier"
+clearmove
+
+selectmonster "Little Soulless Defender"
+clearmove

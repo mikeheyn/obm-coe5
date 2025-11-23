@@ -1,0 +1,11 @@
+{
+  "description": "Example tier balance - Buff weak classes, nerf strong ones",
+  "default": 100,
+  "ritpow_modifiers": {
+    "1": 75,
+    "3": 120,
+    "4": 80,
+    "5": 90,
+    "11": 110
+  }
+}

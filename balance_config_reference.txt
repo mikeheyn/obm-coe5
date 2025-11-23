@@ -1,0 +1,68 @@
+Ritual Power ID Reference
+==================================================
+
+1: Necromancy
+3: Demonology
+4: Witchery
+5: Druidism
+6: Baron
+7: Bakemono Rituals
+8: Baalite Rituals
+9: Hoburg Weed
+10: Hoburg Clockwork
+11: Enchantment
+12: Mictlan Rituals
+13: Spirit Summons
+15: Pale One Rituals
+16: Revelry
+18: Warlock of Fire
+19: Warlock of Water
+20: Warlock of Air
+21: Warlock of Earth
+22: Troll Magic
+23: High Cultist
+24: Star Spawn
+26: Illusionist
+27: Monk
+28: Dvala
+29: Rune Smith
+30: Dwarf Councilor
+31: Senator
+32: Empress
+33: War Priest
+34: Blood Priest
+35: Sky Priest
+36: Rain Priest
+37: Night Priest
+38: Death Priest
+39: Nekromant
+40: Fire Giant
+41: Frost Giant
+42: Mountain Giant
+43: Storm Giant
+44: Sea Giant
+45: Dark Emperor
+46: God Emperor of the Underworld
+47: Dryad Queen
+48: Scourge Lord
+49: Cloud Lord
+50: Renatus
+51: Kobold, Black
+52: Kobold, Red
+53: Kobold, Blue
+54: Kobold, White
+55: Kobold, Green
+56: Alchemist
+57: Magistratus
+58: Crystal Amazon
+59: Garnet Amazon
+60: Jade Amazon
+61: Onyx Amazon
+62: White One
+63: Akashic, Ruby
+64: Akashic, Sapphire
+65: Akashic, Diamond
+66: Akashic, Emerald
+67: Raksharaja
+68: Guildmaster
+69: Engineer Magus

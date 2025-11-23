@@ -1,0 +1,1764 @@
+# OBM Tiered Ritual Cost Modifier
+# 
+# This mod adjusts ritual costs by class/ritual power type.
+# Generated from Ritual Data v5.33.c5m
+# 
+# Tier Definitions:
+#   A: 90%
+#   B: 80%
+#   C: 70%
+#   D: 60%
+#   F: 50%
+#   S: 100%
+# 
+# Class Assignments:
+#   A: Baalite Rituals, Baron, Blood Priest, Cloud Lord, Dark Emperor, Death Priest, Druidism, Empress, Enchantment, God Emperor of the Underworld, Mictlan Rituals, Night Priest, Rain Priest, Revelry, Senator, Sky Priest, War Priest, Warlock of Air, Warlock of Earth, Warlock of Fire, Warlock of Water, Witchery
+#   A Tier - 10% off: _comment2
+#   B: Akashic, Diamond, Akashic, Emerald, Akashic, Ruby, Akashic, Sapphire, Alchemist, Dvala, Dwarf Councilor, Engineer Magus, Fire Giant, Frost Giant, Magistratus, Monk, Mountain Giant, Pale One Rituals, Renatus, Rune Smith, Sea Giant, Storm Giant, Troll Magic, White One
+#   B Tier - 20% off: _comment3
+#   C: Bakemono Rituals, Demonology, Hoburg Clockwork, Hoburg Weed
+#   C Tier - 30% off: _comment4
+#   D: High Cultist, Nekromant, Star Spawn
+#   D Tier - 40% off: _comment5
+#   F: Dryad Queen, Kobold, Black, Kobold, Blue, Kobold, Green, Kobold, Red, Kobold, White, Raksharaja
+#   F Tier - 50% off (weakest classes): _comment6
+#   S: Crystal Amazon, Garnet Amazon, Guildmaster, Illusionist, Jade Amazon, Necromancy, Onyx Amazon, Scourge Lord, Spirit Summons
+#   S Tier - Strongest classes, no reduction: _comment
+#   Unassigned - defaulting to B: _comment7
+# 
+
+
+# --- Druidism (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 2 23  # 23 Herbs (was 25)
+
+selectritual "Ritual of Mastery"
+cost 2 135  # 135 Herbs (was 150)
+
+selectritual "Ritual of Grand Mastery"
+cost 2 540  # 540 Herbs (was 600)
+
+selectritual "Minor Animal Summoning"
+cost 2 14  # 14 Herbs (was 15)
+
+selectritual "Messenger Crows"
+cost 2 14  # 14 Herbs (was 15)
+
+selectritual "Plant Forest Guardians"
+cost 2 14  # 14 Herbs (was 15)
+
+selectritual "Unification"
+cost 2 135  # 135 Herbs (was 150)
+
+selectritual "Major Animal Summoning"
+cost 2 68  # 68 Herbs (was 75)
+
+selectritual "Summon Mythic Beasts"
+cost 2 90  # 90 Herbs (was 100)
+
+selectritual "Heart of the Forest"
+cost 2 135  # 135 Herbs (was 150)
+
+selectritual "Lord of the Wild"
+cost 2 90  # 90 Herbs (was 100)
+
+selectritual "Wild Hunt"
+cost 2 270  # 270 Herbs (was 300)
+
+selectritual "Revive Ancient Forest"
+cost 2 315  # 315 Herbs (was 350)
+
+selectritual "Call Primal Being"
+cost 2 900  # 900 Herbs (was 1000)
+
+selectritual "Summon Legendary Beings"
+cost 2 405  # 405 Herbs (was 450)
+
+selectritual "Shepherds of the Wood"
+cost 2 270  # 270 Herbs (was 300)
+
+selectritual "Faery Paths"
+cost 2 90  # 90 Herbs (was 100)
+
+
+# --- Enchantment (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 0 9  # 9 Gold (was 10)
+
+selectritual "Ritual of Mastery"
+cost 0 54  # 54 Gold (was 60)
+
+selectritual "Ritual of Grand Mastery"
+cost 0 324  # 324 Gold (was 360)
+
+selectritual "Animate Sword"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Bow"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Spear"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Armor"
+cost 1 9  # 9 Iron (was 10)
+
+selectritual "Craft Gargoyle"
+cost 0 5  # 5 Gold (was 5)
+cost 1 5  # 5 Iron (was 5)
+
+selectritual "Create Flesh Golem"
+cost 0 5  # 5 Gold (was 5)
+cost 14 5  # 5 Corpses (humanoid) (was 5)
+
+selectritual "Animate Tools"
+cost 1 9  # 9 Iron (was 10)
+
+selectritual "Create Mimic"
+cost 0 5  # 5 Gold (was 5)
+cost 1 5  # 5 Iron (was 5)
+
+selectritual "Craft Guardian"
+cost 0 14  # 14 Gold (was 15)
+cost 1 5  # 5 Iron (was 5)
+
+selectritual "Create Necrotod"
+cost 0 32  # 32 Gold (was 35)
+cost 17 9  # 9 Corpses (was 10)
+
+selectritual "Create Wood Golem"
+cost 0 18  # 18 Gold (was 20)
+cost 1 18  # 18 Iron (was 20)
+
+selectritual "Create Stone Golem"
+cost 0 36  # 36 Gold (was 40)
+cost 1 36  # 36 Iron (was 40)
+
+selectritual "Create Ice Golem"
+cost 0 45  # 45 Gold (was 50)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Create Clay Golem"
+cost 0 45  # 45 Gold (was 50)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Enchanted Gate"
+cost 0 45  # 45 Gold (was 50)
+cost 1 23  # 23 Iron (was 25)
+
+selectritual "Iron Grafting"
+cost 1 9  # 9 Iron (was 10)
+
+selectritual "Animate Quills and Scrolls"
+cost 0 9  # 9 Gold (was 10)
+
+selectritual "Animate Ballista"
+cost 1 23  # 23 Iron (was 25)
+
+selectritual "Dogs of Gold and Silver"
+cost 0 45  # 45 Gold (was 50)
+cost 1 9  # 9 Iron (was 10)
+
+selectritual "Create Juggernaut"
+cost 0 45  # 45 Gold (was 50)
+
+selectritual "Create Oak Golem"
+cost 0 36  # 36 Gold (was 40)
+cost 1 36  # 36 Iron (was 40)
+
+selectritual "Create Iron Golem"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Create Onyx Golem"
+cost 0 63  # 63 Gold (was 70)
+cost 1 63  # 63 Iron (was 70)
+
+selectritual "Create Crystal Golem"
+cost 0 72  # 72 Gold (was 80)
+cost 1 72  # 72 Iron (was 80)
+
+selectritual "Create Silver Golem"
+cost 0 81  # 81 Gold (was 90)
+cost 1 81  # 81 Iron (was 90)
+
+selectritual "Create Gold Golem"
+cost 0 90  # 90 Gold (was 100)
+cost 1 90  # 90 Iron (was 100)
+
+selectritual "Create Home Portal"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Create Portal"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Infuse Magic Library"
+cost 0 45  # 45 Gold (was 50)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Infuse Magic Academy"
+cost 0 90  # 90 Gold (was 100)
+cost 1 90  # 90 Iron (was 100)
+
+selectritual "Brass Bull"
+cost 0 450  # 450 Gold (was 500)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Create Artifact"
+cost 0 23  # 23 Gold (was 25)
+cost 15 45  # 45 Gems (was 50)
+
+
+# --- Demonology (70%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 14  # 14 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 84  # 84 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 336  # 336 Sacrifices (was 480)
+
+selectritual "Imp Summoning"
+cost 4 7  # 7 Sacrifices (was 10)
+
+selectritual "Demon Summoning"
+cost 4 14  # 14 Sacrifices (was 20)
+
+selectritual "Personal Gate"
+cost 4 7  # 7 Sacrifices (was 10)
+
+selectritual "Greater Demon Summoning"
+cost 4 28  # 28 Sacrifices (was 40)
+
+selectritual "Infernal Horde"
+cost 4 105  # 105 Sacrifices (was 150)
+
+selectritual "Summon Demon Lieutenant"
+cost 4 84  # 84 Sacrifices (was 120)
+
+selectritual "Returning"
+cost 4 7  # 7 Sacrifices (was 10)
+
+selectritual "Wall of Torment"
+cost 4 53  # 53 Sacrifices (was 75)
+
+selectritual "Summon Demon Lord"
+cost 4 350  # 350 Sacrifices (was 500)
+
+selectritual "Infernal Gate"
+cost 4 70  # 70 Sacrifices (was 100)
+
+
+# --- Witchery (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 3 23  # 23 Fungus (was 25)
+
+selectritual "Ritual of Mastery"
+cost 3 135  # 135 Fungus (was 150)
+
+selectritual "Ritual of Grand Mastery"
+cost 3 540  # 540 Fungus (was 600)
+
+selectritual "Minor Summoning"
+cost 3 14  # 14 Fungus (was 15)
+
+selectritual "Swamp Guardians"
+cost 3 9  # 9 Fungus (was 10)
+
+selectritual "Marshlands"
+cost 3 23  # 23 Fungus (was 25)
+
+selectritual "Bog Eye"
+cost 3 9  # 9 Fungus (was 10)
+
+selectritual "Major Summoning"
+cost 3 68  # 68 Fungus (was 75)
+
+selectritual "Mirror Mirror"
+cost 3 9  # 9 Fungus (was 10)
+
+selectritual "Murderous Mist"
+cost 3 90  # 90 Fungus (was 100)
+
+selectritual "Miasma"
+cost 3 90  # 90 Fungus (was 100)
+
+selectritual "Summon Old One"
+cost 3 360  # 360 Fungus (was 400)
+
+selectritual "Swamp Soul"
+cost 3 540  # 540 Fungus (was 600)
+
+selectritual "Bog Path"
+cost 3 270  # 270 Fungus (was 300)
+
+
+# --- Mictlan Rituals (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Sky"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Rain"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of War"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Death"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Night"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Ceremony of the Bloody Mother"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Sky"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Rain"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of War"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Death"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Night"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Bloody Mother"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- War Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of War"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of War"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Blood Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Bloody Mother"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Bloody Mother"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Sky Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Sky"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Sky"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Rain Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Rain"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Rain"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Night Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Night"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Night"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Death Priest (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Death"
+cost 4 23  # 23 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Death"
+cost 4 113  # 113 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Baalite Rituals (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 18  # 18 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 108  # 108 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 432  # 432 Sacrifices (was 480)
+
+selectritual "Lesser Ceremony to Baal"
+cost 4 9  # 9 Sacrifices (was 10)
+
+selectritual "Lesser Blood Feast"
+cost 4 14  # 14 Sacrifices (was 15)
+
+selectritual "Ceremony to Baal"
+cost 4 68  # 68 Sacrifices (was 75)
+
+selectritual "Blood Feast"
+cost 4 45  # 45 Sacrifices (was 50)
+
+selectritual "Grand Ceremony to Baal"
+cost 4 90  # 90 Sacrifices (was 100)
+
+selectritual "Grand Blood Feast"
+cost 4 135  # 135 Sacrifices (was 150)
+
+selectritual "Banquet for the Dead"
+cost 4 135  # 135 Sacrifices (was 150)
+
+selectritual "Second Sun"
+cost 4 450  # 450 Sacrifices (was 500)
+
+selectritual "Summon God"
+cost 4 900  # 900 Sacrifices (was 1000)
+
+
+# --- Troll Magic (80%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 3 20  # 20 Fungus (was 25)
+
+selectritual "Ritual of Mastery"
+cost 3 120  # 120 Fungus (was 150)
+
+selectritual "Ritual of Grand Mastery"
+cost 3 480  # 480 Fungus (was 600)
+
+selectritual "Wither Wood"
+cost 3 20  # 20 Fungus (was 25)
+
+selectritual "Vision Brew"
+cost 3 40  # 40 Fungus (was 50)
+
+selectritual "Plant Giant Fungus"
+cost 3 40  # 40 Fungus (was 50)
+
+selectritual "Plant Shadow Tree"
+cost 3 60  # 60 Fungus (was 75)
+
+selectritual "Call the Old Forest"
+cost 3 120  # 120 Fungus (was 150)
+
+selectritual "Golden Nose"
+cost 3 80  # 80 Fungus (was 100)
+
+selectritual "Activate Fairy Circle"
+cost 3 80  # 80 Fungus (was 100)
+
+selectritual "Summon Linnorm"
+cost 3 800  # 800 Fungus (was 1000)
+cost 0 80  # 80 Gold (was 100)
+
+selectritual "Summon Orm"
+cost 3 600  # 600 Fungus (was 750)
+
+selectritual "Stygian Bath"
+cost 3 1200  # 1200 Fungus (was 1500)
+
+selectritual "Clamor and Clang"
+cost 3 80  # 80 Fungus (was 100)
+cost 18 80  # 80 Hearts (was 100)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Flame Pact"
+cost 7 45  # 45 Prisoners (was 50)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Water Pact"
+cost 8 45  # 45 Unburied (was 50)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Storm Pact"
+cost 9 45  # 45 Coins (was 50)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Earth Pact"
+cost 10 45  # 45 Silk (was 50)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Flame Pact"
+cost 7 26  # 26 Prisoners (was 28)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Water Pact"
+cost 8 26  # 26 Unburied (was 28)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Storm Pact"
+cost 9 26  # 26 Coins (was 28)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Earth Pact"
+cost 10 26  # 26 Silk (was 28)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Greater Flame Pact"
+cost 7 151  # 151 Prisoners (was 167)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Greater Water Pact"
+cost 8 151  # 151 Unburied (was 167)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Greater Storm Pact"
+cost 9 151  # 151 Coins (was 167)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Greater Earth Pact"
+cost 10 151  # 151 Silk (was 167)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Lesser Fire Summoning"
+cost 7 23  # 23 Prisoners (was 25)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Lesser Water Summoning"
+cost 8 23  # 23 Unburied (was 25)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Lesser Air Summoning"
+cost 9 23  # 23 Coins (was 25)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Lesser Earth Summoning"
+cost 10 23  # 23 Silk (was 25)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Greater Fire Summoning"
+cost 7 51  # 51 Prisoners (was 56)
+
+selectritual "Summon Champion of Fire"
+cost 7 51  # 51 Prisoners (was 56)
+
+selectritual "Circle of Flames"
+cost 7 6  # 6 Prisoners (was 6)
+
+selectritual "Vafur Flames"
+cost 7 26  # 26 Prisoners (was 28)
+
+selectritual "Summon Magma Warrior"
+cost 7 26  # 26 Prisoners (was 28)
+cost 10 26  # 26 Silk (was 28)
+
+selectritual "Summon Smoke Warrior"
+cost 7 26  # 26 Prisoners (was 28)
+cost 9 26  # 26 Coins (was 28)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Greater Water Summoning"
+cost 8 51  # 51 Unburied (was 56)
+
+selectritual "Summon Yeti"
+cost 8 26  # 26 Unburied (was 28)
+cost 9 26  # 26 Coins (was 28)
+
+selectritual "Summon Champion of Water"
+cost 8 51  # 51 Unburied (was 56)
+
+selectritual "Summon Mist Warrior"
+cost 8 26  # 26 Unburied (was 28)
+cost 9 26  # 26 Coins (was 28)
+
+selectritual "Summon Mud Warrior"
+cost 8 26  # 26 Unburied (was 28)
+cost 10 26  # 26 Silk (was 28)
+
+selectritual "Maelstrom"
+cost 8 41  # 41 Unburied (was 45)
+
+selectritual "Enchant Lake"
+cost 8 21  # 21 Unburied (was 23)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Greater Air Summoning"
+cost 9 51  # 51 Coins (was 56)
+
+selectritual "Summon Yeti"
+cost 9 26  # 26 Coins (was 28)
+cost 8 26  # 26 Unburied (was 28)
+
+selectritual "Summon Champion of Air"
+cost 9 51  # 51 Coins (was 56)
+
+selectritual "Summon Mist Warrior"
+cost 9 26  # 26 Coins (was 28)
+cost 8 26  # 26 Unburied (was 28)
+
+selectritual "Summon Smoke Warrior"
+cost 9 26  # 26 Coins (was 28)
+cost 7 26  # 26 Prisoners (was 28)
+
+selectritual "Curtain of Storms"
+cost 9 26  # 26 Coins (was 28)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Greater Earth Summoning"
+cost 10 51  # 51 Silk (was 56)
+
+selectritual "Summon Champion of Earth"
+cost 10 51  # 51 Silk (was 56)
+
+selectritual "Summon Magma Warrior"
+cost 10 26  # 26 Silk (was 28)
+cost 7 26  # 26 Prisoners (was 28)
+
+selectritual "Summon Mud Warrior"
+cost 10 26  # 26 Silk (was 28)
+cost 8 26  # 26 Unburied (was 28)
+
+selectritual "Ramparts of Earth"
+cost 10 11  # 11 Silk (was 12)
+
+selectritual "Dig"
+cost 10 11  # 11 Silk (was 12)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Summon King of Fire"
+cost 7 225  # 225 Prisoners (was 250)
+
+selectritual "Wheel of Frost and Flames"
+cost 7 45  # 45 Prisoners (was 50)
+cost 8 45  # 45 Unburied (was 50)
+
+selectritual "Eternal Pyre"
+cost 7 113  # 113 Prisoners (was 125)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Summon Queen of Water"
+cost 8 225  # 225 Unburied (was 250)
+
+selectritual "Wheel of Frost and Flames"
+cost 8 45  # 45 Unburied (was 50)
+cost 7 45  # 45 Prisoners (was 50)
+
+selectritual "Fimbul Fortress"
+cost 8 113  # 113 Unburied (was 125)
+
+selectritual "Primal Maelstrom"
+cost 8 45  # 45 Unburied (was 50)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Summon Queen of Air"
+cost 9 225  # 225 Coins (was 250)
+
+selectritual "Wheel of Storm and Stone"
+cost 9 45  # 45 Coins (was 50)
+cost 10 45  # 45 Silk (was 50)
+
+selectritual "Perpetual Storm"
+cost 9 142  # 142 Coins (was 157)
+
+selectritual "Cloud Castle"
+cost 9 170  # 170 Coins (was 188)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Summon King of Earth"
+cost 10 225  # 225 Silk (was 250)
+
+selectritual "Wheel of Storm and Stone"
+cost 10 45  # 45 Silk (was 50)
+cost 9 45  # 45 Coins (was 50)
+
+selectritual "Wizard's Tower"
+cost 10 113  # 113 Silk (was 125)
+
+selectritual "Raise Volcano"
+cost 10 57  # 57 Silk (was 63)
+cost 7 29  # 29 Prisoners (was 32)
+
+
+# --- Fire Giant (80%) ---
+
+selectritual "King of Giants"
+cost 7 80  # 80 Prisoners (was 100)
+
+selectritual "Call Giants"
+cost 7 80  # 80 Prisoners (was 100)
+
+
+# --- Frost Giant (80%) ---
+
+selectritual "King of Giants"
+cost 8 80  # 80 Unburied (was 100)
+
+selectritual "Call Giants"
+cost 8 80  # 80 Unburied (was 100)
+
+selectritual "Call Winter Wolves"
+cost 8 20  # 20 Unburied (was 25)
+
+
+# --- Sea Giant (80%) ---
+
+selectritual "King of Giants"
+cost 8 80  # 80 Unburied (was 100)
+
+selectritual "Call Giants"
+cost 8 80  # 80 Unburied (was 100)
+
+
+# --- Storm Giant (80%) ---
+
+selectritual "King of Giants"
+cost 9 80  # 80 Coins (was 100)
+
+selectritual "Call Giants"
+cost 9 80  # 80 Coins (was 100)
+
+
+# --- Mountain Giant (80%) ---
+
+selectritual "King of Giants"
+cost 10 80  # 80 Silk (was 100)
+
+selectritual "Call Giants"
+cost 10 80  # 80 Silk (was 100)
+
+selectritual "Create Artifact"
+cost 0 20  # 20 Gold (was 25)
+cost 15 20  # 20 Gems (was 25)
+
+
+# --- Hoburg Weed (70%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 6 18  # 18 Blood (was 25)
+
+selectritual "Ritual of Mastery"
+cost 6 105  # 105 Blood (was 150)
+
+selectritual "Create Hoburg Village"
+cost 6 7  # 7 Blood (was 10)
+cost 0 7  # 7 Gold (was 10)
+
+selectritual "Animal Summoning"
+cost 6 7  # 7 Blood (was 10)
+
+selectritual "Farm Animal Summoning"
+cost 6 7  # 7 Blood (was 10)
+
+selectritual "Summon Guardian of the Hoburgs"
+cost 6 70  # 70 Blood (was 100)
+
+selectritual "Great Animal Summoning"
+cost 6 35  # 35 Blood (was 50)
+
+
+# --- Hoburg Clockwork (70%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Ritual of Mastery"
+cost 15 63  # 63 Gems (was 90)
+
+selectritual "Ruby Construct"
+cost 7 14  # 14 Prisoners (was 20)
+
+selectritual "Sapphire Construct"
+cost 8 14  # 14 Unburied (was 20)
+
+selectritual "Diamond Construct"
+cost 9 14  # 14 Coins (was 20)
+
+selectritual "Emerald Construct"
+cost 10 14  # 14 Silk (was 20)
+
+selectritual "Ruby Iron Dragon"
+cost 7 105  # 105 Prisoners (was 150)
+
+selectritual "Sapphire Iron Dragon"
+cost 8 105  # 105 Unburied (was 150)
+
+selectritual "Diamond Iron Dragon"
+cost 9 105  # 105 Coins (was 150)
+
+selectritual "Emerald Iron Dragon"
+cost 10 105  # 105 Silk (was 150)
+
+selectritual "Construct Ferrous Wheel"
+cost 7 7  # 7 Prisoners (was 10)
+cost 8 7  # 7 Unburied (was 10)
+cost 10 7  # 7 Silk (was 10)
+cost 9 7  # 7 Coins (was 10)
+
+
+# --- Nekromant (60%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 5 6  # 6 Hands (was 10)
+
+selectritual "Ritual of Mastery"
+cost 5 36  # 36 Hands (was 60)
+
+selectritual "Ritual of Grand Mastery"
+cost 5 144  # 144 Hands (was 240)
+
+selectritual "Minor Summoning"
+cost 5 6  # 6 Hands (was 10)
+
+selectritual "Dark Knowledge"
+cost 5 2  # 2 Hands (was 3)
+
+selectritual "Twiceborn"
+cost 5 18  # 18 Hands (was 30)
+
+selectritual "Raven Spy"
+cost 5 3  # 3 Hands (was 5)
+
+selectritual "Flesh Rite"
+cost 5 30  # 30 Hands (was 50)
+
+selectritual "Major Summoning"
+cost 5 45  # 45 Hands (was 75)
+
+selectritual "Create Flesh Golem"
+cost 0 3  # 3 Gold (was 5)
+cost 14 3  # 3 Corpses (humanoid) (was 5)
+
+selectritual "Ravenous Curse"
+cost 5 24  # 24 Hands (was 40)
+
+selectritual "Animate Abomination"
+cost 5 30  # 30 Hands (was 50)
+cost 17 30  # 30 Corpses (was 50)
+
+selectritual "Blood Rite"
+cost 5 75  # 75 Hands (was 125)
+
+selectritual "Blood Servant"
+cost 5 45  # 45 Hands (was 75)
+
+
+# --- Senator (90%) ---
+
+selectritual "Coronation"
+cost 0 540  # 540 Gold (was 600)
+
+selectritual "Imperial Wedding"
+cost 0 360  # 360 Gold (was 400)
+
+selectritual "Erect Statue"
+cost 0 90  # 90 Gold (was 100)
+
+selectritual "Apotheosis"
+cost 0 900  # 900 Gold (was 1000)
+
+
+# --- Empress (90%) ---
+
+selectritual "Apotheosis"
+cost 0 900  # 900 Gold (was 1000)
+
+
+# --- Revelry (90%) ---
+
+selectritual "Incite Revelry"
+cost 0 23  # 23 Gold (was 25)
+
+selectritual "Build Lararium"
+cost 0 23  # 23 Gold (was 25)
+
+
+# --- Dark Emperor (90%) ---
+
+selectritual "Erect Statue"
+cost 0 90  # 90 Gold (was 100)
+
+selectritual "Apotheosis"
+cost 0 900  # 900 Gold (was 1000)
+
+
+# --- God Emperor of the Underworld (90%) ---
+
+selectritual "Planar Swap"
+cost 0 450  # 450 Gold (was 500)
+
+
+# --- Renatus (80%) ---
+
+selectritual "Katabasis"
+cost 0 4  # 4 Gold (was 5)
+
+selectritual "Anabasis"
+cost 0 4  # 4 Gold (was 5)
+
+
+# --- Baron (90%) ---
+
+selectritual "Swift Justice"
+cost 0 23  # 23 Gold (was 25)
+
+selectritual "Raise Fort"
+cost 0 45  # 45 Gold (was 50)
+
+selectritual "Appoint Vassal"
+cost 0 9  # 9 Gold (was 10)
+
+selectritual "Relocate Manor"
+cost 0 90  # 90 Gold (was 100)
+
+selectritual "Coronation"
+cost 0 540  # 540 Gold (was 600)
+
+selectritual "Raise Castle"
+cost 0 225  # 225 Gold (was 250)
+
+
+# --- Monk (80%) ---
+
+selectritual "Drain Swamp"
+cost 0 20  # 20 Gold (was 25)
+
+selectritual "Benediction"
+cost 0 80  # 80 Gold (was 100)
+
+selectritual "Found Monastery"
+cost 0 40  # 40 Gold (was 50)
+
+
+# --- Alchemist (80%) ---
+
+selectritual "Alchemy"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Greater Alchemy"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Alchemical Catapult"
+cost 0 20  # 20 Gold (was 25)
+
+selectritual "Alchemical Trebuchet"
+cost 0 40  # 40 Gold (was 50)
+
+
+# --- High Cultist (60%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 9  # 9 Sacrifices (was 15)
+
+selectritual "Ritual of Mastery"
+cost 4 54  # 54 Sacrifices (was 90)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 216  # 216 Sacrifices (was 360)
+
+selectritual "Call of the Deep"
+cost 4 6  # 6 Sacrifices (was 10)
+
+selectritual "Ceremony in the Deep"
+cost 4 6  # 6 Sacrifices (was 10)
+
+selectritual "Call Warriors of the Deep"
+cost 4 15  # 15 Sacrifices (was 25)
+
+selectritual "Contact Elder Being"
+cost 4 18  # 18 Sacrifices (was 30)
+
+selectritual "Astrology"
+cost 4 3  # 3 Sacrifices (was 5)
+
+selectritual "Greater Ceremony in the Deep"
+cost 4 24  # 24 Sacrifices (was 40)
+
+selectritual "Call Army of the Deep"
+cost 4 45  # 45 Sacrifices (was 75)
+
+selectritual "Contact Old Ones"
+cost 4 60  # 60 Sacrifices (was 100)
+
+selectritual "Deep Rising"
+cost 4 60  # 60 Sacrifices (was 100)
+
+selectritual "Call Outer God"
+cost 4 120  # 120 Sacrifices (was 200)
+
+
+# --- Star Spawn (60%) ---
+
+selectritual "Lesser Void Mastery"
+cost 4 9  # 9 Sacrifices (was 15)
+
+selectritual "Void Mastery"
+cost 4 54  # 54 Sacrifices (was 90)
+
+selectritual "Grand Void Mastery"
+cost 4 216  # 216 Sacrifices (was 360)
+
+selectritual "Astrology"
+cost 4 1  # 1 Sacrifices (was 1)
+
+selectritual "Horoscope"
+cost 4 3  # 3 Sacrifices (was 5)
+
+selectritual "Call Elder Beings"
+cost 4 30  # 30 Sacrifices (was 50)
+
+selectritual "Send Lesser Horror"
+cost 4 6  # 6 Sacrifices (was 10)
+
+selectritual "Send Greater Horror"
+cost 4 30  # 30 Sacrifices (was 50)
+
+
+# --- Bakemono Rituals (70%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 14  # 14 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 84  # 84 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 336  # 336 Sacrifices (was 480)
+
+selectritual "Summon Lesser Beings"
+cost 4 14  # 14 Sacrifices (was 20)
+
+selectritual "Summon Lesser Oni"
+cost 4 21  # 21 Sacrifices (was 30)
+
+selectritual "Make Effigy"
+cost 4 4  # 4 Sacrifices (was 5)
+cost 14 4  # 4 Corpses (humanoid) (was 5)
+
+selectritual "Summon Greater Beings"
+cost 4 70  # 70 Sacrifices (was 100)
+
+selectritual "Summon Oni"
+cost 4 70  # 70 Sacrifices (was 100)
+
+selectritual "Hide Heart"
+cost 4 105  # 105 Sacrifices (was 150)
+
+selectritual "Mountain Lair"
+cost 4 18  # 18 Sacrifices (was 25)
+cost 1 35  # 35 Iron (was 50)
+
+selectritual "Summon King"
+cost 4 210  # 210 Sacrifices (was 300)
+
+
+# --- Dvala (80%) ---
+
+selectritual "Sense Mines"
+cost 9 4  # 4 Coins (was 5)
+
+selectritual "Create Councilor"
+cost 10 16  # 16 Silk (was 20)
+
+selectritual "Create Iron Gate"
+cost 10 24  # 24 Silk (was 30)
+
+selectritual "Lore of Dvalin I"
+cost 9 8  # 8 Coins (was 10)
+
+selectritual "Create Rune Smith"
+cost 9 40  # 40 Coins (was 50)
+
+selectritual "Divine Marriage"
+cost 9 80  # 80 Coins (was 100)
+
+selectritual "Enchant Gate"
+cost 9 32  # 32 Coins (was 40)
+
+selectritual "Lore of Dvalin II"
+cost 9 24  # 24 Coins (was 30)
+
+selectritual "Lore of Dvalin III"
+cost 9 72  # 72 Coins (was 90)
+
+selectritual "Portal of Dvalin"
+cost 9 20  # 20 Coins (was 25)
+cost 10 20  # 20 Silk (was 25)
+
+selectritual "Living Boulders"
+cost 9 12  # 12 Coins (was 15)
+cost 10 12  # 12 Silk (was 15)
+
+
+# --- Dwarf Councilor (80%) ---
+
+selectritual "Found Colony"
+cost 0 200  # 200 Gold (was 250)
+cost 1 40  # 40 Iron (was 50)
+
+
+# --- Rune Smith (80%) ---
+
+selectritual "Ritual of Mastery"
+cost 9 60  # 60 Coins (was 75)
+
+selectritual "Create Rime Armor"
+cost 8 16  # 16 Unburied (was 20)
+
+selectritual "Create Furnace Armor"
+cost 7 16  # 16 Prisoners (was 20)
+
+selectritual "Create Armor of Dvalin"
+cost 10 16  # 16 Silk (was 20)
+
+selectritual "Rime Brand Weapons"
+cost 8 16  # 16 Unburied (was 20)
+
+selectritual "Flame Brand Weapons"
+cost 7 16  # 16 Prisoners (was 20)
+
+selectritual "Earth Brand Weapons"
+cost 10 16  # 16 Silk (was 20)
+
+selectritual "Rime Brand Ballista"
+cost 8 16  # 16 Unburied (was 20)
+
+selectritual "Flame Brand Ballista"
+cost 7 16  # 16 Prisoners (was 20)
+
+selectritual "Earth Brand Ballista"
+cost 10 16  # 16 Silk (was 20)
+
+
+# --- Pale One Rituals (80%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 10 8  # 8 Silk (was 10)
+
+selectritual "Ritual of Mastery"
+cost 10 48  # 48 Silk (was 60)
+
+selectritual "Ritual of Grand Mastery"
+cost 10 192  # 192 Silk (was 240)
+
+selectritual "Cave Temple Construction"
+cost 0 20  # 20 Gold (was 25)
+cost 1 40  # 40 Iron (was 50)
+
+selectritual "Scrying"
+cost 8 4  # 4 Unburied (was 5)
+
+selectritual "Awaken Guardians"
+cost 10 16  # 16 Silk (was 20)
+
+selectritual "Lesser Lava Summoning"
+cost 7 8  # 8 Prisoners (was 10)
+
+selectritual "Lesser Olm Summoning"
+cost 8 8  # 8 Unburied (was 10)
+
+selectritual "Lesser Deep Summoning"
+cost 10 8  # 8 Silk (was 10)
+
+selectritual "Lesser Summoning of the Dead"
+cost 9 8  # 8 Coins (was 10)
+
+selectritual "Olm Conclave"
+cost 8 96  # 96 Unburied (was 120)
+
+selectritual "Summoning of the Dead"
+cost 9 64  # 64 Coins (was 80)
+
+selectritual "Lava Summoning"
+cost 7 64  # 64 Prisoners (was 80)
+
+selectritual "Deep Earth Summoning"
+cost 10 64  # 64 Silk (was 80)
+
+selectritual "Awaken Marble Oracle"
+cost 10 64  # 64 Silk (was 80)
+
+selectritual "Awaken Onyx Oracle"
+cost 10 192  # 192 Silk (was 240)
+
+selectritual "Earth made Flesh"
+cost 10 384  # 384 Silk (was 480)
+
+
+# --- Dryad Queen (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 2 25  # 25 Herbs (was 50)
+
+selectritual "Ritual of Mastery"
+cost 2 100  # 100 Herbs (was 200)
+
+selectritual "Ritual of Grand Mastery"
+cost 2 400  # 400 Herbs (was 800)
+
+selectritual "Minor Animal Summoning"
+cost 2 13  # 13 Herbs (was 25)
+
+selectritual "Create Sacred Grove"
+cost 2 200  # 200 Herbs (was 400)
+
+selectritual "Bramble Fort"
+cost 2 75  # 75 Herbs (was 150)
+
+selectritual "Major Animal Summoning"
+cost 2 50  # 50 Herbs (was 100)
+
+selectritual "Create Grove of Gaia"
+cost 2 375  # 375 Herbs (was 750)
+
+selectritual "Call of Gaia"
+cost 2 200  # 200 Herbs (was 400)
+
+selectritual "Blood Orgy"
+cost 2 50  # 50 Herbs (was 100)
+
+selectritual "Plant Hamadryad"
+cost 2 100  # 100 Herbs (was 200)
+
+selectritual "Call of the Wild"
+cost 2 200  # 200 Herbs (was 400)
+
+selectritual "Create Primal Forest"
+cost 2 500  # 500 Herbs (was 1000)
+
+selectritual "Incarnate Earth Mother"
+cost 2 750  # 750 Herbs (was 1500)
+
+selectritual "Summon Servants of Gaia"
+cost 2 375  # 375 Herbs (was 750)
+
+
+# --- Cloud Lord (90%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 9 14  # 14 Coins (was 15)
+
+selectritual "Ritual of Mastery"
+cost 9 45  # 45 Coins (was 50)
+
+selectritual "Ritual of Grand Mastery"
+cost 9 135  # 135 Coins (was 150)
+
+selectritual "Lesser Sky Summoning"
+cost 9 23  # 23 Coins (was 25)
+
+selectritual "Diamond Alchemy"
+cost 7 9  # 9 Prisoners (was 10)
+cost 8 9  # 9 Unburied (was 10)
+cost 10 9  # 9 Silk (was 10)
+
+selectritual "Greater Sky Summoning"
+cost 9 45  # 45 Coins (was 50)
+
+selectritual "Summon Storm Giant"
+cost 9 68  # 68 Coins (was 75)
+
+selectritual "Summon Mist Warrior"
+cost 9 23  # 23 Coins (was 25)
+cost 8 23  # 23 Unburied (was 25)
+
+selectritual "Summon Yeti"
+cost 9 23  # 23 Coins (was 25)
+cost 8 23  # 23 Unburied (was 25)
+
+selectritual "Shape Clouds"
+cost 9 5  # 5 Coins (was 5)
+cost 10 5  # 5 Silk (was 5)
+
+selectritual "Rainbow Curtain"
+cost 9 23  # 23 Coins (was 25)
+
+selectritual "Summon Queen of Air"
+cost 9 180  # 180 Coins (was 200)
+
+selectritual "Perpetual Storm"
+cost 9 113  # 113 Coins (was 125)
+
+selectritual "Summon Solar Eagle"
+cost 9 23  # 23 Coins (was 25)
+cost 7 45  # 45 Prisoners (was 50)
+
+selectritual "Summon Frost Giant"
+cost 8 68  # 68 Unburied (was 75)
+
+selectritual "Fimbul Fortress"
+cost 8 68  # 68 Unburied (was 75)
+cost 9 23  # 23 Coins (was 25)
+
+selectritual "Castle in the Clouds"
+cost 9 135  # 135 Coins (was 150)
+
+
+# --- Kobold, Black (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 15 10  # 10 Gems (was 20)
+
+selectritual "Ritual of Mastery"
+cost 15 50  # 50 Gems (was 100)
+
+selectritual "Kobold Hatchery"
+cost 0 25  # 25 Gold (was 50)
+cost 1 10  # 10 Iron (was 20)
+
+selectritual "Decay Rune Trap"
+cost 15 1  # 1 Gems (was 2)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 25  # 25 Gold (was 50)
+cost 16 13  # 13 Entrails (was 25)
+cost 15 25  # 25 Gems (was 50)
+
+selectritual "Foretelling"
+cost 0 1  # 1 Gold (was 1)
+cost 16 3  # 3 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 25  # 25 Gold (was 50)
+cost 1 38  # 38 Iron (was 75)
+
+
+# --- Kobold, Red (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 7 5  # 5 Prisoners (was 10)
+
+selectritual "Ritual of Mastery"
+cost 7 25  # 25 Prisoners (was 50)
+
+selectritual "Ritual of Grand Mastery"
+cost 7 100  # 100 Prisoners (was 200)
+
+selectritual "Kobold Hatchery"
+cost 0 25  # 25 Gold (was 50)
+cost 1 10  # 10 Iron (was 20)
+
+selectritual "Flame Rune Trap"
+cost 7 1  # 1 Prisoners (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 25  # 25 Gold (was 50)
+cost 16 13  # 13 Entrails (was 25)
+cost 7 13  # 13 Prisoners (was 25)
+
+selectritual "Foretelling"
+cost 7 1  # 1 Prisoners (was 1)
+cost 16 3  # 3 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 25  # 25 Gold (was 50)
+cost 1 38  # 38 Iron (was 75)
+
+selectritual "Summon Elder Dragon"
+cost 0 100  # 100 Gold (was 200)
+cost 16 100  # 100 Entrails (was 200)
+cost 7 25  # 25 Prisoners (was 50)
+
+
+# --- Kobold, Green (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 10 5  # 5 Silk (was 10)
+
+selectritual "Ritual of Mastery"
+cost 10 25  # 25 Silk (was 50)
+
+selectritual "Ritual of Grand Mastery"
+cost 10 100  # 100 Silk (was 200)
+
+selectritual "Kobold Hatchery"
+cost 0 25  # 25 Gold (was 50)
+cost 1 10  # 10 Iron (was 20)
+
+selectritual "Poison Gas Trap"
+cost 10 1  # 1 Silk (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 25  # 25 Gold (was 50)
+cost 16 13  # 13 Entrails (was 25)
+cost 10 13  # 13 Silk (was 25)
+
+selectritual "Foretelling"
+cost 10 1  # 1 Silk (was 1)
+cost 16 3  # 3 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 25  # 25 Gold (was 50)
+cost 1 38  # 38 Iron (was 75)
+
+selectritual "Summon Elder Dragon"
+cost 0 100  # 100 Gold (was 200)
+cost 16 100  # 100 Entrails (was 200)
+cost 10 25  # 25 Silk (was 50)
+
+
+# --- Kobold, Blue (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 8 5  # 5 Unburied (was 10)
+
+selectritual "Ritual of Mastery"
+cost 8 25  # 25 Unburied (was 50)
+
+selectritual "Ritual of Grand Mastery"
+cost 8 100  # 100 Unburied (was 200)
+
+selectritual "Kobold Hatchery"
+cost 0 25  # 25 Gold (was 50)
+cost 1 10  # 10 Iron (was 20)
+
+selectritual "Frost Rune Trap"
+cost 8 1  # 1 Unburied (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 25  # 25 Gold (was 50)
+cost 16 13  # 13 Entrails (was 25)
+cost 8 13  # 13 Unburied (was 25)
+
+selectritual "Foretelling"
+cost 8 1  # 1 Unburied (was 1)
+cost 16 3  # 3 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 25  # 25 Gold (was 50)
+cost 1 38  # 38 Iron (was 75)
+
+selectritual "Summon Elder Dragon"
+cost 0 100  # 100 Gold (was 200)
+cost 16 100  # 100 Entrails (was 200)
+cost 8 25  # 25 Unburied (was 50)
+
+
+# --- Kobold, White (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 9 5  # 5 Coins (was 10)
+
+selectritual "Ritual of Mastery"
+cost 9 25  # 25 Coins (was 50)
+
+selectritual "Ritual of Grand Mastery"
+cost 9 100  # 100 Coins (was 200)
+
+selectritual "Kobold Hatchery"
+cost 0 25  # 25 Gold (was 50)
+cost 1 10  # 10 Iron (was 20)
+
+selectritual "Lightning Rune Trap"
+cost 9 1  # 1 Coins (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 25  # 25 Gold (was 50)
+cost 16 13  # 13 Entrails (was 25)
+cost 9 13  # 13 Coins (was 25)
+
+selectritual "Foretelling"
+cost 9 1  # 1 Coins (was 1)
+cost 16 3  # 3 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 25  # 25 Gold (was 50)
+cost 1 38  # 38 Iron (was 75)
+
+selectritual "Summon Elder Dragon"
+cost 0 100  # 100 Gold (was 200)
+cost 16 100  # 100 Entrails (was 200)
+cost 9 25  # 25 Coins (was 50)
+
+
+# --- Senator (90%) ---
+
+selectritual "Appoint Governor"
+cost 0 90  # 90 Gold (was 100)
+
+
+# --- Dark Emperor (90%) ---
+
+selectritual "Appoint Governor"
+cost 0 90  # 90 Gold (was 100)
+
+
+# --- Magistratus (80%) ---
+
+selectritual "Erect Imperial Statue"
+cost 0 80  # 80 Gold (was 100)
+
+selectritual "Erect Statue of the Underworld"
+cost 0 80  # 80 Gold (was 100)
+
+
+# --- White One (80%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 15 8  # 8 Gems (was 10)
+
+selectritual "Ritual of Mastery"
+cost 15 48  # 48 Gems (was 60)
+
+selectritual "Ritual of Grand Mastery"
+cost 15 144  # 144 Gems (was 180)
+
+selectritual "Lesser Akashic Summoning"
+cost 15 24  # 24 Gems (was 30)
+
+selectritual "Akashic Summoning"
+cost 15 80  # 80 Gems (was 100)
+
+selectritual "Akashic Records"
+cost 15 2  # 2 Gems (was 2)
+
+selectritual "Greater Akashic Summoning"
+cost 15 200  # 200 Gems (was 250)
+
+selectritual "Avatara"
+cost 15 400  # 400 Gems (was 500)
+
+
+# --- Akashic, Ruby (80%) ---
+
+selectritual "Ruby Summoning"
+cost 7 24  # 24 Prisoners (was 30)
+
+selectritual "Host of Maruts"
+cost 7 80  # 80 Prisoners (was 100)
+
+
+# --- Akashic, Sapphire (80%) ---
+
+selectritual "Sapphire Summoning"
+cost 8 24  # 24 Unburied (was 30)
+
+selectritual "Inhabit Lake"
+cost 8 16  # 16 Unburied (was 20)
+
+
+# --- Akashic, Emerald (80%) ---
+
+selectritual "Emerald Summoning"
+cost 10 24  # 24 Silk (was 30)
+
+selectritual "Inhabit Jungle"
+cost 10 16  # 16 Silk (was 20)
+
+
+# --- Akashic, Diamond (80%) ---
+
+selectritual "Diamond Summoning"
+cost 9 24  # 24 Coins (was 30)
+
+selectritual "Turning of the Wheel"
+cost 15 400  # 400 Gems (was 500)
+
+
+# --- Raksharaja (50%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 4 10  # 10 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery"
+cost 4 60  # 60 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery"
+cost 4 240  # 240 Sacrifices (was 480)
+
+selectritual "Naraka Summoning"
+cost 4 20  # 20 Sacrifices (was 40)
+
+selectritual "Lanka Summoning"
+cost 4 15  # 15 Sacrifices (was 30)
+
+selectritual "Summon the Dead"
+cost 4 13  # 13 Sacrifices (was 25)
+
+selectritual "Bhuta Possession"
+cost 4 13  # 13 Sacrifices (was 25)
+
+selectritual "Greater Naraka Summoning"
+cost 4 90  # 90 Sacrifices (was 180)
+
+selectritual "Greater Lanka Summoning"
+cost 4 75  # 75 Sacrifices (was 150)
+
+selectritual "Veil Village"
+cost 4 13  # 13 Sacrifices (was 25)
+
+selectritual "Shroud of Darkness"
+cost 4 20  # 20 Sacrifices (was 40)
+
+selectritual "Rasatala Summoning"
+cost 4 250  # 250 Sacrifices (was 500)
+
+selectritual "Veil of Dreams"
+cost 4 38  # 38 Sacrifices (was 75)
+cost 0 13  # 13 Gold (was 25)
+
+
+# --- Alchemist (80%) ---
+
+selectritual "Liquid Fire Dispenser"
+cost 0 20  # 20 Gold (was 25)
+cost 1 20  # 20 Iron (was 25)
+
+
+# --- Engineer Magus (80%) ---
+
+selectritual "Storm Spool Ballista"
+cost 15 40  # 40 Gems (was 50)
+
+selectritual "Guild Portal"
+cost 15 80  # 80 Gems (was 100)
+
+
+# --- Demonology (70%) ---
+
+selectritual "Enter Soul Contract"
+cost 4 14  # 14 Sacrifices (was 20)
+

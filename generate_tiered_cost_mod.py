@@ -1,0 +1,321 @@
+#!/usr/bin/env python3
+"""
+Generate a CoE5 mod file that modifies ritual costs by class/ritual power type.
+
+This allows different percentage modifiers for different factions/classes,
+creating a "tier list" balance system.
+
+Usage:
+    python generate_tiered_cost_mod.py <config_file> [output_file]
+    python generate_tiered_cost_mod.py --list-ritpows
+    python generate_tiered_cost_mod.py --generate-config <output_config>
+
+Examples:
+    python generate_tiered_cost_mod.py my_balance.json
+    python generate_tiered_cost_mod.py my_balance.json custom_mod.c5m
+    python generate_tiered_cost_mod.py --list-ritpows
+    python generate_tiered_cost_mod.py --generate-config balance_config.json
+"""
+
+import re
+import sys
+import json
+import math
+from pathlib import Path
+
+# Resource type names for comments (based on Ritual Data v5.33.c5m)
+RESOURCE_TYPES = {
+    0: "Gold",
+    1: "Iron",
+    2: "Herbs",
+    3: "Fungus",
+    4: "Sacrifices",
+    5: "Hands",
+    6: "Blood",
+    7: "Prisoners",
+    8: "Unburied",
+    9: "Coins",
+    10: "Silk",
+    11: "Relics",
+    12: "Gems",
+    13: "Monster Parts",
+    14: "Corpses (humanoid)",
+    15: "Gems",
+    16: "Entrails",
+    17: "Corpses",
+    18: "Hearts",
+    19: "Skulls",
+}
+
+
+def parse_ritual_data(filepath):
+    """Parse the ritual data file and extract ritual names, costs, and ritual power types."""
+    rituals = []
+    current_ritual = None
+    ritpow_names = {}
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            # Check for new ritual definition
+            match = re.match(r'newritual\s+"([^"]+)"', line)
+            if match:
+                if current_ritual and current_ritual['costs']:
+                    rituals.append(current_ritual)
+                current_ritual = {
+                    'name': match.group(1),
+                    'costs': [],
+                    'ritpow': None,
+                    'ritpow_name': None
+                }
+                continue
+
+            if current_ritual:
+                # Check for ritual power
+                match = re.match(r'ritpow\s+(\d+)\s+#\s+(.+)', line)
+                if match:
+                    ritpow_num = int(match.group(1))
+                    ritpow_name = match.group(2).strip()
+                    current_ritual['ritpow'] = ritpow_num
+                    current_ritual['ritpow_name'] = ritpow_name
+                    ritpow_names[ritpow_num] = ritpow_name
+                    continue
+
+                # Check for cost line
+                match = re.match(r'cost\s+(\d+)\s+(\d+)', line.split('#')[0])
+                if match:
+                    resource_type = int(match.group(1))
+                    amount = int(match.group(2))
+                    current_ritual['costs'].append({
+                        'type': resource_type,
+                        'amount': amount
+                    })
+
+        # Don't forget the last ritual
+        if current_ritual and current_ritual['costs']:
+            rituals.append(current_ritual)
+
+    return rituals, ritpow_names
+
+
+def process_config(config, ritpow_names):
+    """Convert tier-based config to ritpow_modifiers format."""
+
+    # Check if this is a tier-based config
+    if 'tiers' in config and 'class_tiers' in config:
+        tiers = config['tiers']
+        class_tiers = config['class_tiers']
+
+        # Build reverse lookup: ritpow_name -> ritpow_id
+        name_to_id = {name: str(num) for num, name in ritpow_names.items()}
+
+        # Convert class_tiers to ritpow_modifiers
+        ritpow_modifiers = {}
+        for class_name, tier in class_tiers.items():
+            if class_name in name_to_id:
+                ritpow_id = name_to_id[class_name]
+                percentage = tiers.get(tier, 100)
+                ritpow_modifiers[ritpow_id] = percentage
+
+        return 100, ritpow_modifiers, tiers, class_tiers
+    else:
+        # Old format - direct ritpow_modifiers
+        return config.get('default', 100), config.get('ritpow_modifiers', {}), None, None
+
+
+def generate_mod_file(rituals, config, ritpow_names, output_path):
+    """Generate a mod file that modifies ritual costs based on config."""
+
+    # Process config (supports both old and new tier-based format)
+    default_pct, ritpow_modifiers, tiers, class_tiers = process_config(config, ritpow_names)
+
+    modified_count = 0
+    skipped_count = 0
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        # Write header
+        f.write("# OBM Tiered Ritual Cost Modifier\n")
+        f.write("# \n")
+        f.write("# This mod adjusts ritual costs by class/ritual power type.\n")
+        f.write("# Generated from Ritual Data v5.33.c5m\n")
+        f.write("# \n")
+
+        if tiers:
+            # Tier-based format
+            f.write("# Tier Definitions:\n")
+            for tier_name, pct in sorted(tiers.items()):
+                f.write(f"#   {tier_name}: {pct}%\n")
+            f.write("# \n")
+            f.write("# Class Assignments:\n")
+            # Group classes by tier
+            tier_groups = {}
+            for class_name, tier in class_tiers.items():
+                if tier not in tier_groups:
+                    tier_groups[tier] = []
+                tier_groups[tier].append(class_name)
+            for tier_name in sorted(tier_groups.keys()):
+                classes = sorted(tier_groups[tier_name])
+                f.write(f"#   {tier_name}: {', '.join(classes)}\n")
+            f.write("# \n\n")
+        else:
+            # Old format
+            f.write(f"# Default modifier: {default_pct}%\n")
+            f.write("# \n")
+            f.write("# Custom modifiers:\n")
+            for ritpow_id, pct in sorted(ritpow_modifiers.items(), key=lambda x: int(x[0])):
+                f.write(f"#   Ritpow {ritpow_id}: {pct}%\n")
+            f.write("# \n\n")
+
+        current_ritpow = None
+
+        for ritual in rituals:
+            ritpow = ritual['ritpow']
+
+            # Determine percentage for this ritual
+            if ritpow is not None and str(ritpow) in ritpow_modifiers:
+                percentage = ritpow_modifiers[str(ritpow)]
+            else:
+                percentage = default_pct
+
+            # Skip if 100% (no change)
+            if percentage == 100:
+                skipped_count += 1
+                continue
+
+            # Add section header when ritpow changes
+            if ritpow != current_ritpow:
+                ritpow_name = ritual['ritpow_name'] or f"Unknown ({ritpow})"
+                f.write(f"\n# --- {ritpow_name} ({percentage}%) ---\n\n")
+                current_ritpow = ritpow
+
+            f.write(f'selectritual "{ritual["name"]}"\n')
+
+            for cost in ritual['costs']:
+                resource_type = cost['type']
+                original_amount = cost['amount']
+
+                # Calculate new cost
+                new_amount = math.ceil(original_amount * percentage / 100)
+                new_amount = max(1, new_amount)
+
+                resource_name = RESOURCE_TYPES.get(resource_type, f"Resource {resource_type}")
+                f.write(f"cost {resource_type} {new_amount}  # {new_amount} {resource_name} (was {original_amount})\n")
+
+            f.write("\n")
+            modified_count += 1
+
+    return modified_count, skipped_count
+
+
+def list_ritpows(ritpow_names):
+    """Print all ritual power types."""
+    print("\nRitual Power Types:")
+    print("=" * 50)
+    for num in sorted(ritpow_names.keys()):
+        print(f"  {num}: {ritpow_names[num]}")
+    print()
+
+
+def generate_config_template(ritpow_names, output_path):
+    """Generate a template config file."""
+    config = {
+        "description": "Tiered ritual cost modifier configuration",
+        "default": 100,
+        "ritpow_modifiers": {}
+    }
+
+    # Add all ritpows as comments in the format they'd use
+    # We'll actually create it with 100% for all (no change by default)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write('{\n')
+        f.write('  "description": "Tiered ritual cost modifier configuration",\n')
+        f.write('  "default": 100,\n')
+        f.write('  "ritpow_modifiers": {\n')
+
+        items = sorted(ritpow_names.items())
+        for i, (num, name) in enumerate(items):
+            comma = "," if i < len(items) - 1 else ""
+            # Default to 100% (no change)
+            f.write(f'    "{num}": 100{comma}  \n')
+
+        f.write('  }\n')
+        f.write('}\n')
+
+    # Also write a reference file
+    ref_path = output_path.replace('.json', '_reference.txt')
+    with open(ref_path, 'w', encoding='utf-8') as f:
+        f.write("Ritual Power ID Reference\n")
+        f.write("=" * 50 + "\n\n")
+        for num, name in sorted(ritpow_names.items()):
+            f.write(f"{num}: {name}\n")
+
+    print(f"Generated config template: {output_path}")
+    print(f"Generated reference file: {ref_path}")
+
+
+def main():
+    script_dir = Path(__file__).parent
+    ritual_data_file = script_dir / "Ritual Data v5.33.c5m"
+
+    if not ritual_data_file.exists():
+        print(f"Error: Could not find '{ritual_data_file}'")
+        sys.exit(1)
+
+    # Parse ritual data
+    rituals, ritpow_names = parse_ritual_data(ritual_data_file)
+
+    # Handle command line arguments
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(1)
+
+    if sys.argv[1] == '--list-ritpows':
+        list_ritpows(ritpow_names)
+        sys.exit(0)
+
+    if sys.argv[1] == '--generate-config':
+        if len(sys.argv) < 3:
+            output = "balance_config.json"
+        else:
+            output = sys.argv[2]
+        generate_config_template(ritpow_names, output)
+        sys.exit(0)
+
+    # Load config file
+    config_file = sys.argv[1]
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Config file '{config_file}' not found")
+        sys.exit(1)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON in config file: {e}")
+        sys.exit(1)
+
+    # Determine output filename
+    if len(sys.argv) >= 3:
+        output_file = sys.argv[2]
+    else:
+        output_file = "tiered_ritual_costs.c5m"
+
+    output_path = script_dir / output_file
+
+    print(f"Parsing ritual data from: {ritual_data_file}")
+    print(f"Found {len(rituals)} rituals with costs")
+    print(f"Found {len(ritpow_names)} ritual power types")
+
+    print(f"\nGenerating mod file: {output_path}")
+    modified, skipped = generate_mod_file(rituals, config, ritpow_names, output_path)
+
+    print(f"\nResults:")
+    print(f"  Modified: {modified} rituals")
+    print(f"  Skipped (100%): {skipped} rituals")
+
+    print(f"\nTo use this mod:")
+    print(f"  1. Copy '{output_file}' to your CoE5 mods folder")
+    print(f"  2. Enable the mod in the game's mod menu")
+
+
+if __name__ == "__main__":
+    main()

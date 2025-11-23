@@ -16,24 +16,24 @@ import sys
 import math
 from pathlib import Path
 
-# Resource type names for comments
+# Resource type names for comments (based on Ritual Data v5.33.c5m)
 RESOURCE_TYPES = {
     0: "Gold",
     1: "Iron",
     2: "Herbs",
     3: "Fungus",
-    4: "Gems",
+    4: "Sacrifices",
     5: "Hands",
-    6: "Sacrifices",
-    7: "Blood",
-    8: "Demon Parts",
-    9: "Unburied",
+    6: "Blood",
+    7: "Prisoners",
+    8: "Unburied",
+    9: "Coins",
     10: "Silk",
     11: "Relics",
-    12: "Prisoners",
-    13: "Coins",
+    12: "Gems",
+    13: "Monster Parts",
     14: "Corpses (humanoid)",
-    15: "Monster Parts",
+    15: "Gems",
     16: "Entrails",
     17: "Corpses",
     18: "Hearts",

@@ -1,8 +1,9 @@
 {
-  "description": "Combined: Class tiers + Level modifiers + Spawn boost + Balance Redux",
+  "description": "Combined: Class tiers + Level modifiers + Spawn boost + Balance Redux + Custom Fixes",
 
   "spawn_modifier": 200,
   "base_mod": "balancemodredux.c5m",
+  "append_mod": "custom_fixes.c5m",
 
   "tiers": {
     "S": 100,
@@ -10,7 +11,7 @@
     "B": 80,
     "C": 70,
     "D": 60,
-    "F": 50
+    "F": 35
   },
 
   "class_tiers": {
@@ -87,8 +88,8 @@
   },
 
   "level_modifiers": {
-    "1": 80,
-    "2": 90,
+    "1": 70,
+    "2": 85,
     "3": 100
   }
 }

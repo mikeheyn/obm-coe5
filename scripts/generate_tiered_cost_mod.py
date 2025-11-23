@@ -21,6 +21,7 @@ import re
 import sys
 import json
 import math
+import shutil
 from pathlib import Path
 
 # Resource type names for comments (based on Ritual Data v5.33.c5m)
@@ -106,6 +107,8 @@ def parse_ritual_data(filepath):
     rituals = []
     current_ritual = None
     ritpow_names = {}
+    # Track how many times we've seen each ritual name (for offset calculation)
+    ritual_name_counts = {}
 
     with open(filepath, 'r', encoding='utf-8') as f:
         for line in f:
@@ -114,12 +117,20 @@ def parse_ritual_data(filepath):
             if match:
                 if current_ritual and current_ritual['costs']:
                     rituals.append(current_ritual)
+                ritual_name = match.group(1)
+                # Calculate offset for this ritual name
+                if ritual_name not in ritual_name_counts:
+                    ritual_name_counts[ritual_name] = 0
+                offset = ritual_name_counts[ritual_name]
+                ritual_name_counts[ritual_name] += 1
+
                 current_ritual = {
-                    'name': match.group(1),
+                    'name': ritual_name,
                     'costs': [],
                     'ritpow': None,
                     'ritpow_name': None,
-                    'level': None
+                    'level': None,
+                    'offset': offset
                 }
                 continue
 
@@ -195,7 +206,9 @@ def generate_mod_file(rituals, config, ritpow_names, output_path, project_dir):
     skipped_count = 0
 
     with open(output_path, 'w', encoding='utf-8') as f:
-        # Write header
+        # Write header with icon and description
+        f.write('icon "MPMod.tga"\n')
+        f.write('description "OBM Balance Mod - Tiered ritual costs, spawn boosts, and balance adjustments for CoE5."\n\n')
         f.write("# OBM Tiered Ritual Cost Modifier\n")
         f.write("# \n")
         f.write("# This mod adjusts ritual costs by class/ritual power type.\n")
@@ -212,8 +225,12 @@ def generate_mod_file(rituals, config, ritpow_names, output_path, project_dir):
                 f.write("# (Our changes below override any conflicts)\n")
                 f.write("# " + "=" * 50 + "\n\n")
 
+                # Read base mod but skip its icon and description lines
                 with open(base_path, 'r', encoding='utf-8') as base:
-                    f.write(base.read())
+                    for line in base:
+                        if line.strip().startswith('icon ') or line.strip().startswith('description '):
+                            continue
+                        f.write(line)
 
                 f.write("\n\n# " + "=" * 50 + "\n")
                 f.write("# OBM MODIFICATIONS START HERE\n")
@@ -285,7 +302,13 @@ def generate_mod_file(rituals, config, ritpow_names, output_path, project_dir):
                 f.write(f"\n# --- {ritpow_name} ({percentage}%) ---\n\n")
                 current_ritpow = ritpow
 
-            f.write(f'selectritual "{ritual["name"]}"\n')
+            # Use offset to select the correct instance of rituals with duplicate names
+            # The second parameter is an offset (0-based index), not ritpow
+            offset = ritual.get('offset', 0)
+            if offset > 0:
+                f.write(f'selectritual "{ritual["name"]}" {offset}\n')
+            else:
+                f.write(f'selectritual "{ritual["name"]}"\n')
 
             for cost in ritual['costs']:
                 resource_type = cost['type']
@@ -441,7 +464,7 @@ def main():
     if len(sys.argv) >= 3:
         output_file = sys.argv[2]
     else:
-        output_file = "tiered_ritual_costs.c5m"
+        output_file = "obm-coe5.c5m"
 
     output_path = project_dir / "output" / output_file
 
@@ -474,8 +497,35 @@ def main():
         print(f"  Modified: {spawn_modified} monsters")
         print(f"  Spawn modifier: {spawn_modifier}%")
 
+    # Append custom fixes at the end (overrides everything)
+    append_mod = config.get('append_mod')
+    if append_mod:
+        append_path = project_dir / append_mod
+        if append_path.exists():
+            with open(output_path, 'a', encoding='utf-8') as f:
+                f.write("\n# " + "=" * 50 + "\n")
+                f.write(f"# CUSTOM FIXES: {append_mod}\n")
+                f.write("# (These changes override everything above)\n")
+                f.write("# " + "=" * 50 + "\n\n")
+
+                with open(append_path, 'r', encoding='utf-8') as custom:
+                    f.write(custom.read())
+
+            print(f"\nCustom Fixes:")
+            print(f"  {append_mod} appended to end")
+        else:
+            print(f"\nWarning: Append mod '{append_mod}' not found at {append_path}")
+
+    # Copy to game-ready folder
+    game_folder = project_dir / "obm_coe5"
+    if game_folder.exists():
+        game_output = game_folder / output_file
+        shutil.copy2(output_path, game_output)
+        print(f"\nGame-ready copy:")
+        print(f"  Copied to {game_output}")
+
     print(f"\nTo use this mod:")
-    print(f"  1. Copy '{output_file}' to your CoE5 mods folder")
+    print(f"  1. Copy the 'obm_coe5' folder to your CoE5 mods directory")
     print(f"  2. Enable the mod in the game's mod menu")
 
 

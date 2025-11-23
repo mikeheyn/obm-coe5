@@ -1,0 +1,4224 @@
+icon "MPMod.tga"
+description "OBM Balance Mod - Tiered ritual costs, spawn boosts, and balance adjustments for CoE5."
+
+# OBM Tiered Ritual Cost Modifier
+# 
+# This mod adjusts ritual costs by class/ritual power type.
+# Generated from Ritual Data v5.33.c5m
+# 
+# ==================================================
+# BASE MOD: balancemodredux.c5m
+# (Our changes below override any conflicts)
+# ==================================================
+
+
+#You have to create the new ritual type at the top of the mod
+#newritpow ""
+
+#-----Weapons-----
+
+#### SCOUTS ####
+
+newmonster "Goblin Scout"                                                       
+copyspr "Goblin Archer"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+stealth
+goblin 1
+allitemslots
+noleader            # Cannot lead troops even when a commander
+
+
+newmonster "Hoburg Scout"                                                       
+copyspr "Hoburg Militia"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+stealth
+allitemslots
+noleader            # Cannot lead troops even when a commander
+
+
+newmonster "Bakemono Scout"                                                       
+copyspr "Bakemono Archer"
+rank             0  # Mid
+hp               5
+armor            0
+mr               4  # Magic Resistance
+mor              3  # Morale
+str              4  # Strength
+rangedweapon 0   7  # Bow
+meleeweapon  0   1  # Dagger
+acutesenses
+noleader            # Cannot lead troops even when a commander
+
+####################
+
+#### HOME GUARD ####
+
+newmonster "Baron's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Necromancer's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Demonologist's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Witch's Home Guard"                                           
+copystats "Androphag Archer"
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "High Priestess's Home Guard"                                           
+copystats "Ba'alite Heavy Infantry"
+rank             0  # Mid
+rangedweapon 0   9  # Crossbow
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Bakemono's Home Guard"                                           
+copystats "Dai Bakemono Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Barbarian's Home Guard"                                           
+copystats "Barbarian Bowman"
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Senator's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Pale Ones's Home Guard"                                           
+copystats "Pale One Soldier"
+rank             0  # Mid
+rangedweapon 1  27  # Sling
+meleeweapon  0  23  # Halberd (value 1: D8 slash damage)
+shield
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Druid's Home Guard"                                           
+copystats "Barechested Swordsman"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Burgmeister's Home Guard"                                           
+copystats "Hoburg Crossbow"
+shield
+stationary
+descr "Trained and heavily armed mercenaries whos only desire is to protect their source of income"
+
+newmonster "Warlocks's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Priest King's Home Guard"                                           
+copystats "Feathered Warrior"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Troll King's Home Guard"                                             
+copystats "Goblin Archer"
+stationary
+descr "Trained and armed defenders whos only desire is to protect their home"
+
+newmonster "Enchanter's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "High Cultist's Home Guard"                                            
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Dwarf Queen's Home Guard"                                            
+copystats "Outdoor Dwarf"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Voice of El's Home Guard"                                            
+copystats "Tower Guard"
+copyspr   "Temple Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Illusionist's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Markgraf's Home Guard"                                           
+copystats "Hoburg Crossbow"
+shield
+stationary
+descr "Trained and heavily armed mercenaries whos only desire is to protect their source of income"
+
+newmonster "Dryad Queen's Home Guard"                                           
+copystats "Satyr Warrior"
+rank             0  # Mid
+rangedweapon 2  27  # Sling
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Scourge Lord's Home Guard"                                           
+copystats "Tower Guard"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Cloud Lord's Home Guard"                                           
+copystats "Airya Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Maharaja's Home Guard"                                           
+copystats "Bandar Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Raksharaja's Home Guard"                                           
+copystats "Bandar Archer"
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+newmonster "Kobold King's Home Guard"                                           
+copystats "Black Kobold Scout"
+rangedweapon 0  27  # Sling
+rank             0  # Mid
+stationary
+descr "Trained and heavily armed defenders whos only desire is to protect their home"
+
+#### DWARF MODIFICATIONS ####
+
+selectmonster "Young Dvala"
+trade 1
+
+selectmonster "Dvala"
+trade 1
+
+selectmonster "Daughter of Dvalin"
+trade 1
+
+selectmonster "Dwarf Arbalest"
+clearmove
+mountain
+snow
+
+selectmonster "Dwarf"
+hp               6
+
+#### PALE ONES MODIFICATIONS ####
+
+#- Weapons
+selectweapon "Obsidian Glaive"
+sweep
+
+selectmonster "King Of The Deep"
+fastheal
+clearweapons
+meleeweapon             19   "Obsidian Glaive" # d27 Slash damage.
+
+selectmonster "Pale One Slinger"
+clearweapons
+rangedweapon               1  27 # Sling: d3 Blunt damage.
+meleeweapon                1   1 # Dagger: d4 Pierce damage.
+
+#### VOICE OF EL MODIFICATIONS ####
+
+selectmonster "Bishop"
+more1spells 10
+
+selectmonster "Arch Bishop"
+more1spells 10
+
+selectmonster "Angel"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Angelic Warrior"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Arch Angel"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Celestial Lion"
+clearmove
+flying
+semistupid
+huge
+
+selectmonster "Harbinger"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Ophan"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+selectmonster "Pilgrim"
+clearmove
+semistupid
+
+selectmonster "Saint"
+clearmove
+semistupid
+temple2             # Prefers temples
+money2              # Prefers gold income sites
+
+selectmonster "Seraph"
+clearmove
+flying
+semistupid
+temple2             # Prefers temples
+
+
+#### SENATOR MODIFICATIONS ####
+
+#- Terrain
+
+#Senator Class Stables
+selectterr 435
+spr "ElephantStable.tga"
+name "War Elephant Stables"
+gold 3
+ownable
+apcost 1
+
+#- Rituals 
+
+newritual "Bring Forth the War Elephants"
+ritpow 31
+level 2
+free
+cost 0 50 #Gold
+cost 1 15 #Iron
+apcost 1
+terr 435
+addstring "War Elephant"
+summoning
+descr "The senator personally oversees the proper care and training of the legion's most powerful weapon and sees its deployment. This weapon is the War Elephant."
+
+newritual "Establish the Stables"
+ritpow 31
+level 2
+free
+apcost 5
+cost 0 150 #Cost gold
+soundfx 57
+terr -32
+alterloc 435
+closewin
+descr "The senator funds the project to establish a Elephant Stable."
+
+#### MARKGRAF MODIFICATIONS ####
+
+#- Terrain
+
+selectterrgroup  -1110
+setname "Old Castles and Graveyards"
+addterr -70
+addterr 235
+addterr  38
+
+#- Rituals
+
+selectritual "Flesh Rite"
+clearritspec
+terr -1110
+addstring "Markmeister"
+addstring "Ghoul Baron"
+addstring "Markgraf"
+addstring "Ghoul Baron"
+addstring "Markmann"
+addstring "Ghoul Baron"
+promotion 1
+closewin
+
+
+#### WARLOCK MODIFICATIONS ####
+
+#- Rituals
+
+selectritual "Flame Pact"
+cost 7 40 #Cost fire
+
+selectritual "Flame Pact" 1
+cost 7 20 #Cost fire
+
+selectritual "Water Pact"
+cost 8 40 #Cost water
+
+selectritual "Water Pact" 1
+cost 8 20 #Cost water
+
+selectritual "Storm Pact"
+cost 9 40 #Cost air
+
+selectritual "Storm Pact" 1
+cost 9 20 #Cost air
+
+selectritual "Earth Pact"
+cost 10 40 #Cost earth
+
+selectritual "Earth Pact" 1
+cost 10 20 #Cost earth
+
+selectritual "Lesser Fire Summoning"
+cost 7 20 #Cost fire 
+
+selectritual "Lesser Water Summoning"
+cost 8 20 #Cost water 
+
+selectritual "Lesser Air Summoning"
+cost 9 20 #Cost air 
+
+selectritual "Lesser Earth Summoning"
+cost 10 20 #Cost earth 
+
+#Fire Warlock
+
+selectritual "Greater Flame Pact"
+cost 7 120 #Cost fire
+
+selectritual "Greater Fire Summoning"
+cost 7 35 #Cost fire 
+
+selectritual "Summon Champion of Fire"
+cost 7 35 #Cost fire 
+
+selectritual "Circle of Flames"
+cost 7 3 #Cost fire 
+
+selectritual "Vafur Flames"
+cost 7 18 #Cost fire 
+
+selectritual "Summon Magma Warrior"
+cost 7 18 #Cost fire 
+cost 10 18 #Cost earth
+
+selectritual "Summon Smoke Warrior"
+cost 7 18 #Cost fire 
+cost 9 18 #Cost air
+
+selectritual "Summon King of Fire"
+cost 7 160 #Cost fire 
+
+selectritual "Wheel of Frost and Flames"
+cost 7 32 #Cost fire 
+cost 8 32 #Cost water 
+
+selectritual "Eternal Pyre"
+cost 7 80 #Cost fire 
+
+#Water Warlock
+
+selectritual "Greater Water Pact"
+cost 8 120 #Cost water
+
+selectritual "Greater Water Summoning"
+cost 8 35 #Cost water 
+
+selectritual "Summon Yeti"
+cost 8 18 #Cost water 
+cost 9 18 #Cost air
+
+selectritual "Summon Champion of Water"
+cost 8 35 #Cost water 
+
+selectritual "Summon Mud Warrior"
+cost 8 18 #Cost water 
+cost 10 18 #Cost earth
+
+selectritual "Maelstrom"
+cost 8 29 #Cost water 
+
+selectritual "Enchant Lake"
+cost 8 14 #Cost water 
+
+selectritual "Summon Queen of Water"
+cost 8 160 #Cost water 
+
+selectritual "Fimbul Fortress"
+cost 8 80 #Cost water 
+
+selectritual "Primal Maelstrom"
+cost 8 32 #Cost water 
+
+#Air Warlock
+
+selectritual "Greater Storm Pact"
+cost 9 120 #Cost air
+
+selectritual "Greater Air Summoning"
+cost 9 35 #Cost air 
+
+selectritual "Summon Champion of Air"
+cost 9 35 #Cost air 
+
+selectritual "Curtain of Storms"
+cost 9 18 #Cost air 
+
+selectritual "Summon Queen of Air"
+cost 9 160 #Cost air 
+
+selectritual "Wheel of Storm and Stone"
+cost 9 32 #Cost air 
+cost 10 32 #Cost earth
+
+selectritual "Perpetual Storm"
+cost 9 100 #Cost air 
+
+selectritual "Cloud Castle"
+cost 9 120 #Cost air 
+
+#Earth Warlock
+
+selectritual "Greater Earth Pact"
+cost 10 120 #Cost earth
+
+selectritual "Greater Earth Summoning"
+cost 10 35 #Cost earth 
+
+selectritual "Summon Champion of Earth"
+cost 10 35 #Cost earth 
+
+selectritual "Ramparts of Earth"
+cost 10 7 #Cost earth 
+
+selectritual "Dig"
+cost 10 7 #Cost earth 
+
+selectritual "Summon King of Earth"
+cost 10 160 #Cost earth 
+
+selectritual "Wizard's Tower"
+cost 10 80 #Cost earth 
+
+selectritual "Raise Volcano"
+cost 10 40 #Cost earth 
+cost 7  20 #Cost fire 
+
+#### DRYAD QUEEN MODIFICATIONS ####
+
+#- Rituals
+
+newritual "Call Forth Sacred Defenders"
+ritpow 47
+level 1
+free
+terr -65
+cost 2 150 #Cost herbs
+addstring "5*Dryad Queen's Home Guard"
+summoning
+descr ""
+
+#### KOBOLD KING MODIFICATIONS ####
+
+selectmonster  "Fire Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+selectmonster "Fire Dragon Hatchling"
+stupid
+stationary
+
+selectmonster  "Frost Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+spawnmon       16          # Spawns the next monster about every 6 turns. 16/100 per turn
+
+newmonster  "Frost Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Frost Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6 276 # Icy Breath: d6 Cold damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+coldres                      100 # Cold immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Storm Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Storm Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Storm Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6 858 # Lightning Breath: d6 Shock damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+shockres                     100 # Shock immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Bile Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Bile Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Bile Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+rangedweapon50s            6  38 # Poison Breath: d6 Poison damage.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+poisonres                    100 # Poison immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Dusk Dragon"
+mor            9           # +2 Morale from base
+randommisc     100         # 100% chance of misc item rather than 50%
+wanderrest     35          # 35% Chance of resting each turn rather than 85%
+wandermaxdist  9           # Can move up to 9 tiles away rather than 5.
+
+newmonster  "Dusk Dragon Hatchling"
+descr "Newly hatched dragons look just like their older brethren, just smaller, and during their first few months their scales are still soft as leather and their flesh is very tender. Many cultures consider the Dragon Hatchlings a delicacy, so both eggs and hatchlings are frequently hunted. In the western provinces, the hatchlings are gutted, pickled in honey vinegar and spices and then spit roasted and covered in sesame seeds. For a Fire Dragon hatchling the spices need to be light, as the meat in itself is dominated by heat. In the north the hatchlings are instead pickled for several weeks in whey and sour milk, and then cooked in the ground while stuffed with onions and leeks. Dwarves, being dwarves, do not understand the concept of a delicacy, so they just dry the hatchlings, grind them and then cook them into a porridge or slush together with ground-up roots and mushrooms."
+copyspr                        "Dusk Dragon"
+armor                          2 # Armor.
+hp                            24 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             7 # Magic Resistance.
+rank                           1 # Front rank.
+spellweapon50s             9   1 # Dark Magic at level 1.
+meleeweapon                8  11 # Bite: d8 Slash damage.
+meleeweapon                7  12 # Claw: d7 Slash damage.
+flying                          
+fireres                      100 # Fire immunity.
+nametype                      15 # Old Nordic male.
+burnforest                     3 # Can choose to burn a forest for 1 AP. The difference between arguments 1, 2, and 3 is undocumented.
+dragon                         1 # Non-elder dragon.
+lairgoldpen                   25 # 25% Gold income penalty for this monster's home square.
+drawsize                     -35 # Draw the unit 35% smaller when shown on its unit token.
+stupid
+stationary
+
+selectmonster  "Red Kobold Sorcerer"
+clearspec
+power                      52  2 # Kobold, Red, level 1.
+mastery                        1
+fireres                      100
+
+selectmonster  "Blue Kobold Sorcerer"
+clearspec
+power                      53  2 # Kobold, Blue, level 1.
+mastery                        1
+coldres                      100
+
+selectmonster  "Green Kobold Sorcerer"
+clearspec
+power                      55  2 # Kobold, Green, level 1.
+mastery                        1
+poisonres                    100
+
+selectmonster  "White Kobold Sorcerer"
+clearspec
+power                      54  2 # Kobold, White, level 1.
+mastery                        1
+shockres                     100
+
+selectmonster  "Red Kobold King"
+power          54 3
+
+selectmonster  "Blue Kobold King"
+power          54 3
+
+selectmonster  "Green Kobold King"
+power          54 3
+
+selectmonster  "White Kobold King"
+power          54 3
+
+selectritual "Ritual of Mastery" 26
+cost 7 50
+
+selectritual "Ritual of Mastery" 27
+cost 10 50
+
+selectritual "Ritual of Mastery" 28
+cost 8 50
+
+selectritual "Ritual of Mastery" 29
+cost 9 50
+
+selectritual "Ritual of Grand Mastery" 22
+cost 7 200
+
+selectritual "Ritual of Grand Mastery" 23
+cost 10 200
+
+selectritual "Ritual of Grand Mastery" 24
+cost 8 200
+
+selectritual "Ritual of Grand Mastery" 25
+cost 9 200
+
+#-Events
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Fire Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Fire Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Bile Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Bile Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Frost Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Frost Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Dusk Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Dusk Dragon Hatchling"
+endevent
+
+squareevent
++terrain     -12 # Greater Mines
++hasunithere -2 "Storm Dragon"
++chance      25
++class       -2 "Kobold King"
+newunits     -2 "Storm Dragon Hatchling"
+endevent
+
+#### ENCHANTER MODIFICATIONS ####
+
+selectritual "Animate Sword"
+apcost       0
+
+selectritual "Animate Bow"
+apcost       0
+
+selectritual "Animate Spear"
+apcost       1
+
+selectritual "Animate Armor"
+apcost       0
+
+selectritual "Craft Gargoyle"
+clearritspec
+descr "The Enchanter crafts a Gargoyle from ordinary earth and brings it to life with a complex ritual.  This ritual is both time consuming and expensive, but the gargoyle is a solid construct that is difficult to harm in combat."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost              1    5 # 5 Iron
+terr                 -94 # Required terrain: temples and fortified locations.
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 1 # Actual AP cost: 2.
+# fx1100               2 # Likely an undocumented AI tip related to stationary defenses.
+aialways              20 # Extra 20% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "3*Gargoyle"
+free
+
+selectritual "Create Flesh Golem"
+clearritspec
+descr "By taking five random corpses and stitching them together into one large humanoid being the Enchanter can create a Flesh Golem.  The creation of a Flesh Golem is relatively quick and inexpensive, but it is not nearly as powerful as golems made out of more solid materials."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost             14    5 # 5 Corpses (humanoid)
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 0 # Actual AP cost: 1.
+aialways              50 # Extra 50% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "2*Flesh Golem"
+
+selectritual "Sculpt Terracotta Soldier"
+descr "The Enchanter forms a soldier out of mud and brings it to life with a simple enchantment.  The process takes a long time, but it does not require any resources other than large quantities of mud."
+ritpow                11 # Enchantment
+level                  1
+terr                 -20 # Required terrain: swamp/bog.
+summoning                # The ritual will summon the monsters specified in a random string.
+destroyterr            8 # % chance of destroying the terrain.
+apcost                 1 # Actual AP cost: 2.
+aialways             999 # AI will always try to cast this ritual, and make long term plans to do so.
+aiweakonly           400 # AI commander will only cast this ritual if his troop strength is below this value. One spearman gives 10 troop strength points.
+addstring     "2*Terracotta Soldier"
+
+selectritual "Animate Tools"
+apcost       1
+
+selectritual "Create Mimic"
+clearritspec
+descr "Even though an Enchanter could create a Mimic from just about any furniture, the chest is usually the preferred piece of furniture to use. This gives the mimic a very large mouth with which it can attack its prey and chests are also exceedingly good at drawing the attention of any would-be raiders. It is possible to tell a Mimic apart from an ordinary piece of furniture by touching it, as it is quite slimy. The slime is sticky and will make it difficult to move and escape from the Mimic, even though a chest shape is badly suited for movement."
+ritpow                11 # Enchantment
+level                  1
+cost              0    5 # 5 Gold
+cost              1    5 # 5 Iron
+terr                 -24 # Required terrain: villages and smaller settlements.
+summoning                # The ritual will summon the monsters specified in a random string.
+apcost                 0 # Actual AP cost: 2.
+aialways              40 # Extra 40% chance that AI will try to cast this ritual if it currently can, but it will not make long term plans to do so.
+addstring     "Mimic"
+free
+
+selectritual "Craft Guardian"
+apcost       1
+free
+
+selectritual "Create Necrotod"
+apcost       1
+
+selectritual "Create Wood Golem"
+apcost       0
+
+selectritual "Create Stone Golem"
+apcost       0
+
+selectritual "Create Ice Golem"
+apcost       0
+
+selectritual "Create Clay Golem"
+apcost       0
+
+selectritual "Enliven Statue"
+clearritspec
+descr "With this ritual the Enchanter will bring a humanlike statue to life and make it obey simple orders.  The ritual can only be performed in temples where there is an ample supply of statues and each casting of this ritual has a chance of destroying the temple."
+ritpow                11 # Enchantment
+level                  2
+terr                  -2 # Required terrain: Ancient Temple.
+summoning                # The ritual will summon the monsters specified in a random string.
+destroyterr            5 # % chance of destroying the terrain.
+apcost                 0 # Actual AP cost: 1
+aialways             999 # AI will always try to cast this ritual, and make long term plans to do so.
+aiweakonly           400 # AI commander will only cast this ritual if his troop strength is below this value. One spearman gives 10 troop strength points.
+addstring     "Animated Statue"
+
+selectritual "Enchanted Gate"
+apcost       2
+free
+
+selectritual "Iron Grafting"
+promotion    3
+
+selectritual "Animate Ballista"
+apcost       1
+
+selectritual "Dogs of Gold and Silver"
+apcost       1
+
+selectritual "Create Juggernaut"
+terr        -2
+apcost       2
+
+selectritual "Create Oak Golem"
+apcost       2
+
+selectritual "Create Iron Golem"
+apcost       2
+
+selectritual "Create Onyx Golem"
+apcost       2
+
+selectritual "Create Crystal Golem"
+apcost       2
+
+selectritual "Create Silver Golem"
+apcost       2
+
+selectritual "Create Gold Golem"
+apcost       2
+
+selectritual "Create Home Portal"
+apcost       2
+
+selectritual "Create Portal"
+apcost       2
+
+selectritual "Infuse Magic Library"
+apcost       2
+
+selectritual "Brass Bull"
+apcost       2
+cost         0 350
+
+#- Units
+selectmonster "Dancing Spear"
+unaging
+
+selectmonster "Dancing Sword"
+unaging
+
+selectmonster "Animated Armor"
+unaging
+
+selectmonster "Gargoyle"
+unaging
+
+selectmonster "Terracotta Soldier"
+unaging
+
+selectmonster "Guardian"
+unaging
+
+selectmonster "Wood Golem"
+weaponslots
+
+selectmonster "Stone Golem"
+weaponslots
+unaging
+
+selectmonster "Ice Golem"
+weaponslots
+unaging
+
+selectmonster "Clay Golem"
+weaponslots
+unaging
+
+selectmonster "Animated Statue"
+weaponslots
+unaging
+
+selectmonster "Animated Ballista"
+unaging
+
+selectmonster "Dog of Gold"
+unaging
+
+selectmonster "Dog of Silver"
+unaging
+
+selectmonster "Juggernaut"
+unaging
+
+selectmonster "Oak Golem"
+weaponslots
+
+selectmonster "Iron Golem"
+weaponslots
+unaging
+
+selectmonster "Onyx Golem"
+weaponslots
+unaging
+
+selectmonster "Crystal Golem"
+weaponslots
+unaging
+
+selectmonster "Silver Golem"
+weaponslots
+unaging
+
+selectmonster "Gold Golem"
+weaponslots
+unaging
+
+selectmonster "Brass Bull"
+unaging
+
+#### BARBARIAN MODIFICATIONS ####
+
+#- Terrain
+selectterr  780
+name    "Moonlight Lodge"
+spr     "lodge.png"
+apcost  1
+gold    2
+herbs    3
+pop    10
+lifeforce   20
+walls
+woodengate
+citadel
+nostdrec
+ownable
+temple
+settlement
+
+#- Rituals
+
+newritual   "Raise Moonlight Lodge"
+ritpow      13 #Spirit Guide
+level       2
+cost        2 300
+terr        -62
+promotion
+alterloc    780
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Werebear"
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Wereboar"
+addstring   "Barbarian Warrior"
+addstring   "Barbarian Werewolf"
+
+selectritual  "Summon Ancestor"
+clearritspec
+descr "The Spirit Guide builds a sweat lodge and burns aromatic herbs to attract the attention of an ancestral spirit of his tribe.  The spirit manifests as a spectral warrior ready to aid his descendants in battles."
+ritpow                13 # Spirit Summons
+level                  1
+cost              2   35 # 35 Herbs
+terr                 -42 # Required terrain: any land.
+summoning                # The ritual will summon the monsters specified in a random string.
+terrboost             19 # Adds 1 to the number of monsters summoned in this terrain: Old Battlefield.
+sum0chance             5 # % chance to summon first string instead of a random string among the others.
+addstring     "c*Ancestral Chief"
+addstring     "1d2*Ancestral Lancer"
+addstring     "1d3*Ancestral Warrior"
+addstring     "1d2*Ancestral Archer"
+
+selectritual  "Summon Heroes of Old"
+clearritspec
+descr "The Spirit Guide builds a sweat lodge and burns large amounts aromatic herbs to call the spirits of the tribe's most heroic ancestors."
+ritpow                13 # Spirit Summons
+level                  2
+cost              2  250 # 250 Herbs
+terr                 -42 # Required terrain: any land.
+summoning                # The ritual will summon the monsters specified in a random string.
+terrboost              4 # Adds 1 to the number of monsters summoned in this terrain: Ancient Forest.
+terrscale50           19 # 50% more monsters summoned in this terrain: Old Battlefield.
+addstring     "(4)c*Ancestor Guide"     # This string will only be included in terrain: Ancient Forest.
+addstring     "c*Ancestral Hero"
+addstring     "c*Ancestral Chief & 1d3+2*Ancestral Lancer"
+addstring     "1d4+2*Ancestral Warrior & 1d4+2*Ancestral Archer"
+addstring     "2d4+4*Ancestral Warrior"
+addstring     "2d4+1*Ancestral Lancer"
+
+selectritual  "Carve Totempole"
+cost          2 250
+free
+
+selectritual  "Promise of the Ancestors"
+cost          2 325
+
+selectritual  "Army of Legends"
+cost          2 750
+
+newritpow
+
+newritual "Raise Champion Host"
+level     1
+terr     -23
+cost       0 250
+summoning
+addstring  "2d6+3*Barbarian Champion"
+
+#- Units
+newmonster    "Barbarian Werewolf"                                               
+descr "In fact, among the henchmen or retainers composing the bodyguards there are varying degrees of rank conferred by the chief whom they follow, and there is an eager rivalry between the retainers for the post of honor next their chief, as well as between the different chiefs for the honor of having the most numerous and the most valiant bodyguard.  Here lie dignity and strength.  From a surviving slave who managed to flee after serving as a captive for the Barbarian Leader, strange tales about some of these bodyguards have been recorded.  It is said that some of the most honored bodyguards at times of great omens are fetched by some of the oldest Enaries to a sacred place in the forest, where they must crawl through the skin of an old Wolf while the priest covers them with tattoos and markings.  Upon returning, their mind is different and they become grumpy and solitary.  It is said that they now are possessed by the spirit of the Bear, and can take that shape during battles.  Some reports have described small tame Wolves fighting on the Barbarian side in battles, but nothing indicates that they were once humans."
+copyspr                 "Wolf"
+armor                          0 # Armor.
+hp                             8 # Hit Points.
+str                            5 # Strength.
+mor                            5 # Morale.
+mr                             5 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                6  11 # Bite: d6 Slash damage.
+fast
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+regeneration                     # Heals ~5% HP every combat round in battle. May rise from the dead if unit suffered less damage than 150% of its HP. Heals permanent battle afflictions over time.
+lookslike                      2 # To opposing players, this monster will appear to be the type defined 1 after this one; i.e. monster #1137: Bandit.
+
+newmonster    "Barbarian Wereboar"                                                 # 1136
+descr "In fact, among the henchmen or retainers composing the bodyguards there are varying degrees of rank conferred by the chief whom they follow, and there is an eager rivalry between the retainers for the post of honor next their chief, as well as between the different chiefs for the honor of having the most numerous and the most valiant bodyguard.  Here lie dignity and strength.  From a surviving slave who managed to flee after serving as a captive for the Barbarian Leader, strange tales about some of these bodyguards have been recorded.  It is said that some of the most honored bodyguards at times of great omens are fetched by some of the oldest Enaries to a sacred place in the forest, where they must crawl through the skin of an old Boar while the priest covers them with tattoos and markings.  Upon returning, their mind is different and they become grumpy and solitary.  It is said that they now are possessed by the spirit of the Bear, and can take that shape during battles.  Some reports have described small tame Boards fighting on the Barbarian side in battles, but nothing indicates that they were once humans."
+copyspr                 "Great Boar"
+armor                          1 # Armor.
+hp                            14 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             5 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                6  37 # Gore: d6 Slash damage.
+fast
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+regeneration                     # Heals ~5% HP every combat round in battle. May rise from the dead if unit suffered less damage than 150% of its HP. Heals permanent battle afflictions over time.
+lookslike                      1 # To opposing players, this monster will appear to be the type defined 1 after this one; i.e. monster #1137: Bandit.
+
+newmonster    "Barbarian Warrior"                                        #  123
+descr "They all possess precisely the same physical characteristics, fierce eyes, unruly hair, and large frames which are good only for a spurt; they certainly have not a corresponding power of endurance for hard work, while, although inured by the nature of their climate and soil to hunger and cold, they have never learnt to withstand heat and thirst.  Generally speaking, the footmen are the most numerous, and the fighting line therefore is composed of both arms combined, all the fastest runners among the young men being chosen for the van, and by their great speed of foot being admirably suited for a cavalry engagement.  Not being a crafty or a cunning race, they furthermore disclose their secret thoughts in the freedom of the feast, and so the minds of all lie open and discovered.  In quenching their thirst they are by no means so temperate; let them but be given all the intoxicating liquor they choose to drink, and vice will make an easier conquest of them than the sword."
+copyspr                 "Barbarian Warrior"
+armor                          0 # Armor.
+hp                             7 # Hit Points.
+str                            5 # Strength.
+mor                            5 # Morale.
+mr                             3 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                1   3 # Axe: d8 Slash damage.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+shield                           # Reduces damage from most weapons by 0-1; 0-2 against ranged weapons.
+allitemslots                     # Has the full set of item slots.
+berserker                        # Can go berserk if hit in combat.  Berserk: +1 Strength, +10 Morale, fight to -20% HP.
+
+newmonster      "Barbarian Champion"
+copyspr         "Unexpected Hero"
+armor                          1 # Armor.
+hp                            10 # Hit Points.
+str                            6 # Strength.
+mor                            6 # Morale.
+mr                             3 # Magic Resistance.
+rank                           1 # Front rank.
+meleeweapon                1  21 # Greatsword: d10 Slash damage.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+allitemslots                     # Has the full set of item slots.
+berserker
+
+
+selectmonster  "Onyx Amazon"
+clearmove
+mor             6
+
+selectmonster  "Jade Amazon"
+clearweapons
+poisonres      50
+meleeweapon    0 "Poison Spear"
+rangedweapon   0 "Sling"
+
+selectmonster  "Garnet Amazon"
+hp              8
+str             5
+mor             6
+
+selectmonster  "Barbarian Leader"
+hp             18
+armor           1
+power           0   1
+
+
+
+#### HOBURG MODIFICATIONS ####
+
+#- Terrain
+selectterr  781
+name                 "Labryinth Grove"
+herbs             2 # Herbs:  2
+fungus            2 # Fungus:  2
+weed              1 # Weed: 1
+lifeforce        35 # 3 Lifeforce can be drained from this square per turn.
+apcost            5 # Action Point cost for moving through the terrain: 6
+burnable            # The terran can be burned like forest.
+invisible           # Terrain on top of the background is not drawn, but the grass will still be drawn.
+forest              # The terrain counts as forest for the purposes of abilities like Forest Stealth.
+nosight             # The terrain does not provide vision into adjacent squares when owned.
+
+
+
+#- Rituals
+
+newritual     "Vessel of Wrath"
+descr "When the Entish guardians of the Hoburgs are engulfed in the flame of war leaving naught but dead cinders in its wake, the most stalwart of the Horticulturists give up their sense of self to become as a conduit for the rage and vengeance of the devestated wood spirits."
+ritpow              9 # Hoburg Weed
+level               3 
+cost            6 250 # 250 Weed
+#terr               37 # Shadow Wood
+castertarg
+promotion
+addstring          "Garden Master"
+addstring          "Scion of the Wood"
+free
+
+newritual    "Awaken Vine Men"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 50 # 50 Weed
+terr        -6    # Forests
+summoning
+addstring    "2d3+1*Vine Man"
+free
+
+newritual    "Awaken Vine Ogre"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 35 # 35 Weed
+terr        -6    # Forests
+summoning
+addstring    "Vine Ogre"
+free
+
+newritual    "Awaken Dark Vines"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost        6 150 # 150 Weed
+terr        -6    # Forests
+summoning
+addstring    "Dark Vines"
+free
+
+newritual    "Awaken Ivy King"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost        6 350 # 350 Weed
+terr        -97   # Ancient Forests and similar
+summoning
+addstring    "c*Ivy King & 2*Vine Man & Vine Ogre"
+free
+
+#newritual    "Labryinth Grove"
+#descr        "wip"
+#level        4
+#ritpow              9 # Hoburg Weed
+#cost           6 35 # 35 Weed
+#soundfx     57
+#chooseterrloc         -21
+#alterloc               781
+#free
+
+#newritual    "Wild Regrowth"
+#descr        "wip"
+#level        4
+#ritpow              9 # Hoburg Weed
+#cost         6 100 # 100 Weed
+#soundfx     57
+#free
+
+newritual    "Walking Woods"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 250 # 250 Weed
+terr        -6     # Forests and Jungles
+soundfx     57
+seteventvar 7801
+free
+
+newritual    "Tree Sight"
+descr        "wip"
+level        4
+ritpow              9 # Hoburg Weed
+cost         6 200 # 200 Weed
+terr        -6
+soundfx     57
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+randnewloc   4 # Random undiscovered ancient forest
+scryloc      20
+free
+
+#- Events
+
+squareevent
++varequal  7801 1 # True after casting Walking Woods
++terrain       -6 # Forests and jungles
++plane         -2
+message        -1 "Bark and branch, root and vine, suddenly forests across all of Elysium shudder and move, taking on a life of their own and harrying civilization!"
+setvar     7801 0
++chance         5 # Five percent chance per forest tile
+alterterrain    0 # Turn into plains
+newunits       -2 "c*Vine Ogre & 2d4 Vine Man"
+endevent
+
+#- Units
+
+selectmonster "Horologist"
+chopforest                     1
+
+selectmonster "Clockwork Master Crafter"
+chopforest                     1
+
+newmonster    "Scion of the Wood"
+descr         "WIP"
+spr1          "scion1.tga"
+spr2          "scion2.tga"
+armor                          1 # Armor.
+hp                             8 # Hit Points.
+str                            4 # Strength.
+mor                            5 # Morale.
+mr                             9 # Magic Resistance.
+rank                          -1 # Back rank.
+spellweapon               54   3 # Forest Magic at level 3.
+meleeweapon               -1   5 # Staff: d2 Blunt damage.
+slow                             # The monster only has 2 AP.
+human                            # Vulnerable to weapons and spells that only affect humans; leaves a humanoid corpse on death.
+allitemslots                     # Has the full set of item slots.
+power                       9  4 # Hoburg Weed, level 4.
+nametype                       4 # Germanic male.
+awakentrees                    6 # Animate trees in 6 radius
+fireres                      -25 # 25% weakness to fire
+
+newmonster    "Vine Man"
+descr         "plant boi"
+spr1          "vineman1.png"
+spr2          "vineman2.png"
+armor                     1 
+hp                        8
+str                       5
+mor                      99
+mr                        5
+rank                      1 # Front Rank
+meleeweapon50s        3 332 # Tangle vines d3 blunt
+meleeweapon        2 "Fist" # d2 Blunt
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+newmonster    "Vine Ogre"
+descr         "plant boi"
+spr1          "vineogre1.png"
+spr2          "vineogre2.png"
+armor                     1 
+hp                       38
+str                       7
+mor                      99
+mr                        5
+size2x2
+rank                      1 # Front Rank
+meleeweaponbonus      6 332 # Tangle Vines d6 blunt
+meleeweapon50s        6 332 # Tangle vines d6 blunt
+meleeweapon        12 "Fist" # d12 Blunt
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+newmonster    "Dark Vines"
+descr         "plant boi"
+spr1          "darkvines1.png"
+spr2          "darkvines2.png"
+huge
+armor                     1 
+hp                       87
+str                       8
+mor                      99
+mr                        7
+rank                      1 # Front Rank
+meleeweaponbonus       6 "Tentacle" # d6 Blunt
+meleeweaponbonus       6 "Tentacle" # d6 Blunt
+meleeweaponbonus       6 "Tentacle" # d6 Blunt     
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+noeyes
+hpoverflow                1 # Increased HP persists
+absorbdead                3 # Consumes 3 corpses per turn for 9 Hp
+
+newmonster    "Ivy King"
+descr         "plant boi"
+spr1          "ivyking1.png"
+spr2          "ivyking2.png"
+armor                     1 
+hp                       42
+str                       7
+mor                      99
+mr                        5
+size2x2
+rank                     -1 # Back Rank
+meleeweaponbonus      6 332 # Tangle Vines d6 blunt
+meleeweapon50s        6 332 # Tangle vines d6 blunt
+meleeweapon       12 "Fist" # d12 Blunt
+spellweaponbonus  60 3      # Tree magic
+power                   9 4 # Scion rituals
+allitemslots                
+noheal                      # Doesn't heal
+healonterr               -6 # Only heals in forests
+foreststealth               # Stealthy in forests
+bluntres                    # Half damage from blunt
+pierceres                   # Half damage from pierce
+tangleres                 1 # Immune to tangle vines
+fireres                 -50 # Weakness to fire
+poisonres               100 # Immunity to poison
+
+#### BARON ####
+
+newritual       "Establish Capital"
+descr           "Whence commeth law? Whence commeth loyalty? Whence commeth order? Elysium is in need of all of these things desperately and immediately. Only the Baron can wrest the world from this chaotic state, but first he must gather together the resources to crown himself a great leader."
+ritpow           6 # Baron
+cost         0 450 # 450 Gold
+terr            -9 #
+soundfx         57
+movehome         1 
+free
+nonearby99req   124 # Must not have a King's Castle on the plane
+alterloc        124 # Creates King's Castle
+
+selectritual  "Raise Levies"
+clearritspec
+descr "Raises a militia from the local population that will defend the place from brigands, animals or worse.  The militia can only be raised in a settlement where there is no militia already.  The larger the settlement, the larger the militia will be."
+ritpow                 6 # Baron
+level                  1
+terr                 -14 # Required terrain: human settlement.
+nomonreq                 # Monsters in strings beginning with "(-)" must not be here.
+sacrscale                # Summoning amount scales with sacrifice income of target square.
+summoning                # The ritual will summon the monsters specified in a random string.
+aialways             100 # AI will always try to cast this ritual if it currently can, but it will not make long term plans to do so.
+free                     # Always start with this ritual in addition to the others.
+addstring     "1d7+1*Levy"
+addstring     "(-)Levy"     # This string will only be used by nomon[...] commands.
+
+
+
+#### -----Class Content----- ####
+
+#Baron
+selectclass 1
+addstartunits "Scout" 1
+addstartunits "Baron's Home Guard" 5
+
+
+#Necromancer
+selectclass 2
+addstartunits "Scout" 1
+addstartunits "Necromancer's Home Guard" 5
+clearrec #Clears the Necro recruitment list so we can reset it
+addcomrec "Necromancer's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Necromancer's Apprentice"
+reclimiter "-Necromancer"
+reclimiter "-Grand Necromancer"
+addcomrec "Necromancer's Apprentice" 15 50 d12 0 #Make it 15 percent
+libraryrec
+addunitrec "Soulless Soldier" 100 5 0 0 5
+reclimiter "=Soulless"
+addunitrec "Armored Soulless" 100 5 0 0 20
+reclimiter "=Soulless"
+addunitrec "Armored Longdead" 100 5 0 0 20
+reclimiter "=Longdead"
+addunitrec "Bane Fire Archer" 100 5 0 0 0
+reclimiter "=Longdead"
+recxcost 5 20
+addunitrec "Bane-Bones" 100 5 0 0 10
+reclimiter "=Longdead"
+recxcost 5 5
+
+#Demonologist
+selectclass 3
+addstartunits "Scout" 1
+addstartunits "Demonologist's Home Guard" 5
+addcomrec "Cultist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cultist"
+reclimiter "-Demonologist"
+reclimiter "-Goetic Master"
+
+
+#Witch
+selectclass 4
+addstartunits "Scout" 1
+addstartunits "Witch's Home Guard" 5
+addcomrec "Witch's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Witch's Apprentice"
+reclimiter "-Witch"
+reclimiter "-Hag"
+
+
+#High Priestess
+selectclass 5
+addstartunits "Scout" 1
+addstartunits "High Priestess's Home Guard" 5
+addcomrec "Hierodule" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Hierodule"
+reclimiter "-High Priestess"
+reclimiter "-Anointed Priestess"
+
+
+#Bakemono
+selectclass 6
+addstartunits "Bakemono Scout" 1
+addmercrec "Bakemono Scout" 10 1 20 d6 0 
+addstartunits "Bakemono's Home Guard" 5
+addcomrec "Bakemono Shaman" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Bakemono Sorceror"
+reclimiter "-Bakemono Great Sorceror"
+reclimiter "-Bakemono Shaman"
+reclimiter "-Bakemono Witch Doctor"
+
+
+#Barbarian
+selectclass 7
+addstartterr           109
+addstartterr           109
+clearstartunits
+setmaincom             "Barbarian Leader"
+addstartunits          "Barbarian Warrior"        20
+addstartunits          "Barbarian Bowman"          5
+addstartunits          "Scout" 1
+addstartunits          "Barbarian's Home Guard" 5
+addstartunits          "Thunder Totem"              1
+addstartcom            "Spirit Guide"
+addcomrec "Spirit Guide" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Spirit Guide"
+reclimiter "-Enarie"
+reclimiter "-Elder Enarie"
+addcomrec   "Crystal Priestess"              10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Crystal Priestess"
+addcomrec   "Garnet Priestess"               10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Garnet Priestess"
+addcomrec   "Onyx Priestess"                 10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Onyx Priestess"
+addcomrec   "Jade Priestess"                 10      40  20    0 # once per offer; extra.
+templerec                                     # +3% to chance per temple owned, to a max of +15% for 5+ temples.
+reclimiter  "-Jade Priestess"
+addunitrec "Crystal Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Crystal Priestess"
+reclimiter  "+Painted Crystal Priestess"
+reclimiter  "+Crystal Sorceress"
+addunitrec "Jade Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Jade Priestess"
+reclimiter  "+Painted Jade Priestess"
+reclimiter  "+Jade Sorceress"
+addunitrec "Onyx Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Onyx Priestess"
+reclimiter  "+Painted Onyx Priestess"
+reclimiter  "+Onyx Sorceress"
+addunitrec "Garnet Amazon"                 100  5   50   0    0 # once per offer.
+reclimiter  "+Garnet Priestess"
+reclimiter  "+Painted Garnet Priestess"
+reclimiter  "+Garnet Sorceress"
+addunitrec "Barbarian Werebear" 100 1 25 0
+recterr     780
+addunitrec "Barbarian Wereboar" 100 2 35 0
+recterr     780
+addunitrec "Barbarian Werewolf" 100 3 50 0
+recterr     780
+
+
+#Senator
+selectclass 8
+addstartunits "Scout" 1
+addstartunits "Senator's Home Guard" 5
+addcomrec "Senator" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Senator"
+reclimiter "-Emperor"
+addcomrec "Reveler" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Reveler"
+
+
+#Pale Ones (Agartha)
+selectclass 9
+addstartunits "Pale One Scout" 1
+addstartunits "Pale Ones's Home Guard" 5 
+addcomrec "Earth Reader" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Earth Reader"
+reclimiter "-Earth Mind"
+
+
+#Druid
+selectclass 10
+addstartunits "Barechested Scout" 1
+addstartunits "Druid's Home Guard" 5
+addcomrec "Druid's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Druid's Apprentice"
+reclimiter "-Druid"
+reclimiter "-Elder Druid"
+
+
+#Burgmeister (Hoburg) 
+selectclass 11
+addstartunits "Hoburg Scout" 1
+addstartunits "Burgmeister's Home Guard" 15 
+addcomrec "Horticulturist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Horticulturist"
+reclimiter "-Garden Master"
+reclimiter "-Burgmeister"
+addcomrec "Horologist" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Horologist"
+reclimiter "-Clockwork Master Crafter"
+
+
+#Warlock
+selectclass 12
+addstartunits "Scout" 1
+addstartunits "Warlocks's Home Guard" 5
+addcomrec "Warlock's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Warlock's Apprentice"
+reclimiter "-Warlock of Fire"
+reclimiter "-Great Warlock of Fire"
+reclimiter "-Warlock of Water"
+reclimiter "-Great Warlock of Water"
+reclimiter "-Warlock of Air"
+reclimiter "-Great Warlock of Air"
+reclimiter "-Warlock of Earth"
+reclimiter "-Great Warlock of Earth"
+
+
+#Priest King (Mictlan)
+selectclass 13
+addstartunits "Scout" 1 
+addstartunits "Priest King's Home Guard" 5
+addcomrec "Sun Temple Attendant" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Sun Temple Attendant"
+reclimiter "-Priest King"
+reclimiter "-High Priest of the Sun"
+
+
+#Troll King
+selectclass 14
+addstartunits "Goblin Scout" 1
+addstartunits "Troll King's Home Guard" 10
+addcomrec "Goblin Shaman" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Goblin Shaman"
+reclimiter "-Goblin Witch Doctor"
+reclimiter "-Troll Shaman"
+reclimiter "-Troll Witch Doctor"
+reclimiter "-Elder Troll Shaman"
+
+
+#Enchanter
+selectclass 15
+addstartunits "Scout" 1
+addstartunits "Enchanter's Home Guard" 5
+addcomrec "Enchanter's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Enchanter's Apprentice"
+reclimiter "-Enchanter"
+reclimiter "-Great Enchanter"
+
+
+#Beholder (Non Playable) 
+#selectclass 16
+
+#Archmage (Non Playable)
+#selectclass 17
+
+#Goblin King (Non Playable)
+#selectclass 18
+
+
+#High Cultist
+selectclass 19
+addstartunits "Scout" 1
+addstartunits "High Cultist's Home Guard" 5
+addcomrec "Cultist of the Deep" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cultist of the Deep"
+reclimiter "-High Cultist"
+
+
+#Dwarf Queen
+selectclass 20
+addstartunits "Outdoor Dwarf" 1
+addstartunits "Dwarf Queen's Home Guard" 5
+clearrec #Clears the Dwarf recruitment list so we can reset it
+addunitrec "Dwarf" 100 5 0 0 20
+addunitrec "Dwarf Warrior" 100 5 0 0 20
+addunitrec "Dwarf Guard" 100 5 0 0 40
+addunitrec "Dwarf Arbalest" 100 5 0 0 30
+addunitrec "Outdoor Dwarf" 100 2 10 0 10
+addunitrec "Dwarf Sapper" 100 5 0 0 30
+addunitrec "Dwarven Ballista" 100 2 0 0 60
+addcomrec "Dwarf Commander" 100 20 0 10 
+
+
+#Voice of El (Priest)
+selectclass 21
+addstartunits "Scout" 1
+addstartunits "Voice of El's Home Guard" 5
+addcomrec "Bishop" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Bishop"
+reclimiter "-Arch Bishop"
+reclimiter "-Cardinal"
+reclimiter "-Pontiff"
+addmercrec "Angel" 50 1 100 0 0
+reclimiter "+Arch Bishop"
+recxcost 12 10
+addmercrec ""Harbinger"" 50 1 150 0 0
+reclimiter "+Cardinal"
+recxcost 12 20
+addmercrec ""Arch Angel" 50 1 200 0 0
+reclimiter "+Pontiff"
+recxcost 12 30
+
+
+#Illusionist
+selectclass 22
+addstartunits "Scout" 1
+addstartunits "Illusionist's Home Guard" 5
+addcomrec "Illusionist's Apprentice" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Illusionist's Apprentice"
+reclimiter "-Illusionist"
+reclimiter "-Master Illusionist"
+
+
+#Markgraf
+selectclass 23
+addstartunits "Hoburg Scout" 1
+addstartunits "Markgraf's Home Guard" 15 
+addcomrec "Nekromant" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Nekromant"
+reclimiter "-Grand Nekromant"
+reclimiter "-Ghoulgraf"
+reclimiter "-Ghoul Baron"
+
+
+#Dryad Queen (Pan)
+selectclass 24
+addstartunits "Harpy Scout" 1
+addstartunits "Dryad Queen's Home Guard" 5  
+addcomrec "Dryad" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Dryad"
+reclimiter "-Dryad Queen"
+reclimiter "-Anointed of Gaia" 
+
+
+#Scourge Lord
+selectclass 25
+addstartunits "Scout" 1
+addstartunits "Scourge Lord's Home Guard" 5
+addcomrec "Scourage Herald" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Scourage Herald"
+reclimiter "-Scourage Lord"
+reclimiter "-Scourage King"
+
+
+#Cloud Lord
+selectclass 26
+addstartunits "Airya Scout" 1
+addstartunits "Cloud Lord's Home Guard" 5
+addcomrec "Cloud Caster" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Cloud Caster"
+reclimiter "-Cloud Lord"
+reclimiter "-Eagle King"
+
+
+#Kobold King
+selectclass 27
+addstartunits "Black Kobold Murderer" 1
+addstartunits "Kobold King's Home Guard" 10
+addcomrec     "Red Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Red Kobold Shaman"
+reclimiter    "+Red Kobold Chief"
+addcomrec     "Red Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Red Kobold Sorcerer"
+reclimiter    "+Red Kobold Shaman"
+addcomrec     "Blue Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Blue Kobold Shaman"
+reclimiter    "+Blue Kobold Chief"
+addcomrec     "Blue Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Blue Kobold Sorcerer"
+reclimiter    "+Blue Kobold Shaman"
+addcomrec     "Green Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Green Kobold Shaman"
+reclimiter    "+Green Kobold Chief"
+addcomrec     "Green Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-Green Kobold Sorcerer"
+reclimiter    "+Green Kobold Shaman"
+addcomrec     "White Kobold Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-White Kobold Shaman"
+reclimiter    "+White Kobold Chief"
+addcomrec     "White Kobold Sorcerer" 15 75 d20 0 #15 percent
+reclimiter    "-White Kobold Sorcerer"
+reclimiter    "+White Kobold Shaman"
+addcomrec     "Black Kobold Slayer Shaman" 25 40 d20 0 #25 percent
+reclimiter    "-Black Kobold Slayer Shaman"
+reclimiter    "+Black Kobold Chief"
+
+#Monkey Maharaja
+selectclass 28
+clearstartunits
+setmaincom             "Bandaraja"
+addstartunits          "Markata"                  10
+addstartunits          "Markata Archer"           10
+addstartunits          "Vanara Archer"             5
+addstartunits          "Vanara Soldier"            5
+addstartunits  "Maharaja's Home Guard" 5
+addstartcom    "Yogi"
+addcomrec      "Yogi" 25 50 d12 0 #Make it 25 percent
+reclimiter     "-Yogi"
+addcomrec      "Bandaraja" 25 60 d10 0 #Make it 25 percent
+reclimiter     "-Bandaraja"
+
+#Raksharaja
+selectclass 29
+addstartunits  "Raksharaja's Home Guard" 5
+addcomrec      "Rakshasa General" 25 100 20 0 
+reclimiter     "-Raksharaja"
+reclimiter     "-Rakshasa General"
+
+
+#-----Events-----
+
+#Event Code to Aid in Testing
+#playerevent
+#+turnnbr 1
+#addresources -2 0 5000
+#addresources -2 7 5000
+#addresources -2 8 5000
+#addresources -2 9 5000
+#addresources -2 10 5000
+#endevent
+
+
+# ==================================================
+# OBM MODIFICATIONS START HERE
+# ==================================================
+
+# Ritual Level Modifiers:
+#   Level 1: 70%
+#   Level 2: 85%
+#   Level 3: 100%
+# 
+# Class Tier Definitions:
+#   A: 90%
+#   B: 80%
+#   C: 70%
+#   D: 60%
+#   F: 35%
+#   S: 100%
+# 
+# Class Assignments:
+#   A: Baalite Rituals, Baron, Blood Priest, Cloud Lord, Dark Emperor, Death Priest, Druidism, Empress, Enchantment, God Emperor of the Underworld, Mictlan Rituals, Night Priest, Rain Priest, Revelry, Senator, Sky Priest, War Priest, Warlock of Air, Warlock of Earth, Warlock of Fire, Warlock of Water, Witchery
+#   B: Akashic, Diamond, Akashic, Emerald, Akashic, Ruby, Akashic, Sapphire, Alchemist, Dvala, Dwarf Councilor, Engineer Magus, Fire Giant, Frost Giant, Magistratus, Monk, Mountain Giant, Pale One Rituals, Renatus, Rune Smith, Sea Giant, Storm Giant, Troll Magic, White One
+#   C: Bakemono Rituals, Demonology, Hoburg Clockwork, Hoburg Weed
+#   D: High Cultist, Nekromant, Star Spawn
+#   F: Dryad Queen, Kobold, Black, Kobold, Blue, Kobold, Green, Kobold, Red, Kobold, White, Raksharaja
+#   S: Crystal Amazon, Garnet Amazon, Guildmaster, Illusionist, Jade Amazon, Necromancy, Onyx Amazon, Scourge Lord, Spirit Summons
+# 
+
+
+# --- Druidism (63%) ---
+
+selectritual "Lesser Ritual of Mastery"
+cost 2 16  # 16 Herbs (was 25)
+
+selectritual "Ritual of Mastery"
+cost 2 95  # 95 Herbs (was 150)
+
+selectritual "Ritual of Grand Mastery"
+cost 2 456  # 456 Herbs (was 600)
+
+selectritual "Minor Animal Summoning"
+cost 2 10  # 10 Herbs (was 15)
+
+selectritual "Messenger Crows"
+cost 2 10  # 10 Herbs (was 15)
+
+selectritual "Plant Forest Guardians"
+cost 2 10  # 10 Herbs (was 15)
+
+selectritual "Unification"
+cost 2 95  # 95 Herbs (was 150)
+
+selectritual "Major Animal Summoning"
+cost 2 57  # 57 Herbs (was 75)
+
+selectritual "Summon Mythic Beasts"
+cost 2 76  # 76 Herbs (was 100)
+
+selectritual "Heart of the Forest"
+cost 2 114  # 114 Herbs (was 150)
+
+selectritual "Lord of the Wild"
+cost 2 76  # 76 Herbs (was 100)
+
+selectritual "Wild Hunt"
+cost 2 228  # 228 Herbs (was 300)
+
+selectritual "Revive Ancient Forest"
+cost 2 266  # 266 Herbs (was 350)
+
+selectritual "Call Primal Being"
+cost 2 900  # 900 Herbs (was 1000)
+
+selectritual "Summon Legendary Beings"
+cost 2 405  # 405 Herbs (was 450)
+
+selectritual "Shepherds of the Wood"
+cost 2 270  # 270 Herbs (was 300)
+
+selectritual "Faery Paths"
+cost 2 90  # 90 Herbs (was 100)
+
+
+# --- Necromancy (70%) ---
+
+selectritual "Lesser Ritual of Mastery" 1
+cost 5 7  # 7 Hands (was 10)
+
+selectritual "Ritual of Mastery" 1
+cost 5 42  # 42 Hands (was 60)
+
+selectritual "Ritual of Grand Mastery" 1
+cost 5 204  # 204 Hands (was 240)
+
+selectritual "Minor Summoning"
+cost 5 7  # 7 Hands (was 10)
+
+selectritual "Dark Knowledge"
+cost 5 3  # 3 Hands (was 3)
+
+selectritual "Twiceborn"
+cost 5 21  # 21 Hands (was 30)
+
+selectritual "Raven Spy"
+cost 5 4  # 4 Hands (was 5)
+
+selectritual "Pierce the Veil of Death"
+cost 5 1  # 1 Hands (was 1)
+
+selectritual "Major Summoning"
+cost 5 64  # 64 Hands (was 75)
+
+selectritual "Raise Legion"
+cost 5 85  # 85 Hands (was 100)
+
+selectritual "Ravenous Curse"
+cost 5 34  # 34 Hands (was 40)
+
+selectritual "Blood Rite"
+cost 5 107  # 107 Hands (was 125)
+
+selectritual "Mummification"
+cost 5 17  # 17 Hands (was 20)
+
+selectritual "Stygian Paths"
+cost 5 22  # 22 Hands (was 25)
+
+selectritual "Wall of Unlife"
+cost 5 22  # 22 Hands (was 25)
+
+selectritual "Pyramid of Skulls"
+cost 5 22  # 22 Hands (was 25)
+cost 14 22  # 22 Corpses (humanoid) (was 25)
+
+selectritual "Animate Abomination"
+cost 5 43  # 43 Hands (was 50)
+cost 17 43  # 43 Corpses (was 50)
+
+
+# --- Enchantment (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 2
+cost 0 7  # 7 Gold (was 10)
+
+selectritual "Ritual of Mastery" 2
+cost 0 38  # 38 Gold (was 60)
+
+selectritual "Ritual of Grand Mastery" 2
+cost 0 274  # 274 Gold (was 360)
+
+selectritual "Animate Sword"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Bow"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Spear"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Animate Armor"
+cost 1 7  # 7 Iron (was 10)
+
+selectritual "Craft Gargoyle"
+cost 0 4  # 4 Gold (was 5)
+cost 1 4  # 4 Iron (was 5)
+
+selectritual "Create Flesh Golem"
+cost 0 4  # 4 Gold (was 5)
+cost 14 4  # 4 Corpses (humanoid) (was 5)
+
+selectritual "Animate Tools"
+cost 1 7  # 7 Iron (was 10)
+
+selectritual "Create Mimic"
+cost 0 4  # 4 Gold (was 5)
+cost 1 4  # 4 Iron (was 5)
+
+selectritual "Craft Guardian"
+cost 0 12  # 12 Gold (was 15)
+cost 1 4  # 4 Iron (was 5)
+
+selectritual "Create Necrotod"
+cost 0 27  # 27 Gold (was 35)
+cost 17 8  # 8 Corpses (was 10)
+
+selectritual "Create Wood Golem"
+cost 0 16  # 16 Gold (was 20)
+cost 1 16  # 16 Iron (was 20)
+
+selectritual "Create Stone Golem"
+cost 0 31  # 31 Gold (was 40)
+cost 1 31  # 31 Iron (was 40)
+
+selectritual "Create Ice Golem"
+cost 0 38  # 38 Gold (was 50)
+cost 1 38  # 38 Iron (was 50)
+
+selectritual "Create Clay Golem"
+cost 0 38  # 38 Gold (was 50)
+cost 1 38  # 38 Iron (was 50)
+
+selectritual "Enchanted Gate"
+cost 0 38  # 38 Gold (was 50)
+cost 1 19  # 19 Iron (was 25)
+
+selectritual "Iron Grafting"
+cost 1 8  # 8 Iron (was 10)
+
+selectritual "Animate Quills and Scrolls"
+cost 0 8  # 8 Gold (was 10)
+
+selectritual "Animate Ballista"
+cost 1 19  # 19 Iron (was 25)
+
+selectritual "Dogs of Gold and Silver"
+cost 0 38  # 38 Gold (was 50)
+cost 1 8  # 8 Iron (was 10)
+
+selectritual "Create Juggernaut"
+cost 0 38  # 38 Gold (was 50)
+
+selectritual "Create Oak Golem"
+cost 0 36  # 36 Gold (was 40)
+cost 1 36  # 36 Iron (was 40)
+
+selectritual "Create Iron Golem"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Create Onyx Golem"
+cost 0 63  # 63 Gold (was 70)
+cost 1 63  # 63 Iron (was 70)
+
+selectritual "Create Crystal Golem"
+cost 0 72  # 72 Gold (was 80)
+cost 1 72  # 72 Iron (was 80)
+
+selectritual "Create Silver Golem"
+cost 0 81  # 81 Gold (was 90)
+cost 1 81  # 81 Iron (was 90)
+
+selectritual "Create Gold Golem"
+cost 0 90  # 90 Gold (was 100)
+cost 1 90  # 90 Iron (was 100)
+
+selectritual "Create Home Portal"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Create Portal"
+cost 0 54  # 54 Gold (was 60)
+cost 1 54  # 54 Iron (was 60)
+
+selectritual "Infuse Magic Library"
+cost 0 45  # 45 Gold (was 50)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Infuse Magic Academy"
+cost 0 90  # 90 Gold (was 100)
+cost 1 90  # 90 Iron (was 100)
+
+selectritual "Brass Bull"
+cost 0 450  # 450 Gold (was 500)
+cost 1 45  # 45 Iron (was 50)
+
+selectritual "Create Artifact"
+cost 0 23  # 23 Gold (was 25)
+cost 15 45  # 45 Gems (was 50)
+
+
+# --- Demonology (49%) ---
+
+selectritual "Lesser Ritual of Mastery" 3
+cost 4 10  # 10 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 3
+cost 4 59  # 59 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 3
+cost 4 284  # 284 Sacrifices (was 480)
+
+selectritual "Imp Summoning"
+cost 4 5  # 5 Sacrifices (was 10)
+
+selectritual "Demon Summoning"
+cost 4 10  # 10 Sacrifices (was 20)
+
+selectritual "Personal Gate"
+cost 4 5  # 5 Sacrifices (was 10)
+
+selectritual "Greater Demon Summoning"
+cost 4 24  # 24 Sacrifices (was 40)
+
+selectritual "Infernal Horde"
+cost 4 89  # 89 Sacrifices (was 150)
+
+selectritual "Summon Demon Lieutenant"
+cost 4 71  # 71 Sacrifices (was 120)
+
+selectritual "Returning"
+cost 4 6  # 6 Sacrifices (was 10)
+
+selectritual "Wall of Torment"
+cost 4 45  # 45 Sacrifices (was 75)
+
+selectritual "Summon Demon Lord"
+cost 4 350  # 350 Sacrifices (was 500)
+
+selectritual "Infernal Gate"
+cost 4 70  # 70 Sacrifices (was 100)
+
+
+# --- Witchery (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 4
+cost 3 16  # 16 Fungus (was 25)
+
+selectritual "Ritual of Mastery" 4
+cost 3 95  # 95 Fungus (was 150)
+
+selectritual "Ritual of Grand Mastery" 4
+cost 3 456  # 456 Fungus (was 600)
+
+selectritual "Minor Summoning" 1
+cost 3 10  # 10 Fungus (was 15)
+
+selectritual "Swamp Guardians"
+cost 3 7  # 7 Fungus (was 10)
+
+selectritual "Marshlands"
+cost 3 16  # 16 Fungus (was 25)
+
+selectritual "Bog Eye"
+cost 3 7  # 7 Fungus (was 10)
+
+selectritual "Major Summoning" 1
+cost 3 57  # 57 Fungus (was 75)
+
+selectritual "Mirror Mirror"
+cost 3 8  # 8 Fungus (was 10)
+
+selectritual "Murderous Mist"
+cost 3 76  # 76 Fungus (was 100)
+
+selectritual "Miasma"
+cost 3 76  # 76 Fungus (was 100)
+
+selectritual "Summon Old One"
+cost 3 360  # 360 Fungus (was 400)
+
+selectritual "Swamp Soul"
+cost 3 540  # 540 Fungus (was 600)
+
+selectritual "Bog Path"
+cost 3 270  # 270 Fungus (was 300)
+
+
+# --- Mictlan Rituals (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 5
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 5
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 5
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Sky"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Rain"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of War"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Death"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Ceremony of the Lord of Night"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Ceremony of the Bloody Mother"
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Sky"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Rain"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of War"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Death"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Lord of Night"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Greater Ceremony of the Bloody Mother"
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God"
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- War Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 6
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 6
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 6
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of War" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of War" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 1
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Blood Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 7
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 7
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 7
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Bloody Mother" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Bloody Mother" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 2
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Sky Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 8
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 8
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 8
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Sky" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Sky" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 3
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Rain Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 9
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 9
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 9
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Rain" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Rain" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 4
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Night Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 10
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 10
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 10
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Night" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Night" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 5
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Death Priest (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 11
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 11
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 11
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Ceremony of the Lord of Death" 1
+cost 4 16  # 16 Sacrifices (was 25)
+
+selectritual "Greater Ceremony of the Lord of Death" 1
+cost 4 95  # 95 Sacrifices (was 125)
+
+selectritual "Summon God" 6
+cost 4 450  # 450 Sacrifices (was 500)
+
+
+# --- Illusionist (70%) ---
+
+selectritual "Lesser Ritual of Mastery" 12
+cost 15 7  # 7 Gems (was 10)
+
+selectritual "Ritual of Mastery" 12
+cost 15 42  # 42 Gems (was 60)
+
+selectritual "Ritual of Grand Mastery" 12
+cost 15 153  # 153 Gems (was 180)
+
+selectritual "Floating Eye"
+cost 15 4  # 4 Gems (was 5)
+
+selectritual "Capture Images"
+cost 15 7  # 7 Gems (was 10)
+
+selectritual "Capture Spell"
+cost 15 4  # 4 Gems (was 5)
+
+selectritual "Scrying"
+cost 15 2  # 2 Gems (was 2)
+
+selectritual "Mirror Walk"
+cost 15 5  # 5 Gems (was 5)
+
+selectritual "Capture Images" 1
+cost 15 43  # 43 Gems (was 50)
+
+selectritual "Capture Phantasms"
+cost 15 22  # 22 Gems (was 25)
+
+selectritual "Capture Spell" 1
+cost 15 22  # 22 Gems (was 25)
+
+selectritual "Capture Greater Spell"
+cost 15 9  # 9 Gems (was 10)
+
+selectritual "Summon Phase Beast"
+cost 15 22  # 22 Gems (was 25)
+
+selectritual "Mirror Wall"
+cost 15 22  # 22 Gems (was 25)
+cost 0 85  # 85 Gold (was 100)
+
+
+# --- Baalite Rituals (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 13
+cost 4 13  # 13 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 13
+cost 4 76  # 76 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 13
+cost 4 365  # 365 Sacrifices (was 480)
+
+selectritual "Lesser Ceremony to Baal"
+cost 4 7  # 7 Sacrifices (was 10)
+
+selectritual "Lesser Blood Feast"
+cost 4 10  # 10 Sacrifices (was 15)
+
+selectritual "Ceremony to Baal"
+cost 4 57  # 57 Sacrifices (was 75)
+
+selectritual "Blood Feast"
+cost 4 38  # 38 Sacrifices (was 50)
+
+selectritual "Grand Ceremony to Baal"
+cost 4 90  # 90 Sacrifices (was 100)
+
+selectritual "Grand Blood Feast"
+cost 4 135  # 135 Sacrifices (was 150)
+
+selectritual "Banquet for the Dead"
+cost 4 135  # 135 Sacrifices (was 150)
+
+selectritual "Second Sun"
+cost 4 450  # 450 Sacrifices (was 500)
+
+selectritual "Summon God" 7
+cost 4 900  # 900 Sacrifices (was 1000)
+
+
+# --- Troll Magic (56%) ---
+
+selectritual "Lesser Ritual of Mastery" 14
+cost 3 14  # 14 Fungus (was 25)
+
+selectritual "Ritual of Mastery" 14
+cost 3 84  # 84 Fungus (was 150)
+
+selectritual "Ritual of Grand Mastery" 14
+cost 3 408  # 408 Fungus (was 600)
+
+selectritual "Wither Wood"
+cost 3 14  # 14 Fungus (was 25)
+
+selectritual "Vision Brew"
+cost 3 28  # 28 Fungus (was 50)
+
+selectritual "Plant Giant Fungus"
+cost 3 28  # 28 Fungus (was 50)
+
+selectritual "Plant Shadow Tree"
+cost 3 51  # 51 Fungus (was 75)
+
+selectritual "Call the Old Forest"
+cost 3 102  # 102 Fungus (was 150)
+
+selectritual "Golden Nose"
+cost 3 68  # 68 Fungus (was 100)
+
+selectritual "Activate Fairy Circle"
+cost 3 68  # 68 Fungus (was 100)
+
+selectritual "Summon Linnorm"
+cost 3 800  # 800 Fungus (was 1000)
+cost 0 80  # 80 Gold (was 100)
+
+selectritual "Summon Orm"
+cost 3 600  # 600 Fungus (was 750)
+
+selectritual "Stygian Bath"
+cost 3 1200  # 1200 Fungus (was 1500)
+
+selectritual "Clamor and Clang"
+cost 3 80  # 80 Fungus (was 100)
+cost 18 80  # 80 Hearts (was 100)
+
+
+# --- Warlock of Fire (63%) ---
+
+selectritual "Flame Pact"
+cost 7 32  # 32 Prisoners (was 50)
+
+
+# --- Warlock of Water (63%) ---
+
+selectritual "Water Pact"
+cost 8 32  # 32 Unburied (was 50)
+
+
+# --- Warlock of Air (63%) ---
+
+selectritual "Storm Pact"
+cost 9 32  # 32 Coins (was 50)
+
+
+# --- Warlock of Earth (63%) ---
+
+selectritual "Earth Pact"
+cost 10 32  # 32 Silk (was 50)
+
+
+# --- Warlock of Fire (76%) ---
+
+selectritual "Flame Pact" 1
+cost 7 22  # 22 Prisoners (was 28)
+
+
+# --- Warlock of Water (76%) ---
+
+selectritual "Water Pact" 1
+cost 8 22  # 22 Unburied (was 28)
+
+
+# --- Warlock of Air (76%) ---
+
+selectritual "Storm Pact" 1
+cost 9 22  # 22 Coins (was 28)
+
+
+# --- Warlock of Earth (76%) ---
+
+selectritual "Earth Pact" 1
+cost 10 22  # 22 Silk (was 28)
+
+
+# --- Warlock of Fire (76%) ---
+
+selectritual "Greater Flame Pact"
+cost 7 127  # 127 Prisoners (was 167)
+
+
+# --- Warlock of Water (76%) ---
+
+selectritual "Greater Water Pact"
+cost 8 127  # 127 Unburied (was 167)
+
+
+# --- Warlock of Air (76%) ---
+
+selectritual "Greater Storm Pact"
+cost 9 127  # 127 Coins (was 167)
+
+
+# --- Warlock of Earth (76%) ---
+
+selectritual "Greater Earth Pact"
+cost 10 127  # 127 Silk (was 167)
+
+
+# --- Warlock of Fire (63%) ---
+
+selectritual "Lesser Fire Summoning"
+cost 7 16  # 16 Prisoners (was 25)
+
+
+# --- Warlock of Water (63%) ---
+
+selectritual "Lesser Water Summoning"
+cost 8 16  # 16 Unburied (was 25)
+
+
+# --- Warlock of Air (63%) ---
+
+selectritual "Lesser Air Summoning"
+cost 9 16  # 16 Coins (was 25)
+
+
+# --- Warlock of Earth (63%) ---
+
+selectritual "Lesser Earth Summoning"
+cost 10 16  # 16 Silk (was 25)
+
+
+# --- Warlock of Fire (76%) ---
+
+selectritual "Greater Fire Summoning"
+cost 7 43  # 43 Prisoners (was 56)
+
+selectritual "Summon Champion of Fire"
+cost 7 43  # 43 Prisoners (was 56)
+
+selectritual "Circle of Flames"
+cost 7 5  # 5 Prisoners (was 6)
+
+selectritual "Vafur Flames"
+cost 7 22  # 22 Prisoners (was 28)
+
+selectritual "Summon Magma Warrior"
+cost 7 22  # 22 Prisoners (was 28)
+cost 10 22  # 22 Silk (was 28)
+
+selectritual "Summon Smoke Warrior"
+cost 7 22  # 22 Prisoners (was 28)
+cost 9 22  # 22 Coins (was 28)
+
+
+# --- Warlock of Water (76%) ---
+
+selectritual "Greater Water Summoning"
+cost 8 43  # 43 Unburied (was 56)
+
+selectritual "Summon Yeti"
+cost 8 22  # 22 Unburied (was 28)
+cost 9 22  # 22 Coins (was 28)
+
+selectritual "Summon Champion of Water"
+cost 8 43  # 43 Unburied (was 56)
+
+selectritual "Summon Mist Warrior"
+cost 8 22  # 22 Unburied (was 28)
+cost 9 22  # 22 Coins (was 28)
+
+selectritual "Summon Mud Warrior"
+cost 8 22  # 22 Unburied (was 28)
+cost 10 22  # 22 Silk (was 28)
+
+selectritual "Maelstrom"
+cost 8 35  # 35 Unburied (was 45)
+
+selectritual "Enchant Lake"
+cost 8 18  # 18 Unburied (was 23)
+
+
+# --- Warlock of Air (76%) ---
+
+selectritual "Greater Air Summoning"
+cost 9 43  # 43 Coins (was 56)
+
+selectritual "Summon Yeti" 1
+cost 9 22  # 22 Coins (was 28)
+cost 8 22  # 22 Unburied (was 28)
+
+selectritual "Summon Champion of Air"
+cost 9 43  # 43 Coins (was 56)
+
+selectritual "Summon Mist Warrior" 1
+cost 9 22  # 22 Coins (was 28)
+cost 8 22  # 22 Unburied (was 28)
+
+selectritual "Summon Smoke Warrior" 1
+cost 9 22  # 22 Coins (was 28)
+cost 7 22  # 22 Prisoners (was 28)
+
+selectritual "Curtain of Storms"
+cost 9 22  # 22 Coins (was 28)
+
+
+# --- Warlock of Earth (76%) ---
+
+selectritual "Greater Earth Summoning"
+cost 10 43  # 43 Silk (was 56)
+
+selectritual "Summon Champion of Earth"
+cost 10 43  # 43 Silk (was 56)
+
+selectritual "Summon Magma Warrior" 1
+cost 10 22  # 22 Silk (was 28)
+cost 7 22  # 22 Prisoners (was 28)
+
+selectritual "Summon Mud Warrior" 1
+cost 10 22  # 22 Silk (was 28)
+cost 8 22  # 22 Unburied (was 28)
+
+selectritual "Ramparts of Earth"
+cost 10 10  # 10 Silk (was 12)
+
+selectritual "Dig"
+cost 10 10  # 10 Silk (was 12)
+
+
+# --- Warlock of Fire (90%) ---
+
+selectritual "Summon King of Fire"
+cost 7 225  # 225 Prisoners (was 250)
+
+selectritual "Wheel of Frost and Flames"
+cost 7 45  # 45 Prisoners (was 50)
+cost 8 45  # 45 Unburied (was 50)
+
+selectritual "Eternal Pyre"
+cost 7 113  # 113 Prisoners (was 125)
+
+
+# --- Warlock of Water (90%) ---
+
+selectritual "Summon Queen of Water"
+cost 8 225  # 225 Unburied (was 250)
+
+selectritual "Wheel of Frost and Flames" 1
+cost 8 45  # 45 Unburied (was 50)
+cost 7 45  # 45 Prisoners (was 50)
+
+selectritual "Fimbul Fortress"
+cost 8 113  # 113 Unburied (was 125)
+
+selectritual "Primal Maelstrom"
+cost 8 45  # 45 Unburied (was 50)
+
+
+# --- Warlock of Air (90%) ---
+
+selectritual "Summon Queen of Air"
+cost 9 225  # 225 Coins (was 250)
+
+selectritual "Wheel of Storm and Stone"
+cost 9 45  # 45 Coins (was 50)
+cost 10 45  # 45 Silk (was 50)
+
+selectritual "Perpetual Storm"
+cost 9 142  # 142 Coins (was 157)
+
+selectritual "Cloud Castle"
+cost 9 170  # 170 Coins (was 188)
+
+
+# --- Warlock of Earth (90%) ---
+
+selectritual "Summon King of Earth"
+cost 10 225  # 225 Silk (was 250)
+
+selectritual "Wheel of Storm and Stone" 1
+cost 10 45  # 45 Silk (was 50)
+cost 9 45  # 45 Coins (was 50)
+
+selectritual "Wizard's Tower"
+cost 10 113  # 113 Silk (was 125)
+
+selectritual "Raise Volcano"
+cost 10 57  # 57 Silk (was 63)
+cost 7 29  # 29 Prisoners (was 32)
+
+
+# --- Fire Giant (56%) ---
+
+selectritual "King of Giants"
+cost 7 56  # 56 Prisoners (was 100)
+
+selectritual "Call Giants"
+cost 7 68  # 68 Prisoners (was 100)
+
+
+# --- Frost Giant (56%) ---
+
+selectritual "King of Giants" 1
+cost 8 56  # 56 Unburied (was 100)
+
+selectritual "Call Giants" 1
+cost 8 68  # 68 Unburied (was 100)
+
+selectritual "Call Winter Wolves"
+cost 8 17  # 17 Unburied (was 25)
+
+
+# --- Sea Giant (56%) ---
+
+selectritual "King of Giants" 2
+cost 8 56  # 56 Unburied (was 100)
+
+selectritual "Call Giants" 2
+cost 8 68  # 68 Unburied (was 100)
+
+
+# --- Storm Giant (56%) ---
+
+selectritual "King of Giants" 3
+cost 9 56  # 56 Coins (was 100)
+
+selectritual "Call Giants" 3
+cost 9 68  # 68 Coins (was 100)
+
+
+# --- Mountain Giant (56%) ---
+
+selectritual "King of Giants" 4
+cost 10 56  # 56 Silk (was 100)
+
+selectritual "Call Giants" 4
+cost 10 68  # 68 Silk (was 100)
+
+selectritual "Create Artifact" 1
+cost 0 17  # 17 Gold (was 25)
+cost 15 17  # 17 Gems (was 25)
+
+
+# --- Hoburg Weed (49%) ---
+
+selectritual "Lesser Ritual of Mastery" 15
+cost 6 13  # 13 Blood (was 25)
+
+selectritual "Ritual of Mastery" 15
+cost 6 89  # 89 Blood (was 150)
+
+selectritual "Create Hoburg Village"
+cost 6 5  # 5 Blood (was 10)
+cost 0 5  # 5 Gold (was 10)
+
+selectritual "Animal Summoning"
+cost 6 6  # 6 Blood (was 10)
+
+selectritual "Farm Animal Summoning"
+cost 6 6  # 6 Blood (was 10)
+
+selectritual "Summon Guardian of the Hoburgs"
+cost 6 70  # 70 Blood (was 100)
+
+selectritual "Great Animal Summoning"
+cost 6 35  # 35 Blood (was 50)
+
+
+# --- Hoburg Clockwork (49%) ---
+
+selectritual "Lesser Ritual of Mastery" 16
+cost 15 8  # 8 Gems (was 15)
+
+selectritual "Ritual of Mastery" 16
+cost 15 45  # 45 Gems (was 90)
+
+selectritual "Ruby Construct"
+cost 7 10  # 10 Prisoners (was 20)
+
+selectritual "Sapphire Construct"
+cost 8 10  # 10 Unburied (was 20)
+
+selectritual "Diamond Construct"
+cost 9 10  # 10 Coins (was 20)
+
+selectritual "Emerald Construct"
+cost 10 10  # 10 Silk (was 20)
+
+selectritual "Ruby Iron Dragon"
+cost 7 89  # 89 Prisoners (was 150)
+
+selectritual "Sapphire Iron Dragon"
+cost 8 89  # 89 Unburied (was 150)
+
+selectritual "Diamond Iron Dragon"
+cost 9 89  # 89 Coins (was 150)
+
+selectritual "Emerald Iron Dragon"
+cost 10 89  # 89 Silk (was 150)
+
+selectritual "Construct Ferrous Wheel"
+cost 7 6  # 6 Prisoners (was 10)
+cost 8 6  # 6 Unburied (was 10)
+cost 10 6  # 6 Silk (was 10)
+cost 9 6  # 6 Coins (was 10)
+
+
+# --- Nekromant (42%) ---
+
+selectritual "Lesser Ritual of Mastery" 17
+cost 5 5  # 5 Hands (was 10)
+
+selectritual "Ritual of Mastery" 17
+cost 5 26  # 26 Hands (was 60)
+
+selectritual "Ritual of Grand Mastery" 15
+cost 5 123  # 123 Hands (was 240)
+
+selectritual "Minor Summoning" 2
+cost 5 5  # 5 Hands (was 10)
+
+selectritual "Dark Knowledge" 1
+cost 5 2  # 2 Hands (was 3)
+
+selectritual "Twiceborn" 1
+cost 5 13  # 13 Hands (was 30)
+
+selectritual "Raven Spy" 1
+cost 5 3  # 3 Hands (was 5)
+
+selectritual "Flesh Rite"
+cost 5 21  # 21 Hands (was 50)
+
+selectritual "Major Summoning" 2
+cost 5 39  # 39 Hands (was 75)
+
+selectritual "Create Flesh Golem" 1
+cost 0 3  # 3 Gold (was 5)
+cost 14 3  # 3 Corpses (humanoid) (was 5)
+
+selectritual "Ravenous Curse" 1
+cost 5 21  # 21 Hands (was 40)
+
+selectritual "Animate Abomination" 1
+cost 5 26  # 26 Hands (was 50)
+cost 17 26  # 26 Corpses (was 50)
+
+selectritual "Blood Rite" 1
+cost 5 64  # 64 Hands (was 125)
+
+selectritual "Blood Servant"
+cost 5 45  # 45 Hands (was 75)
+
+
+# --- Senator (76%) ---
+
+selectritual "Coronation"
+cost 0 456  # 456 Gold (was 600)
+
+selectritual "Imperial Wedding"
+cost 0 360  # 360 Gold (was 400)
+
+selectritual "Erect Statue"
+cost 0 90  # 90 Gold (was 100)
+
+selectritual "Apotheosis"
+cost 0 900  # 900 Gold (was 1000)
+
+
+# --- Empress (90%) ---
+
+selectritual "Apotheosis" 1
+cost 0 900  # 900 Gold (was 1000)
+
+
+# --- Revelry (63%) ---
+
+selectritual "Incite Revelry"
+cost 0 16  # 16 Gold (was 25)
+
+selectritual "Build Lararium"
+cost 0 16  # 16 Gold (was 25)
+
+
+# --- Dark Emperor (76%) ---
+
+selectritual "Erect Statue" 1
+cost 0 76  # 76 Gold (was 100)
+
+selectritual "Apotheosis" 2
+cost 0 760  # 760 Gold (was 1000)
+
+
+# --- God Emperor of the Underworld (90%) ---
+
+selectritual "Planar Swap" 1
+cost 0 450  # 450 Gold (was 500)
+
+
+# --- Renatus (56%) ---
+
+selectritual "Katabasis"
+cost 0 3  # 3 Gold (was 5)
+
+selectritual "Anabasis"
+cost 0 3  # 3 Gold (was 5)
+
+
+# --- Baron (63%) ---
+
+selectritual "Swift Justice"
+cost 0 16  # 16 Gold (was 25)
+
+selectritual "Raise Fort"
+cost 0 32  # 32 Gold (was 50)
+
+selectritual "Appoint Vassal"
+cost 0 8  # 8 Gold (was 10)
+
+selectritual "Relocate Manor"
+cost 0 76  # 76 Gold (was 100)
+
+selectritual "Coronation" 1
+cost 0 456  # 456 Gold (was 600)
+
+selectritual "Raise Castle"
+cost 0 225  # 225 Gold (was 250)
+
+
+# --- Monk (56%) ---
+
+selectritual "Drain Swamp"
+cost 0 14  # 14 Gold (was 25)
+
+selectritual "Benediction"
+cost 0 56  # 56 Gold (was 100)
+
+selectritual "Found Monastery"
+cost 0 34  # 34 Gold (was 50)
+
+
+# --- Alchemist (56%) ---
+
+selectritual "Alchemy"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Greater Alchemy"
+cost 1 1  # 1 Iron (was 1)
+
+selectritual "Alchemical Catapult"
+cost 0 17  # 17 Gold (was 25)
+
+selectritual "Alchemical Trebuchet"
+cost 0 34  # 34 Gold (was 50)
+
+
+# --- Spirit Summons (70%) ---
+
+selectritual "Lesser Ritual of Mastery" 18
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Ritual of Mastery" 18
+cost 2 210  # 210 Herbs (was 300)
+
+selectritual "Ritual of Grand Mastery" 16
+cost 2 1020  # 1020 Herbs (was 1200)
+
+selectritual "Summon Ancestor"
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Make Effigy"
+cost 2 14  # 14 Herbs (was 20)
+cost 14 4  # 4 Corpses (humanoid) (was 5)
+
+selectritual "Summon Heroes of Old"
+cost 2 255  # 255 Herbs (was 300)
+
+selectritual "Carve Totempole"
+cost 2 255  # 255 Herbs (was 300)
+
+selectritual "Promise of the Ancestors"
+cost 2 340  # 340 Herbs (was 400)
+
+
+# --- High Cultist (42%) ---
+
+selectritual "Lesser Ritual of Mastery" 19
+cost 4 7  # 7 Sacrifices (was 15)
+
+selectritual "Ritual of Mastery" 19
+cost 4 38  # 38 Sacrifices (was 90)
+
+selectritual "Ritual of Grand Mastery" 17
+cost 4 184  # 184 Sacrifices (was 360)
+
+selectritual "Call of the Deep"
+cost 4 5  # 5 Sacrifices (was 10)
+
+selectritual "Ceremony in the Deep"
+cost 4 5  # 5 Sacrifices (was 10)
+
+selectritual "Call Warriors of the Deep"
+cost 4 11  # 11 Sacrifices (was 25)
+
+selectritual "Contact Elder Being"
+cost 4 13  # 13 Sacrifices (was 30)
+
+selectritual "Astrology"
+cost 4 3  # 3 Sacrifices (was 5)
+
+selectritual "Greater Ceremony in the Deep"
+cost 4 21  # 21 Sacrifices (was 40)
+
+selectritual "Call Army of the Deep"
+cost 4 39  # 39 Sacrifices (was 75)
+
+selectritual "Contact Old Ones"
+cost 4 51  # 51 Sacrifices (was 100)
+
+selectritual "Deep Rising"
+cost 4 60  # 60 Sacrifices (was 100)
+
+selectritual "Call Outer God"
+cost 4 120  # 120 Sacrifices (was 200)
+
+
+# --- Star Spawn (42%) ---
+
+selectritual "Lesser Void Mastery"
+cost 4 7  # 7 Sacrifices (was 15)
+
+selectritual "Void Mastery"
+cost 4 38  # 38 Sacrifices (was 90)
+
+selectritual "Grand Void Mastery"
+cost 4 184  # 184 Sacrifices (was 360)
+
+selectritual "Astrology" 1
+cost 4 1  # 1 Sacrifices (was 1)
+
+selectritual "Horoscope"
+cost 4 3  # 3 Sacrifices (was 5)
+
+selectritual "Call Elder Beings"
+cost 4 21  # 21 Sacrifices (was 50)
+
+selectritual "Send Lesser Horror"
+cost 4 6  # 6 Sacrifices (was 10)
+
+selectritual "Send Greater Horror"
+cost 4 30  # 30 Sacrifices (was 50)
+
+
+# --- Bakemono Rituals (49%) ---
+
+selectritual "Lesser Ritual of Mastery" 20
+cost 4 10  # 10 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 20
+cost 4 59  # 59 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 18
+cost 4 284  # 284 Sacrifices (was 480)
+
+selectritual "Summon Lesser Beings"
+cost 4 10  # 10 Sacrifices (was 20)
+
+selectritual "Summon Lesser Oni"
+cost 4 15  # 15 Sacrifices (was 30)
+
+selectritual "Make Effigy" 1
+cost 4 3  # 3 Sacrifices (was 5)
+cost 14 3  # 3 Corpses (humanoid) (was 5)
+
+selectritual "Summon Greater Beings"
+cost 4 59  # 59 Sacrifices (was 100)
+
+selectritual "Summon Oni"
+cost 4 59  # 59 Sacrifices (was 100)
+
+selectritual "Hide Heart"
+cost 4 89  # 89 Sacrifices (was 150)
+
+selectritual "Mountain Lair"
+cost 4 15  # 15 Sacrifices (was 25)
+cost 1 30  # 30 Iron (was 50)
+
+selectritual "Summon King"
+cost 4 210  # 210 Sacrifices (was 300)
+
+
+# --- Dvala (56%) ---
+
+selectritual "Sense Mines"
+cost 9 3  # 3 Coins (was 5)
+
+selectritual "Create Councilor"
+cost 10 12  # 12 Silk (was 20)
+
+selectritual "Create Iron Gate"
+cost 10 17  # 17 Silk (was 30)
+
+selectritual "Lore of Dvalin I"
+cost 9 6  # 6 Coins (was 10)
+
+selectritual "Create Rune Smith"
+cost 9 34  # 34 Coins (was 50)
+
+selectritual "Divine Marriage"
+cost 9 68  # 68 Coins (was 100)
+
+selectritual "Enchant Gate"
+cost 9 28  # 28 Coins (was 40)
+
+selectritual "Lore of Dvalin II"
+cost 9 21  # 21 Coins (was 30)
+
+selectritual "Lore of Dvalin III"
+cost 9 72  # 72 Coins (was 90)
+
+selectritual "Portal of Dvalin"
+cost 9 20  # 20 Coins (was 25)
+cost 10 20  # 20 Silk (was 25)
+
+selectritual "Living Boulders"
+cost 9 12  # 12 Coins (was 15)
+cost 10 12  # 12 Silk (was 15)
+
+
+# --- Dwarf Councilor (56%) ---
+
+selectritual "Found Colony"
+cost 0 140  # 140 Gold (was 250)
+cost 1 28  # 28 Iron (was 50)
+
+
+# --- Rune Smith (56%) ---
+
+selectritual "Ritual of Mastery" 21
+cost 9 42  # 42 Coins (was 75)
+
+selectritual "Create Rime Armor"
+cost 8 12  # 12 Unburied (was 20)
+
+selectritual "Create Furnace Armor"
+cost 7 12  # 12 Prisoners (was 20)
+
+selectritual "Create Armor of Dvalin"
+cost 10 12  # 12 Silk (was 20)
+
+selectritual "Rime Brand Weapons"
+cost 8 14  # 14 Unburied (was 20)
+
+selectritual "Flame Brand Weapons"
+cost 7 14  # 14 Prisoners (was 20)
+
+selectritual "Earth Brand Weapons"
+cost 10 14  # 14 Silk (was 20)
+
+selectritual "Rime Brand Ballista"
+cost 8 14  # 14 Unburied (was 20)
+
+selectritual "Flame Brand Ballista"
+cost 7 14  # 14 Prisoners (was 20)
+
+selectritual "Earth Brand Ballista"
+cost 10 14  # 14 Silk (was 20)
+
+
+# --- Pale One Rituals (56%) ---
+
+selectritual "Lesser Ritual of Mastery" 21
+cost 10 6  # 6 Silk (was 10)
+
+selectritual "Ritual of Mastery" 22
+cost 10 34  # 34 Silk (was 60)
+
+selectritual "Ritual of Grand Mastery" 19
+cost 10 164  # 164 Silk (was 240)
+
+selectritual "Cave Temple Construction"
+cost 0 14  # 14 Gold (was 25)
+cost 1 28  # 28 Iron (was 50)
+
+selectritual "Scrying" 1
+cost 8 3  # 3 Unburied (was 5)
+
+selectritual "Awaken Guardians"
+cost 10 12  # 12 Silk (was 20)
+
+selectritual "Lesser Lava Summoning"
+cost 7 6  # 6 Prisoners (was 10)
+
+selectritual "Lesser Olm Summoning"
+cost 8 6  # 6 Unburied (was 10)
+
+selectritual "Lesser Deep Summoning"
+cost 10 6  # 6 Silk (was 10)
+
+selectritual "Lesser Summoning of the Dead"
+cost 9 6  # 6 Coins (was 10)
+
+selectritual "Olm Conclave"
+cost 8 82  # 82 Unburied (was 120)
+
+selectritual "Summoning of the Dead"
+cost 9 55  # 55 Coins (was 80)
+
+selectritual "Lava Summoning"
+cost 7 55  # 55 Prisoners (was 80)
+
+selectritual "Deep Earth Summoning"
+cost 10 55  # 55 Silk (was 80)
+
+selectritual "Awaken Marble Oracle"
+cost 10 55  # 55 Silk (was 80)
+
+selectritual "Awaken Onyx Oracle"
+cost 10 192  # 192 Silk (was 240)
+
+selectritual "Earth made Flesh"
+cost 10 384  # 384 Silk (was 480)
+
+
+# --- Dryad Queen (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 22
+cost 2 12  # 12 Herbs (was 50)
+
+selectritual "Ritual of Mastery" 23
+cost 2 48  # 48 Herbs (was 200)
+
+selectritual "Ritual of Grand Mastery" 20
+cost 2 232  # 232 Herbs (was 800)
+
+selectritual "Minor Animal Summoning" 1
+cost 2 6  # 6 Herbs (was 25)
+
+selectritual "Create Sacred Grove"
+cost 2 96  # 96 Herbs (was 400)
+
+selectritual "Bramble Fort"
+cost 2 36  # 36 Herbs (was 150)
+
+selectritual "Major Animal Summoning" 1
+cost 2 29  # 29 Herbs (was 100)
+
+selectritual "Create Grove of Gaia"
+cost 2 218  # 218 Herbs (was 750)
+
+selectritual "Call of Gaia"
+cost 2 116  # 116 Herbs (was 400)
+
+selectritual "Blood Orgy"
+cost 2 29  # 29 Herbs (was 100)
+
+selectritual "Plant Hamadryad"
+cost 2 58  # 58 Herbs (was 200)
+
+selectritual "Call of the Wild"
+cost 2 140  # 140 Herbs (was 400)
+
+selectritual "Create Primal Forest"
+cost 2 350  # 350 Herbs (was 1000)
+
+selectritual "Incarnate Earth Mother"
+cost 2 525  # 525 Herbs (was 1500)
+
+selectritual "Summon Servants of Gaia"
+cost 2 263  # 263 Herbs (was 750)
+
+
+# --- Scourge Lord (70%) ---
+
+selectritual "Lesser Ritual of Scourge Mastery"
+cost 13 18  # 18 Monster Parts (was 25)
+
+selectritual "Ritual of Scourge Mastery"
+cost 13 140  # 140 Monster Parts (was 200)
+
+selectritual "Grand Ritual of Scourge Mastery"
+cost 13 680  # 680 Monster Parts (was 800)
+
+selectritual "Call of the Pyramid"
+cost 13 35  # 35 Monster Parts (was 50)
+
+selectritual "Construct Pillar of Power"
+cost 0 18  # 18 Gold (was 25)
+cost 1 18  # 18 Iron (was 25)
+
+selectritual "Scourge Summons"
+cost 13 35  # 35 Monster Parts (was 50)
+
+selectritual "Dark Bonds"
+cost 13 105  # 105 Monster Parts (was 150)
+
+selectritual "Call of the Pillar"
+cost 13 43  # 43 Monster Parts (was 50)
+
+selectritual "Construct Pyramid of Power"
+cost 0 64  # 64 Gold (was 75)
+cost 1 64  # 64 Iron (was 75)
+
+selectritual "Pyramid Walls"
+cost 13 43  # 43 Monster Parts (was 50)
+cost 1 22  # 22 Iron (was 25)
+
+selectritual "Appoint Herald"
+cost 13 85  # 85 Monster Parts (was 100)
+cost 0 26  # 26 Gold (was 30)
+
+selectritual "Dark Blessing"
+cost 13 85  # 85 Monster Parts (was 100)
+
+selectritual "Dark Scourge Summons"
+cost 13 128  # 128 Monster Parts (was 150)
+
+selectritual "Construct Guardian"
+cost 13 85  # 85 Monster Parts (was 100)
+cost 1 9  # 9 Iron (was 10)
+
+
+# --- Cloud Lord (63%) ---
+
+selectritual "Lesser Ritual of Mastery" 23
+cost 9 10  # 10 Coins (was 15)
+
+selectritual "Ritual of Mastery" 24
+cost 9 32  # 32 Coins (was 50)
+
+selectritual "Ritual of Grand Mastery" 21
+cost 9 114  # 114 Coins (was 150)
+
+selectritual "Lesser Sky Summoning"
+cost 9 16  # 16 Coins (was 25)
+
+selectritual "Diamond Alchemy"
+cost 7 7  # 7 Prisoners (was 10)
+cost 8 7  # 7 Unburied (was 10)
+cost 10 7  # 7 Silk (was 10)
+
+selectritual "Greater Sky Summoning"
+cost 9 38  # 38 Coins (was 50)
+
+selectritual "Summon Storm Giant"
+cost 9 57  # 57 Coins (was 75)
+
+selectritual "Summon Mist Warrior" 2
+cost 9 19  # 19 Coins (was 25)
+cost 8 19  # 19 Unburied (was 25)
+
+selectritual "Summon Yeti" 2
+cost 9 19  # 19 Coins (was 25)
+cost 8 19  # 19 Unburied (was 25)
+
+selectritual "Shape Clouds"
+cost 9 4  # 4 Coins (was 5)
+cost 10 4  # 4 Silk (was 5)
+
+selectritual "Rainbow Curtain"
+cost 9 19  # 19 Coins (was 25)
+
+selectritual "Summon Queen of Air" 1
+cost 9 180  # 180 Coins (was 200)
+
+selectritual "Perpetual Storm" 1
+cost 9 113  # 113 Coins (was 125)
+
+selectritual "Summon Solar Eagle"
+cost 9 23  # 23 Coins (was 25)
+cost 7 45  # 45 Prisoners (was 50)
+
+selectritual "Summon Frost Giant"
+cost 8 68  # 68 Unburied (was 75)
+
+selectritual "Fimbul Fortress" 1
+cost 8 68  # 68 Unburied (was 75)
+cost 9 23  # 23 Coins (was 25)
+
+selectritual "Castle in the Clouds"
+cost 9 135  # 135 Coins (was 150)
+
+
+# --- Kobold, Black (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 24
+cost 15 5  # 5 Gems (was 20)
+
+selectritual "Ritual of Mastery" 25
+cost 15 24  # 24 Gems (was 100)
+
+selectritual "Kobold Hatchery"
+cost 0 12  # 12 Gold (was 50)
+cost 1 5  # 5 Iron (was 20)
+
+selectritual "Decay Rune Trap"
+cost 15 1  # 1 Gems (was 2)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon"
+cost 0 15  # 15 Gold (was 50)
+cost 16 8  # 8 Entrails (was 25)
+cost 15 15  # 15 Gems (was 50)
+
+selectritual "Foretelling"
+cost 0 1  # 1 Gold (was 1)
+cost 16 2  # 2 Entrails (was 5)
+
+selectritual "Kobold Stronghold"
+cost 0 15  # 15 Gold (was 50)
+cost 1 22  # 22 Iron (was 75)
+
+
+# --- Kobold, Red (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 25
+cost 7 3  # 3 Prisoners (was 10)
+
+selectritual "Ritual of Mastery" 26
+cost 7 12  # 12 Prisoners (was 50)
+
+selectritual "Ritual of Grand Mastery" 22
+cost 7 58  # 58 Prisoners (was 200)
+
+selectritual "Kobold Hatchery" 1
+cost 0 12  # 12 Gold (was 50)
+cost 1 5  # 5 Iron (was 20)
+
+selectritual "Flame Rune Trap"
+cost 7 1  # 1 Prisoners (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon" 1
+cost 0 15  # 15 Gold (was 50)
+cost 16 8  # 8 Entrails (was 25)
+cost 7 8  # 8 Prisoners (was 25)
+
+selectritual "Foretelling" 1
+cost 7 1  # 1 Prisoners (was 1)
+cost 16 2  # 2 Entrails (was 5)
+
+selectritual "Kobold Stronghold" 1
+cost 0 15  # 15 Gold (was 50)
+cost 1 22  # 22 Iron (was 75)
+
+selectritual "Summon Elder Dragon"
+cost 0 70  # 70 Gold (was 200)
+cost 16 70  # 70 Entrails (was 200)
+cost 7 18  # 18 Prisoners (was 50)
+
+
+# --- Kobold, Green (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 26
+cost 10 3  # 3 Silk (was 10)
+
+selectritual "Ritual of Mastery" 27
+cost 10 12  # 12 Silk (was 50)
+
+selectritual "Ritual of Grand Mastery" 23
+cost 10 58  # 58 Silk (was 200)
+
+selectritual "Kobold Hatchery" 2
+cost 0 12  # 12 Gold (was 50)
+cost 1 5  # 5 Iron (was 20)
+
+selectritual "Poison Gas Trap"
+cost 10 1  # 1 Silk (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon" 2
+cost 0 15  # 15 Gold (was 50)
+cost 16 8  # 8 Entrails (was 25)
+cost 10 8  # 8 Silk (was 25)
+
+selectritual "Foretelling" 2
+cost 10 1  # 1 Silk (was 1)
+cost 16 2  # 2 Entrails (was 5)
+
+selectritual "Kobold Stronghold" 2
+cost 0 15  # 15 Gold (was 50)
+cost 1 22  # 22 Iron (was 75)
+
+selectritual "Summon Elder Dragon" 1
+cost 0 70  # 70 Gold (was 200)
+cost 16 70  # 70 Entrails (was 200)
+cost 10 18  # 18 Silk (was 50)
+
+
+# --- Kobold, Blue (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 27
+cost 8 3  # 3 Unburied (was 10)
+
+selectritual "Ritual of Mastery" 28
+cost 8 12  # 12 Unburied (was 50)
+
+selectritual "Ritual of Grand Mastery" 24
+cost 8 58  # 58 Unburied (was 200)
+
+selectritual "Kobold Hatchery" 3
+cost 0 12  # 12 Gold (was 50)
+cost 1 5  # 5 Iron (was 20)
+
+selectritual "Frost Rune Trap"
+cost 8 1  # 1 Unburied (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon" 3
+cost 0 15  # 15 Gold (was 50)
+cost 16 8  # 8 Entrails (was 25)
+cost 8 8  # 8 Unburied (was 25)
+
+selectritual "Foretelling" 3
+cost 8 1  # 1 Unburied (was 1)
+cost 16 2  # 2 Entrails (was 5)
+
+selectritual "Kobold Stronghold" 3
+cost 0 15  # 15 Gold (was 50)
+cost 1 22  # 22 Iron (was 75)
+
+selectritual "Summon Elder Dragon" 2
+cost 0 70  # 70 Gold (was 200)
+cost 16 70  # 70 Entrails (was 200)
+cost 8 18  # 18 Unburied (was 50)
+
+
+# --- Kobold, White (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 28
+cost 9 3  # 3 Coins (was 10)
+
+selectritual "Ritual of Mastery" 29
+cost 9 12  # 12 Coins (was 50)
+
+selectritual "Ritual of Grand Mastery" 25
+cost 9 58  # 58 Coins (was 200)
+
+selectritual "Kobold Hatchery" 4
+cost 0 12  # 12 Gold (was 50)
+cost 1 5  # 5 Iron (was 20)
+
+selectritual "Lightning Rune Trap"
+cost 9 1  # 1 Coins (was 1)
+cost 16 1  # 1 Entrails (was 1)
+
+selectritual "Summon Dragon" 4
+cost 0 15  # 15 Gold (was 50)
+cost 16 8  # 8 Entrails (was 25)
+cost 9 8  # 8 Coins (was 25)
+
+selectritual "Foretelling" 4
+cost 9 1  # 1 Coins (was 1)
+cost 16 2  # 2 Entrails (was 5)
+
+selectritual "Kobold Stronghold" 4
+cost 0 15  # 15 Gold (was 50)
+cost 1 22  # 22 Iron (was 75)
+
+selectritual "Summon Elder Dragon" 3
+cost 0 70  # 70 Gold (was 200)
+cost 16 70  # 70 Entrails (was 200)
+cost 9 18  # 18 Coins (was 50)
+
+
+# --- Senator (90%) ---
+
+selectritual "Appoint Governor"
+cost 0 90  # 90 Gold (was 100)
+
+
+# --- Dark Emperor (76%) ---
+
+selectritual "Appoint Governor" 1
+cost 0 76  # 76 Gold (was 100)
+
+
+# --- Magistratus (56%) ---
+
+selectritual "Erect Imperial Statue"
+cost 0 56  # 56 Gold (was 100)
+
+selectritual "Erect Statue of the Underworld"
+cost 0 56  # 56 Gold (was 100)
+
+
+# --- Crystal Amazon (70%) ---
+
+selectritual "Paint Tattoo"
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Design Eagle Tattoo"
+cost 2 140  # 140 Herbs (was 200)
+
+selectritual "Design Pegasus Tattoo"
+cost 2 425  # 425 Herbs (was 500)
+
+
+# --- Garnet Amazon (70%) ---
+
+selectritual "Paint Tattoo" 1
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Design Lion Tattoo"
+cost 2 140  # 140 Herbs (was 200)
+
+selectritual "Design Gryphon Tattoo"
+cost 2 425  # 425 Herbs (was 500)
+
+
+# --- Jade Amazon (70%) ---
+
+selectritual "Paint Tattoo" 2
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Design Serpent Tattoo"
+cost 2 140  # 140 Herbs (was 200)
+
+selectritual "Design Hydra Tattoo"
+cost 2 425  # 425 Herbs (was 500)
+
+
+# --- Onyx Amazon (70%) ---
+
+selectritual "Paint Tattoo" 3
+cost 2 35  # 35 Herbs (was 50)
+
+selectritual "Design Badger Tattoo"
+cost 2 140  # 140 Herbs (was 200)
+
+selectritual "Design Skull Tattoo"
+cost 2 425  # 425 Herbs (was 500)
+
+
+# --- Spirit Summons (70%) ---
+
+selectritual "Pierce the Veil of Death" 1
+cost 2 14  # 14 Herbs (was 20)
+
+selectritual "Sending"
+cost 2 35  # 35 Herbs (was 50)
+
+
+# --- White One (56%) ---
+
+selectritual "Lesser Ritual of Mastery" 29
+cost 15 6  # 6 Gems (was 10)
+
+selectritual "Ritual of Mastery" 30
+cost 15 34  # 34 Gems (was 60)
+
+selectritual "Ritual of Grand Mastery" 26
+cost 15 123  # 123 Gems (was 180)
+
+selectritual "Lesser Akashic Summoning"
+cost 15 17  # 17 Gems (was 30)
+
+selectritual "Akashic Summoning"
+cost 15 68  # 68 Gems (was 100)
+
+selectritual "Akashic Records"
+cost 15 2  # 2 Gems (was 2)
+
+selectritual "Greater Akashic Summoning"
+cost 15 200  # 200 Gems (was 250)
+
+selectritual "Avatara"
+cost 15 400  # 400 Gems (was 500)
+
+
+# --- Akashic, Ruby (56%) ---
+
+selectritual "Ruby Summoning"
+cost 7 17  # 17 Prisoners (was 30)
+
+selectritual "Host of Maruts"
+cost 7 68  # 68 Prisoners (was 100)
+
+
+# --- Akashic, Sapphire (56%) ---
+
+selectritual "Sapphire Summoning"
+cost 8 17  # 17 Unburied (was 30)
+
+selectritual "Inhabit Lake"
+cost 8 12  # 12 Unburied (was 20)
+
+
+# --- Akashic, Emerald (56%) ---
+
+selectritual "Emerald Summoning"
+cost 10 17  # 17 Silk (was 30)
+
+selectritual "Inhabit Jungle"
+cost 10 12  # 12 Silk (was 20)
+
+
+# --- Akashic, Diamond (56%) ---
+
+selectritual "Diamond Summoning"
+cost 9 17  # 17 Coins (was 30)
+
+selectritual "Turning of the Wheel"
+cost 15 340  # 340 Gems (was 500)
+
+
+# --- Raksharaja (24%) ---
+
+selectritual "Lesser Ritual of Mastery" 30
+cost 4 5  # 5 Sacrifices (was 20)
+
+selectritual "Ritual of Mastery" 31
+cost 4 29  # 29 Sacrifices (was 120)
+
+selectritual "Ritual of Grand Mastery" 27
+cost 4 140  # 140 Sacrifices (was 480)
+
+selectritual "Naraka Summoning"
+cost 4 10  # 10 Sacrifices (was 40)
+
+selectritual "Lanka Summoning"
+cost 4 8  # 8 Sacrifices (was 30)
+
+selectritual "Summon the Dead"
+cost 4 6  # 6 Sacrifices (was 25)
+
+selectritual "Bhuta Possession"
+cost 4 6  # 6 Sacrifices (was 25)
+
+selectritual "Greater Naraka Summoning"
+cost 4 53  # 53 Sacrifices (was 180)
+
+selectritual "Greater Lanka Summoning"
+cost 4 44  # 44 Sacrifices (was 150)
+
+selectritual "Veil Village"
+cost 4 8  # 8 Sacrifices (was 25)
+
+selectritual "Shroud of Darkness"
+cost 4 12  # 12 Sacrifices (was 40)
+
+selectritual "Rasatala Summoning"
+cost 4 175  # 175 Sacrifices (was 500)
+
+selectritual "Veil of Dreams"
+cost 4 27  # 27 Sacrifices (was 75)
+cost 0 9  # 9 Gold (was 25)
+
+
+# --- Illusionist (85%) ---
+
+selectritual "Veil Mine"
+cost 15 17  # 17 Gems (was 20)
+
+selectritual "Mirror Blink"
+cost 15 5  # 5 Gems (was 5)
+
+
+# --- Guildmaster (70%) ---
+
+selectritual "Lesser Ritual of Mastery" 31
+cost 0 7  # 7 Gold (was 10)
+cost 15 7  # 7 Gems (was 10)
+
+selectritual "Ritual of Mastery" 32
+cost 0 28  # 28 Gold (was 40)
+cost 15 28  # 28 Gems (was 40)
+
+selectritual "Ritual of Grand Mastery" 28
+cost 0 68  # 68 Gold (was 80)
+cost 15 68  # 68 Gems (was 80)
+
+selectritual "Traders Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Merchants Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Thieves Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Assassins Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Assassination Contract"
+cost 0 17  # 17 Gold (was 20)
+cost 15 9  # 9 Gems (was 10)
+
+selectritual "Shipwrights Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Cartographers Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Miners Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Masons Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Sages Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Mages Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Mercenaries Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Adventurers Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Apothecaries Guild"
+cost 0 11  # 11 Gold (was 15)
+cost 15 11  # 11 Gems (was 15)
+
+selectritual "Alchemists Guild"
+cost 0 26  # 26 Gold (was 30)
+cost 15 26  # 26 Gems (was 30)
+
+selectritual "Establish Market Village"
+cost 0 18  # 18 Gold (was 25)
+
+selectritual "Purge Guilds"
+cost 0 35  # 35 Gold (was 50)
+
+
+# --- Alchemist (80%) ---
+
+selectritual "Liquid Fire Dispenser"
+cost 0 20  # 20 Gold (was 25)
+cost 1 20  # 20 Iron (was 25)
+
+
+# --- Engineer Magus (68%) ---
+
+selectritual "Storm Spool Ballista"
+cost 15 34  # 34 Gems (was 50)
+
+selectritual "Guild Portal"
+cost 15 68  # 68 Gems (was 100)
+
+
+# --- Demonology (49%) ---
+
+selectritual "Enter Soul Contract"
+cost 4 10  # 10 Sacrifices (was 20)
+
+
+# ==================================================
+# SPAWN RATE MODIFICATIONS
+# ==================================================
+# Global spawn modifier: 200%
+# 
+
+selectmonster "Warrior Totem"
+spawnmon 40  # was 20; 20% chance per month to spawn the monster type defined 11 before this one; i.e. monster #123: Barbarian Warrior.
+
+selectmonster "Statue of the Underworld"
+spawn1d6mon 30  # was 15; 15% chance per month to spawn 1d6 of the monster type defined after this one; i.e. monster #146: Imperial Spirit.
+
+selectmonster "Hamadryad"
+harpyspawn 6  # was 3; Harpy Spawn Boost (+3). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Juggernaut"
+spawn1d6mon 200  # was 100; 100% chance per month to spawn 1d6 of the monster type defined after this one; i.e. monster #439: Devout Follower.
+
+selectmonster "Mother of Monsters"
+motherspawn 2  # was 1; Each month, spawns 1 Hydra Hatchling, 1 Marsh Worm, 1 Doppel Spawn, or 1 Swamp Monster (equal chance of each).
+
+selectmonster "Young Dvala"
+spawnmon 200  # was 100; Each month, spawns 1 of the monster type defined 3 after this one; i.e. monster #894: Dwarf Worker.
+
+selectmonster "Dvala"
+spawnmon 400  # was 200; Each month, spawns 2 of the monster type defined 2 after this one; i.e. monster #894: Dwarf Worker.
+
+selectmonster "Daughter of Dvalin"
+spawnmon 600  # was 300; Each month, spawns 3 of the monster type defined 1 after this one; i.e. monster #894: Dwarf Worker.
+
+selectmonster "God Vessel"
+spawnmon 200  # was 100; Each month, spawns 1 of the monster type defined 1 after this one; i.e. monster #1007: Penumbral.
+
+selectmonster "Teotl of War"
+motherspawn 4  # was 2; Each month, spawns d2 Jaguars or 1 Ozelotl (equal chance of each).
+
+selectmonster "Teteo Inan"
+motherspawn 8  # was 4; Each month, spawns d2 Jaguars or d3 Serpents (equal chance of each).
+
+selectmonster "Teotl of the Sky"
+motherspawn 14  # was 7; Each month, spawns d3 Beast Bats or d3 Eagle Warriors (equal chance of each).
+
+selectmonster "Teotl of Rain"
+motherspawn 6  # was 3; Each month, spawns d2 Toad Warriors (not d3, as the v5.33 modding manual states).
+
+selectmonster "Teotl of the Night"
+motherspawn 10  # was 5; Each month, spawns d3 Beast Bats or 1 Ozelotl (equal chance of each).
+
+selectmonster "Teotl of the Underworld"
+motherspawn 12  # was 6; Each month, spawns d3 Longdead (not 2d3, as the v5.33 modding manual states).
+
+selectmonster "Dryad"
+satyrspawn 6  # was 3; Satyr Spawn Boost (+3). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Dryad Queen"
+satyrspawn 8  # was 4; Satyr Spawn Boost (+4). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Anointed of Gaia"
+satyrspawn 10  # was 5; Satyr Spawn Boost (+5). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Centaur Commander"
+centspawn 4  # was 2; Centaur Spawn Boost (+2). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Cataphract Commander"
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Hierophant"
+centspawn 6  # was 3; Centaur Spawn Boost (+3). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Grand Hierophant"
+centspawn 8  # was 4; Centaur Spawn Boost (+4). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Hierophantide"
+centspawn 6  # was 3; Centaur Spawn Boost (+3). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Grand Hierophantide"
+centspawn 8  # was 4; Centaur Spawn Boost (+4). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Centaur Sage"
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Centaur Seer"
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Satyr Commander"
+satyrspawn 4  # was 2; Satyr Spawn Boost (+2). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Hoplite Commander"
+satyrspawn 2  # was 1; Satyr Spawn Boost (+1). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Keeper of Traditions"
+minospawn 4  # was 2; Minotaur Spawn Boost (+2). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Minotaur Lord"
+minospawn 2  # was 1; Minotaur Spawn Boost (+1). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Pan"
+satyrspawn 4  # was 2; Satyr Spawn Boost (+2). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+minospawn 2  # was 1; Minotaur Spawn Boost (+1). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+harpyspawn 2  # was 1; Harpy Spawn Boost (+1). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Elder Pan"
+satyrspawn 6  # was 3; Satyr Spawn Boost (+3). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+minospawn 4  # was 2; Minotaur Spawn Boost (+2). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+centspawn 4  # was 2; Centaur Spawn Boost (+2). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+harpyspawn 4  # was 2; Harpy Spawn Boost (+2). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Pandemoniac"
+satyrspawn 6  # was 3; Satyr Spawn Boost (+3). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+minospawn 4  # was 2; Minotaur Spawn Boost (+2). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+harpyspawn 2  # was 1; Harpy Spawn Boost (+1). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Panic Apostate"
+satyrspawn 6  # was 3; Satyr Spawn Boost (+3). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+minospawn 4  # was 2; Minotaur Spawn Boost (+2). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+centspawn 2  # was 1; Centaur Spawn Boost (+1). Allows and boosts Dryad Queen centaur spawn. Only the highest value of this trait in each grove counts.
+harpyspawn 2  # was 1; Harpy Spawn Boost (+1). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Blood Bull"
+satyrspawn 6  # was 3; Satyr Spawn Boost (+3). Boosts Dryad Queen satyr spawn. Only the highest value of this trait in each grove counts.
+minospawn 6  # was 3; Minotaur Spawn Boost (+3). Allows and boosts Dryad Queen minotaur spawn. Only the highest value of this trait in each grove counts.
+
+selectmonster "Harpy Queen"
+harpyspawn 8  # was 4; Harpy Spawn Boost (+4). Boosts Dryad Queen harpy spawn. Only the highest value of this trait in each grove counts.
+
+
+# ==================================================
+# CUSTOM FIXES: custom_fixes.c5m
+# (These changes override everything above)
+# ==================================================
+
+#hoburg fastening
+
+selectmonster "Burgmeister"
+clearmove
+
+selectmonster "Burgmann"
+clearmove
+
+selectmonster "Horticulturist"
+clearmove
+
+selectmonster "Garden Master"
+clearmove
+
+selectmonster "Horologist"
+clearmove
+
+selectmonster "Clockwork Master Crafter"
+clearmove
+
+selectmonster "Hoburg Militia"
+clearmove
+
+selectmonster "Hoburg Slinger"
+clearmove
+
+selectmonster "Hoburg Soldier"
+clearmove
+
+selectmonster "Hoburg Defender"
+clearmove
+
+selectmonster "Hoburg Crossbow"
+clearmove
+
+selectmonster "Hoburg Pikeneer"
+clearmove
+
+selectmonster "Burgmeister Guard"
+clearmove
+
+selectmonster "Hog Knight"
+fast
+
+selectmonster "Hogmeister"
+fast
+
+selectmonster "Hoburg Scout"
+clearmove
+
+# Markgraf fastening
+
+selectmonster "Markgraf"
+clearmove
+
+selectmonster "Malefic Markgraf"
+clearmove
+
+selectmonster "Malefic Master"
+fast
+saner 3
+thrallhunt 5
+
+selectmonster "Markmann"
+saner 1
+
+selectmonster "Ghoulgraf"
+clearmove
+
+selectmonster "Nekromant"
+clearmove
+saner 1
+
+selectmonster "Grand Nekromant"
+clearmove
+saner 3
+
+selectmonster "Corpse Nekromant"
+clearmove
+
+selectmonster "Wight Nekromant"
+clearmove
+
+selectmonster "Ghost Nekromant"
+saner 1
+
+selectmonster "Grand Ghost Nekromant"
+saner 2
+
+selectmonster "Malefic Markmeister"
+saner 1
+
+selectmonster "Malefic Hauptmarkmeister"
+saner 2
+clearmove
+
+selectmonster "Hoburg Thrall"
+clearmove
+
+selectmonster "Hobmark Soldier"
+clearmove
+
+selectmonster "Hobmark Defender"
+clearmove
+
+selectmonster "Hobmark Crossbow"
+clearmove
+
+selectmonster "Hobmark Hammerer"
+clearmove
+
+selectmonster "Hobmark Pikeneer"
+clearmove
+
+selectmonster "Markgraf Guard"
+clearmove
+
+selectmonster "Hog Hussar"
+fast
+
+selectmonster "Markmeister"
+fast
+thrallhunt 5
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Longdead"
+clearmove
+
+selectmonster "Little Soulless"
+clearmove
+
+selectmonster "Little Soulless Soldier"
+clearmove
+
+selectmonster "Little Soulless Defender"
+clearmove

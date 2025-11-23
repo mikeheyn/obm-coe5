@@ -91,6 +91,7 @@ selectmonster "Malefic Markmeister"
 saner 1
 
 selectmonster "Malefic Hauptmarkmeister"
+saner 3
 clearmove
 
 selectmonster "Hoburg Thrall"

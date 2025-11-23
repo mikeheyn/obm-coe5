@@ -1,0 +1,6 @@
+# Generated mod files
+ritual_costs_*.c5m
+
+# Python
+__pycache__/
+*.pyc

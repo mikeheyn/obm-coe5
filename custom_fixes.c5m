@@ -163,6 +163,11 @@ clearmove
 selectmonster "King of The Deep"
 allitemslots
 
+selectmonster "Cave Grub"
+clearmove
+fast
+hp 30
+
 selectmonster "Troll King"
 allitemslots
 

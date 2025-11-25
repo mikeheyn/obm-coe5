@@ -4078,6 +4078,7 @@ harpyspawn 8  # was 4; Harpy Spawn Boost (+4). Boosts Dryad Queen harpy spawn. O
 # (These changes override everything above)
 # ==================================================
 
+
 #hoburg fastening
 
 selectmonster "Burgmeister"
@@ -4135,14 +4136,16 @@ clearmove
 
 selectmonster "Malefic Markgraf"
 clearmove
+saner 2
+thrallhunt 100
 
 selectmonster "Malefic Master"
 fast
 saner 3
-thrallhunt 5
+thrallhunt 100
 
 selectmonster "Markmann"
-saner 1
+clearmove
 
 selectmonster "Ghoulgraf"
 clearmove
@@ -4169,10 +4172,12 @@ saner 2
 
 selectmonster "Malefic Markmeister"
 saner 1
+thrallhunt 100
 
 selectmonster "Malefic Hauptmarkmeister"
 saner 2
 clearmove
+thrallhunt 100
 
 selectmonster "Hoburg Thrall"
 clearmove
@@ -4200,7 +4205,6 @@ fast
 
 selectmonster "Markmeister"
 fast
-thrallhunt 5
 
 selectmonster "Little Longdead"
 clearmove
@@ -4231,5 +4235,24 @@ clearmove
 
 selectmonster "Sentinel"
 clearmove
+hp 20
 
-selectmonster ""
+selectmonster "Olm Farseer"
+clearmove
+
+selectmonster "King of The Deep"
+allitemslots
+
+selectmonster "Cave Grub"
+clearmove
+fast
+hp 30
+
+selectmonster "Troll King"
+allitemslots
+
+selectmonster "Old Troll"
+allitemslots
+
+selectmonster "Ancient Troll"
+allitemslots

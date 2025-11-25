@@ -466,7 +466,10 @@ def main():
     else:
         output_file = "obm-coe5.c5m"
 
-    output_path = project_dir / "output" / output_file
+    output_path = project_dir / "obm_coe5" / output_file
+
+    # Ensure output directory exists
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     print(f"Parsing ritual data from: {ritual_data_file}")
     print(f"Found {len(rituals)} rituals with costs")
@@ -515,14 +518,6 @@ def main():
             print(f"  {append_mod} appended to end")
         else:
             print(f"\nWarning: Append mod '{append_mod}' not found at {append_path}")
-
-    # Copy to game-ready folder
-    game_folder = project_dir / "obm_coe5"
-    if game_folder.exists():
-        game_output = game_folder / output_file
-        shutil.copy2(output_path, game_output)
-        print(f"\nGame-ready copy:")
-        print(f"  Copied to {game_output}")
 
     print(f"\nTo use this mod:")
     print(f"  1. Copy the 'obm_coe5' folder to your CoE5 mods directory")

@@ -4152,7 +4152,7 @@ harpyspawn 8  # was 4; Harpy Spawn Boost (+4). Boosts Dryad Queen harpy spawn. O
 # ==================================================
 
 
-#hoburg fastening
+#-----------------------------------hoburg fastening
 
 selectmonster "Burgmeister"
 clearmove
@@ -4202,7 +4202,7 @@ fast
 selectmonster "Hoburg Scout"
 clearmove
 
-# Markgraf fastening
+#----------------------------------- Markgraf fastening
 
 selectmonster "Markgraf"
 clearmove
@@ -4300,26 +4300,50 @@ clearmove
 selectmonster "Little Soulless Defender"
 clearmove
 
+#-----------------------------------Pale One Fixes
+
 selectmonster "Olm"
 clearmove
+water
 
 selectmonster "Olm Sage"
 clearmove
+water
 
 selectmonster "Sentinel"
 clearmove
-hp 20
+slow
+water
+
+selectmonster "Granite Guardian"
+clearmove
+slow
+water
+
+selectmonster "Marble Oracle"
+clearmove
+slow
+water
+
+selectmonster "Onyx Oracle"
+clearmove
+slow
+water
 
 selectmonster "Olm Farseer"
 clearmove
+water
 
 selectmonster "King of The Deep"
 allitemslots
 
 selectmonster "Cave Grub"
 clearmove
+water
 fast
 hp 30
+
+#-----------------------------------Troll King
 
 selectmonster "Troll King"
 allitemslots
@@ -4329,3 +4353,4 @@ allitemslots
 
 selectmonster "Ancient Troll"
 allitemslots
+

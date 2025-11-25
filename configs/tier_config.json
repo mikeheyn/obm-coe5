@@ -1,13 +1,13 @@
 {
-  "description": "OBM Balance Mod - Tier-based ritual cost adjustments (linear S=100% to F=50%)",
+  "description": "OBM Balance Mod - Tier-based ritual cost adjustments (S=no discount, F=35% discount)",
 
   "tiers": {
     "S": 100,
-    "A": 90,
-    "B": 80,
-    "C": 70,
-    "D": 60,
-    "F": 50
+    "A": 93,
+    "B": 86,
+    "C": 79,
+    "D": 72,
+    "F": 65
   },
 
   "class_tiers": {

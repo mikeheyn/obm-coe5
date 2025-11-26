@@ -50,6 +50,21 @@ selectmonster "Hoburg Scout"
 clearmove
 
 #----------------------------------- Markgraf fastening
+#Markgraf
+selectclass 23
+hometerr 38
+addstartterr 5
+addstartterr 16
+addstartterr 70
+
+
+addstartunits "Hoburg Scout" 1
+addstartunits "Markgraf's Home Guard" 15 
+addcomrec "Nekromant" 25 50 d12 0 #Make it 25 percent
+reclimiter "-Nekromant"
+reclimiter "-Grand Nekromant"
+reclimiter "-Ghoulgraf"
+reclimiter "-Ghoul Baron"
 
 selectmonster "Markgraf"
 clearmove
@@ -189,6 +204,16 @@ clearmove
 water
 fast
 hp 30
+
+selectclass 9
+newmonster    "Grub Wrangler"
+descr "The Cavern Guards are the elites of the Pale Ones. There are those who choose to Farm and guide Cave grubs for the betterment of their own kind, alot of them disolve into a puddle, those who survive and thrive learn to live fast and follow the code of the grub."
+copystats "Cavern Guard"
+copyspr   "Cavern Guard"
+fast
+tunnel
+
+addcomrec "Grub Wrangler" 15 65 20 0
 
 #-----------------------------------Troll King
 

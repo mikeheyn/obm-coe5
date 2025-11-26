@@ -210,9 +210,10 @@ newmonster    "Grub Wrangler"
 descr "The Cavern Guards are the elites of the Pale Ones. There are those who choose to Farm and guide Cave grubs for the betterment of their own kind, alot of them disolve into a puddle, those who survive and thrive learn to live fast and follow the code of the grub."
 copystats "Cavern Guard"
 copyspr   "Cavern Guard"
+HP 15
 fast
 tunnel
-
+siegetunnel 10
 addcomrec "Grub Wrangler" 15 65 20 0
 
 #-----------------------------------Troll King

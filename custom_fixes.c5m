@@ -57,15 +57,6 @@ addstartterr 5
 addstartterr 16
 addstartterr 70
 
-
-addstartunits "Hoburg Scout" 1
-addstartunits "Markgraf's Home Guard" 15 
-addcomrec "Nekromant" 25 50 d12 0 #Make it 25 percent
-reclimiter "-Nekromant"
-reclimiter "-Grand Nekromant"
-reclimiter "-Ghoulgraf"
-reclimiter "-Ghoul Baron"
-
 selectmonster "Markgraf"
 clearmove
 
@@ -73,16 +64,16 @@ selectmonster "Malefic Markgraf"
 clearmove
 saner 2
 thrallhunt 100
+water
+flying
 
 selectmonster "Malefic Master"
 fast
 saner 3
 thrallhunt 100
+water
 
 selectmonster "Markmann"
-clearmove
-
-selectmonster "Ghoulgraf"
 clearmove
 
 selectmonster "Nekromant"
@@ -95,9 +86,11 @@ saner 3
 
 selectmonster "Corpse Nekromant"
 clearmove
+saner 1
 
 selectmonster "Wight Nekromant"
 clearmove
+saner 1
 
 selectmonster "Ghost Nekromant"
 saner 1
@@ -105,14 +98,26 @@ saner 1
 selectmonster "Grand Ghost Nekromant"
 saner 2
 
+
 selectmonster "Malefic Markmeister"
 saner 1
 thrallhunt 100
+water
 
 selectmonster "Malefic Hauptmarkmeister"
 saner 2
-clearmove
 thrallhunt 100
+water
+
+selectmonster "Ghoul Baron"
+clearmove
+water
+saner 1
+
+selectmonster "Ghoulgraf"
+clearmove
+water
+saner 2
 
 selectmonster "Hoburg Thrall"
 clearmove
@@ -143,24 +148,31 @@ fast
 
 selectmonster "Little Longdead"
 clearmove
+water
 
 selectmonster "Little Longdead"
 clearmove
+water
 
 selectmonster "Little Longdead"
 clearmove
+water
 
 selectmonster "Little Longdead"
 clearmove
+water
 
 selectmonster "Little Soulless"
 clearmove
+water
 
 selectmonster "Little Soulless Soldier"
 clearmove
+water
 
 selectmonster "Little Soulless Defender"
 clearmove
+water
 
 #-----------------------------------Pale One Fixes
 
@@ -226,4 +238,3 @@ allitemslots
 
 selectmonster "Ancient Troll"
 allitemslots
-
